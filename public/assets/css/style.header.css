@@ -10,6 +10,7 @@ header {
 .logo {
     max-width: 100%;
     justify-content: center;
+    margin-bottom: 2%;
 }
 
 .icon {
@@ -22,10 +23,6 @@ i{
     padding: 10%;
     width: 30px;
     height: 30px;
-}
-
-nav {
-
 }
 
 ul {
