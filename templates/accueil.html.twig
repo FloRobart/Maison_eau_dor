@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="{{ asset('assets/css/style.accueil.css') }}">
+<body>
+    <div class="content-imga">
+        <img class="img-accueil" src="{{ asset('images/barparfum.jpg') }}" alt="Image bar à parfum">
+    </div>
+    <h1 class="h1-accueil">Nos Meilleures Ventes</h1>
+    <div class="ensemble_bestsales-accueil">
+        <div class="p1-accueil">
+            <img src="{{ asset('images/ahlam.png') }}" alt="Produit 1">
+            <p class="nomp-accueil">Ahlam</p>
+            <p class="prixp-accueil">30,00€</p>
+            <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+        </div>
+        <div class="p2-accueil">
+            <img src="{{ asset('images/magic_aïsha.png') }}" alt="Produit 2">
+            <p class="nomp-accueil">Magic Aïsha</p>
+            <p class="prixp-accueil">30,00€</p>
+            <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+        </div>
+        <div class="p3-accueil">
+            <img src="{{ asset('images/pure_evasion.png') }}" alt="Produit 3">
+            <p class="nomp-accueil">Pure Evasion</p>
+            <p class="prixp-accueil">30,00€</p>
+            <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+        </div>
+        <i class="fa-solid fa-chevron-right fa-2xl" id="iconp-accueil"></i>
+    </div>
+    <div class="carousel_container-accueil">
+        <div class="carousel-accueil">
+            <div class="slide-accueil">
+                <img src="{{ asset('images/parfums.png') }}" alt="Slide 1">
+            </div>
+            <div class="slide-accueil">
+                <img src="{{ asset('images/sprays.png') }}" alt="Slide 2">
+            </div>
+            <div class="slide-accueil">
+                <img src="{{ asset('images/cosmétiques.png') }}" alt="Slide 3">
+            </div>
+            <div class="slide-accueil">
+                <img src="{{ asset('images/muscs.png') }}" alt="Slide 4">
+            </div>
+            <div class="slide-accueil">
+                <img src="{{ asset('images/produits_capillaire.png') }}" alt="Slide 5">
+            </div>
+            <div class="slide-accueil">
+                <img src="{{ asset('images/brumes.png') }}" alt="Slide 6">
+            </div>
+        </div>
+            <i class="fa-solid fa-chevron-left fa-2xl" id="btnp-accueil" onclick="prevSlide()"></i></button>
+            <i class="fa-solid fa-chevron-right fa-2xl" id="btns-accueil" onclick="nextSlide()"></i></button>
+    </div>
+    <script src="{{ asset('assets/js/accueil.js') }}"></script>
+</body>
