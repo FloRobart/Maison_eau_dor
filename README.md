@@ -4,6 +4,10 @@
 
 ## Installation
 
+### Prérequis
+
+- Disposer des droits administrateurs sur la machine
+
 ### Windows
 
 - [Installer Git](https://github.com/FloRobart/Maison_eau_dor/blob/master/Documentations/doc_installation_git_windows.md)
