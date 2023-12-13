@@ -1,1 +1,2 @@
-/var/
+# Dossier de configuration personnel de l'application (cache, logs, etc.)
+var
