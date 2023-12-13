@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Maison Eau D'or</title>
-        <link rel="stylesheet" href="{{ asset('assets/css/style.header.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
@@ -12,5 +11,9 @@
         {% endblock %}
 
         {% block body %}{% endblock %}
+
+        {% block footer %}
+        {% include 'footer.html.twig' %}
+        {% endblock %}
     </body>
 </html>

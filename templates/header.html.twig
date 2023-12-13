@@ -1,20 +1,21 @@
+<link rel="stylesheet" href="{{ asset('assets/css/style.header.css') }}">
 <header>
-        <div class="icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+        <div class="ens_icon-header">
+            <i class="fa-solid fa-magnifying-glass" id="icon-header"></i>
+            <i class="fa-solid fa-user" id="icon-header"></i>
+            <i class="fa-solid fa-cart-shopping" id="icon-header"></i>
         </div>
-        <div class="logo">
+        <div class="logo-header">
             <img src="{{ asset('images/maisoneaudor.png') }}" alt="Logo maison eau d'or">
         </div>
     <nav>
-        <ul>
-            <li><a {#href="{{ path('parfums') }}"#}>PARFUMS</a></li>
-            <li><a {#href="{{ path('maison') }}"#}>MAISON</a></li>
-            <li><a {#href="{{ path('muscs') }}"#}>MUSCS TAHARA INTIME</a></li>
-            <li><a {#href="{{ path('cosmetiques') }}"#}>COSMETIQUES</a></li>
-            <li><a {#href="{{ path('brumes') }}"#}>BRUMES</a></li>
-            <li><a {#href="{{ path('capillaire') }}"#}>PRODUITS CAPILLAIRE</a></li>
+        <ul class="ul-header">
+            <li class="li-header"><a class="a-header" {#href="{{ path('parfums') }}"#}>PARFUMS</a></li>
+            <li class="li-header"><a class="a-header" {#href="{{ path('maison') }}"#}>MAISON</a></li>
+            <li class="li-header"><a class="a-header" {#href="{{ path('muscs') }}"#}>MUSCS TAHARA INTIME</a></li>
+            <li class="li-header"><a class="a-header" {#href="{{ path('cosmetiques') }}"#}>COSMETIQUES</a></li>
+            <li class="li-header"><a class="a-header" {#href="{{ path('brumes') }}"#}>BRUMES</a></li>
+            <li class="li-header"><a class="a-header" {#href="{{ path('capillaire') }}"#}>PRODUITS CAPILLAIRE</a></li>
         </ul>
     </nav>
 </header>
