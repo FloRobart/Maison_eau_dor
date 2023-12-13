@@ -3,10 +3,9 @@ const slidesContainer = document.querySelector('.carousel-accueil');
 const totalSlides = 4;
 const slidesToShow = 3;
 const slideWidth = 480; // Largeur fixe de chaque slide en pixels
-const windowWidth = window.innerWidth;
 
 function showSlide(index) {
-    const offset = -index * (windowWidth / 3) + 'px';
+    const offset = -index * slideWidth + 'px';
     slidesContainer.style.transform = 'translateX(' + offset + ')';
 }
 
@@ -21,9 +20,8 @@ function nextSlide() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Largeur de la fenêtre :', (windowWidth/3));
-    slidesContainer.style.width = totalSlides * (windowWidth/3) + 'px';
+    slidesContainer.style.width = totalSlides * slideWidth + 'px';
     document.querySelectorAll('.slide-accueil').forEach(function (slide) {
-        slide.style.width = (windowWidth/3) + 'px';
+        slide.style.width = slideWidth + 'px';
     });
 });

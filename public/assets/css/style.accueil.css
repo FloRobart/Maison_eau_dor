@@ -99,3 +99,70 @@
 #btns-accueil {
     right: 0;
 }
+
+.barbg-accueil{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: #F7E1C7;
+    display: flex;
+    gap: 2%;
+    padding: 2%;
+}
+
+.contentinfo-accueil{
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 8% 0% 8%;
+}
+
+.titreinfo-accueil{
+    color: #000;
+    font-family: Lora;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logoinf-accueil{
+    height: 4em;
+}
+
+.txt1bar-accueil, .txt2bar-accueil, .txt3bar-accueil{
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.enstxt-accueil{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    flex-shrink: 0;
+}
+
+.btnd-accueil{
+    border: none;
+    margin-top: 5%;
+    color: #C3AE93;
+    text-align: center;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    background: #F5DAB9;
+    padding: 1% 10% 1% 10%;
+}
+
+#chevronbtn-accueil{
+    margin-top: 2%;
+}
+
+.imgbar-accueil{
+    width: 100%;
+    height: 380px;
+}
