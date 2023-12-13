@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="{{ asset('assets/css/style.footer.css') }}">
+<footer>
+    <div class="haut-footer">
+        <div class="secure-footer">
+            <i class="fa-solid fa-lock fa-2xl" id="icon-footer"></i>
+            <p>Paiement sécurisé</p>
+            <p>Paypal, CB, Apple Pay</p>
+      </div>
+        <div class="livraison-footer">
+            <i class="fa-solid fa-box fa-2xl" id="icon-footer"></i>
+            <p class="p-liv">Livraison en</p>
+            <p>Europe</p>
+        </div>
+        <div class="reso-footer">
+            <i class="fa-brands fa-facebook fa-2xl" id="icon-resof"></i>
+            <i class="fa-brands fa-snapchat fa-2xl" id="icon-resof"></i>
+            <i class="fa-brands fa-instagram fa-2xl" id="icon-resof"></i>
+            <p class="p-resof">Nous suivre</p>
+        </div>
+    </div>
+    <div class="bas-footer">
+        <div class="logo-footer">
+            <img src="{{ asset('images/maisoneaudor.png') }}" alt="Logo maison eau d'or">
+        </div>
+        <div class="menu-footer">
+            <p class="p-menuf">Menu</p>
+            <ul>
+            <li class="li-footer"><a class="a-footer" {#href="{{ path('parfums') }}"#}>Parfums</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('maison') }}"#}>Maison</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('muscs') }}"#}>Muscs Tahara Intime</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('cosmetiques') }}"#}>Cosmétiques</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('brumes') }}"#}>Brumes</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('capillaire') }}"#}>Produits Capillaire</a></li>
+            </ul>
+        </div>
+        <div class="help-footer">
+            <p class="p-menuf">Besoin d'aide</p>
+            <ul>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('parfums') }}"#}>A propos</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('maison') }}"#}>Contactez-nous</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('muscs') }}"#}>Politique de confidentialité</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('cosmetiques') }}"#}>Politique de cookies</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('brumes') }}"#}>Mentions légales</a></li>
+            <li class="li-footer"><a class="a-footer"{#href="{{ path('capillaire') }}"#}>Conditions générales de vente</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

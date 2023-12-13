@@ -1,0 +1,168 @@
+.img-accueil{
+    width: 100%;
+    height: auto;
+}
+
+.h1-accueil{
+    font-weight: lighter;
+    text-align: center;
+    font-family: Lora;
+    color: #ECC291;
+    padding: 3%;
+}
+
+.ensemble_bestsales-accueil{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4%;
+    margin-bottom: 2%;
+}
+
+.p1-accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.p2-accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.p3-accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.nomp-accueil{
+    font-family: Lora;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.prixp-accueil{
+    color: #777;
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.btn_panier-accueil{
+    border-radius: 25px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 700;
+    border: 1px solid #000;
+    background: #000;
+    padding : 2% 25% 2% 25%;
+}
+
+#iconp-accueil{
+    margin-top: 13.5%;
+    margin-left: -2.7%;
+    margin-right: -2.7%;
+}
+
+.carousel_container-accueil {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    margin: auto;
+}
+
+.carousel-accueil {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-accueil {
+    box-sizing: border-box;
+}
+
+#btnp-accueil, #btns-accueil {
+    position: absolute;
+    top: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#btns-accueil {
+    right: 0;
+}
+
+.barbg-accueil{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: #F7E1C7;
+    display: flex;
+    gap: 2%;
+    padding: 2%;
+}
+
+.contentinfo-accueil{
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 8% 0% 8%;
+}
+
+.titreinfo-accueil{
+    color: #000;
+    font-family: Lora;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logoinf-accueil{
+    height: 4em;
+}
+
+.txt1bar-accueil, .txt2bar-accueil, .txt3bar-accueil{
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.enstxt-accueil{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    flex-shrink: 0;
+}
+
+.btnd-accueil{
+    border: none;
+    margin-top: 5%;
+    color: #C3AE93;
+    text-align: center;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 10px;
+    background: #F5DAB9;
+    padding: 1% 10% 1% 10%;
+}
+
+#chevronbtn-accueil{
+    margin-top: 2%;
+}
+
+.imgbar-accueil{
+    width: 100%;
+    height: 380px;
+}

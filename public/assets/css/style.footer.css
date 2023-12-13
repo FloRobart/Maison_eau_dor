@@ -1,0 +1,88 @@
+footer{
+    color: #000000;
+}
+
+.haut-footer{
+    background-color: #F7E1C7;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding-bottom: 2%;
+}
+
+.secure-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 4%;
+}
+
+.livraison-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.8%;
+}
+
+.reso-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 4%;
+    margin-top: 1.1%;
+}
+
+#icon-footer{
+    padding: 20%;
+}
+
+#icon-resof{
+    padding: 5%;
+}
+
+.p-resof{
+    margin-top: 11%;
+}
+
+.p-liv{
+    margin-top: 8%;
+}
+
+p{
+    margin: 0;
+}
+
+.bas-footer{
+    font-family: Lora;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.logo-footer{
+    margin-left: 15%;
+}
+
+.menu-footer{
+    margin-top: 2%;
+}
+
+.help-footer{
+    margin-top: 2%;
+    margin-right: 4%;
+}
+
+.p-menuf{
+    font-size: 36px;
+}
+
+.li-footer{
+    font-size: 24px;
+}
