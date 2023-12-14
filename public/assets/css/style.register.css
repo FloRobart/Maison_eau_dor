@@ -1,8 +1,8 @@
-.body-login{
+.body-register{
     margin: 2%;
 }
 
-.content-login{
+.content-register{
     display: flex;
     width: 500.835px;
     flex-direction: column;
@@ -12,7 +12,7 @@
     margin: 0 auto;
 }
 
-.titre-login{
+.titre-register{
     color: #000;
     font-family: Lora;
     font-size: 40px;
@@ -20,7 +20,7 @@
     margin: 0;
 }
 
-.form-login{
+.form-register{
     display: flex;
     width: 500.835px;
     flex-direction: column;
@@ -29,7 +29,7 @@
     gap: 2em;
 }
 
-.email-login{
+.prenom-register{
     border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
@@ -39,7 +39,7 @@
     padding: 2%;
 }
 
-.mdp-login{
+.nom-register{
     border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
@@ -49,15 +49,37 @@
     padding: 2%;
 }
 
-.lostmdp-login{
-    color: #2972FF;
+.email-register{
+    border-radius: 20px;
+    border: 1px solid #000;
+    color: #000000;
     font-family: Lora;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 400;
-    margin: 0;
+    padding: 2%;
 }
 
-.btnl-login{
+.mdp-register{
+    border-radius: 20px;
+    border: 1px solid #000;
+    color: #000000;
+    font-family: Lora;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 2%;
+}
+
+.confirm-register{
+    border-radius: 20px;
+    border: 1px solid #000;
+    color: #000000;
+    font-family: Lora;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 2%;
+}
+
+.btnr-register{
     border-radius: 20px;
     border: 1px solid #000;
     background: #000;
@@ -65,16 +87,16 @@
     font-family: Lora;
     font-size: 32px;
     font-weight: 700;
-    padding: 2% 26% 2% 26%;
+    padding: 2% 17% 2% 17%;
     transition: background-color 0.5s, color 0.5s;
 }
 
-.btnl-login:hover{
-    background: #FFF;
+.btnr-register:hover{
+    background: #fff;
     color: #000;
 }
 
-.new-login{
+.client-register{
     color: #000;
     font-family: Lora;
     font-size: 24px;
@@ -82,7 +104,7 @@
     margin: 0;
 }
 
-.create-login{
+.login-register{
     border-radius: 20px;
     border: 1px solid #000;
     background: #000;
@@ -90,7 +112,7 @@
     transition: background-color 0.5s, color 0.5s;
 }
 
-.btncreate-login{
+.btnlogin-register{
     background: #000;
     color: #FFF;
     font-family: Lora;
@@ -100,12 +122,12 @@
     transition: background-color 0.5s, color 0.5s;
 }
 
-.create-login:hover{
+.login-register:hover{
     background: #FFF;
     color: #000;
 }
 
-.create-login:hover .btncreate-login{
+.login-register:hover .btnlogin-register{
     background: #FFF;
     color: #000;
 }
