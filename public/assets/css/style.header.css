@@ -47,14 +47,14 @@ header {
     width: 200%;
     padding: 0;
     position: absolute;
-    margin-top: 14.5%;
+    margin-top: 12.5%;
     background-color: #ffffff;
     color: #000000;
     font-family: Lora;
     font-size: 18px;
     text-align: left;
     border-top: 1px solid #000000;
-    box-shadow: darkgray 5px 5px 5px 0px;
+    box-shadow: black 2px 2px 5px 0px;
 }
 
 .lismp-header{
@@ -68,14 +68,14 @@ header {
     width: 200%;
     padding: 0;
     position: absolute;
-    margin-top: 16%;
+    margin-top: 13.5%;
     background-color: #ffffff;
     color: #000000;
     font-family: Lora;
     font-size: 18px;
     text-align: left;
     border-top: 1px solid #000000;
-    box-shadow: darkgray 5px 5px 5px 0px;
+    box-shadow: black 2px 2px 5px 0px;
 }
 
 .lismb-header{
@@ -89,14 +89,14 @@ header {
     width: 100%;
     padding: 0;
     position: absolute;
-    margin-top: 6%;
+    margin-top: 5.5%;
     background-color: #ffffff;
     color: #000000;
     font-family: Lora;
     font-size: 18px;
     text-align: left;
     border-top: 1px solid #000000;
-    box-shadow: darkgray 5px 5px 5px 0px;
+    box-shadow: black 2px 2px 5px 0px;
 }
 
 .lismc-header{

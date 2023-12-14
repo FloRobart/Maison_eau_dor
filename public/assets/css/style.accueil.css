@@ -83,10 +83,13 @@
 .carousel-accueil {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+    padding: 0.2%;
 }
 
 .slide-accueil {
     box-sizing: border-box;
+    width: 100%;
 }
 
 #btnp-accueil, #btns-accueil {
