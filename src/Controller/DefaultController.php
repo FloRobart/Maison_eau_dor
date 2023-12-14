@@ -13,6 +13,12 @@ class DefaultController extends AbstractController
         return $this->render('base.html.twig');
     }
 
+    #[Route('/connexion', name: 'default.login', methods: ['GET'])]
+    public function login(): Response
+    {
+        return $this->render('login.html.twig');
+    }
+
     #[Route('/contact', name: 'default.contact', methods: ['GET'])]
     public function contact(): Response
     {
