@@ -10,12 +10,28 @@
         </div>
     <nav>
         <ul class="ul-header">
-            <li class="li-header"><a class="a-header" {#href="{{ path('parfums') }}"#}>PARFUMS</a></li>
-            <li class="li-header"><a class="a-header" {#href="{{ path('maison') }}"#}>MAISON</a></li>
-            <li class="li-header"><a class="a-header" {#href="{{ path('muscs') }}"#}>MUSCS TAHARA INTIME</a></li>
-            <li class="li-header"><a class="a-header" {#href="{{ path('cosmetiques') }}"#}>COSMETIQUES</a></li>
-            <li class="li-header"><a class="a-header" {#href="{{ path('brumes') }}"#}>BRUMES</a></li>
-            <li class="li-header"><a class="a-header" {#href="{{ path('capillaire') }}"#}>PRODUITS CAPILLAIRE</a></li>
+            <li class="li-header"><a class="ap-header" {#href="{{ path('parfums') }}"#}>PARFUMS <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="menu_parfums-header">
+                    <li class="lismp-header">Les Evasions Gourmandes</li>
+                    <li class="lismp-header">Le Bar à parfums</li>
+                </ul>
+            </li>
+            <li class="li-header"><a class="am-header" {#href="{{ path('maison') }}"#}>MAISON</a></li>
+            <li class="li-header"><a class="amt-header" {#href="{{ path('muscs') }}"#}>MUSCS TAHARA INTIME</a></li>
+            <li class="li-header"><a class="ac-header" {#href="{{ path('cosmetiques') }}"#}>COSMETIQUES</a></li>
+            <li class="li-header"><a class="ab-header" {#href="{{ path('brumes') }}"#}>BRUMES <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="menu_brumes-header">
+                    <li class="lismb-header">Brumes RP</li>
+                    <li class="lismb-header">Brumes Gris Montaigne</li>
+                </ul>
+            </li>
+            <li class="li-header"><a class="apc-header" {#href="{{ path('capillaire') }}"#}>PRODUITS CAPILLAIRE <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="menu_pc-header">
+                    <li class="lismc-header">KeraQueens</li>
+                    <li class="lismc-header">Rose Baie</li>
+                    <li class="lismc-header">RedOne</li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
