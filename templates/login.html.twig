@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.login.css') }}">
+</head>
+
+<body class="body-login">
+    <div class="content-login">
+        <img class="logo-login" src="{{ asset('images/maisoneaudor.png') }}" alt="Logo maison eau d'or">
+        <p class="titre-login">Se connecter</p>
+        <form action="#" method="post" class="form-login">
+        <input class="email-login" type="email" id="email" name="email" placeholder="Email" required>
+        <input class="mdp-login" type="password" id="password" name="password" placeholder="Mot de Passe" required>
+        <p class="lostmdp-login">Mot de passe oublié ?</p> 
+        <input class="btnl-login" type="submit" value="Connexion">
+    </form>
+        <p class="new-login">Nouveau client ?</p>
+        <a class="create-login" href="{{ path('default.register') }}"><button class="btncreate-login">Créer votre compte</button></a>
+    </div>
+</body>

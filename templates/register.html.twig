@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.register.css') }}">
+</head>
+
+<body class="body-register">
+    <div class="content-register">
+        <img class="logo-register" src="{{ asset('images/maisoneaudor.png') }}" alt="Logo maison eau d'or">
+        <p class="titre-register">S'inscrire</p>
+        <form action="#" method="post" class="form-register">
+        <input class="prenom-register" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+        <input class="nom-register" type="text" id="nom" name="nom" placeholder="Nom" required>
+        <input class="email-register" type="email" id="email" name="email" placeholder="Email" required>
+        <input class="mdp-register" type="password" id="password" name="password" placeholder="Mot de Passe" required>
+        <input class="confirm-register" type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirmer le mot de passe" required>
+        <input class="btnr-register" type="submit" value="Créer son compte">
+    </form>
+        <p class="client-register">Déjà inscrit ?</p>
+        <a class="login-register" href="{{ path('default.login') }}"><button class="btnlogin-register">Se connecter</button></a>
+    </div>
+</body>
