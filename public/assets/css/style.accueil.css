@@ -11,36 +11,40 @@
     padding: 3%;
 }
 
-.ensemble_bestsales-accueil{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4%;
-    margin-bottom: 2%;
+.container_bestsales-accueil{
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    margin: auto;
+    margin-bottom: 3%;
 }
 
-.p1-accueil{
+.carousel_bestsales-accueil {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    padding: 0.2%;
+}
+
+.slidebs-accueil{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.p2-accueil{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+#btnp_bs-accueil, #btns_bs-accueil {
+    position: absolute;
+    top: 37%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
-.p3-accueil{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+#btns_bs-accueil{
+    right: 0;
 }
 
 .nomp-accueil{

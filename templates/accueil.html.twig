@@ -4,26 +4,47 @@
         <img class="img-accueil" src="{{ asset('images/barparfum.jpg') }}" alt="Image bar à parfum">
     </div>
     <h1 class="h1-accueil">Nos Meilleures Ventes</h1>
-    <div class="ensemble_bestsales-accueil">
-        <div class="p1-accueil">
-            <img src="{{ asset('images/ahlam.png') }}" alt="Produit 1">
-            <p class="nomp-accueil">Ahlam</p>
-            <p class="prixp-accueil">30,00€</p>
-            <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+    <div class="container_bestsales-accueil">
+        <div class="carousel_bestsales-accueil">
+            <div class="slidebs-accueil">
+                <img src="{{ asset('images/ahlam.png') }}" alt="Produit 1">
+                <p class="nomp-accueil">Ahlam</p>
+                <p class="prixp-accueil">30,00€</p>
+                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+            </div>
+            <div class="slidebs-accueil">
+                <img src="{{ asset('images/magic_aïsha.png') }}" alt="Produit 2">
+                <p class="nomp-accueil">Magic Aïsha</p>
+                <p class="prixp-accueil">30,00€</p>
+                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+            </div>
+            <div class="slidebs-accueil">
+                <img src="{{ asset('images/pure_evasion.png') }}" alt="Produit 3">
+                <p class="nomp-accueil">Pure Evasion</p>
+                <p class="prixp-accueil">30,00€</p>
+                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+            </div>
+            <div class="slidebs-accueil">
+                <img src="{{ asset('images/mula_rouge.png') }}" alt="Produit 3">
+                <p class="nomp-accueil">Mula Rouge</p>
+                <p class="prixp-accueil">30,00€</p>
+                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+            </div>
+            <div class="slidebs-accueil">
+                <img src="{{ asset('images/bali.png') }}" alt="Produit 3">
+                <p class="nomp-accueil">Bali</p>
+                <p class="prixp-accueil">35,00€</p>
+                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+            </div>
+            <div class="slidebs-accueil">
+                <img src="{{ asset('images/california.png') }}" alt="Produit 3">
+                <p class="nomp-accueil">California</p>
+                <p class="prixp-accueil">35,00€</p>
+                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
+            </div>
         </div>
-        <div class="p2-accueil">
-            <img src="{{ asset('images/magic_aïsha.png') }}" alt="Produit 2">
-            <p class="nomp-accueil">Magic Aïsha</p>
-            <p class="prixp-accueil">30,00€</p>
-            <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
-        </div>
-        <div class="p3-accueil">
-            <img src="{{ asset('images/pure_evasion.png') }}" alt="Produit 3">
-            <p class="nomp-accueil">Pure Evasion</p>
-            <p class="prixp-accueil">30,00€</p>
-            <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
-        </div>
-        <i class="fa-solid fa-chevron-right fa-2xl" id="iconp-accueil"></i>
+            <i class="fa-solid fa-chevron-left fa-2xl" id="btnp_bs-accueil" onclick="prevSlide_bs()"></i></button>
+            <i class="fa-solid fa-chevron-right fa-2xl" id="btns_bs-accueil" onclick="nextSlide_bs()"></i></button>
     </div>
     <div class="carousel_container-accueil">
         <div class="carousel-accueil">
