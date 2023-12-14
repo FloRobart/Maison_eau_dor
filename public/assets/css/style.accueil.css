@@ -69,6 +69,12 @@
     border: 1px solid #000;
     background: #000;
     padding : 2% 25% 2% 25%;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn_panier-accueil:hover{
+    background: #FFF;
+    color: #000;   
 }
 
 #iconp-accueil{
@@ -94,6 +100,11 @@
 .slide-accueil {
     box-sizing: border-box;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.slide-accueil:hover{
+    transform: scale(1.1);
 }
 
 #btnp-accueil, #btns-accueil {
@@ -162,7 +173,14 @@
     font-weight: 400;
     border-radius: 10px;
     background: #F5DAB9;
+    border: 1px solid #F5DAB9;
     padding: 1% 10% 1% 10%;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btnd-accueil:hover{
+    background: #fff;
+    color: #F5DAB9;
 }
 
 #chevronbtn-accueil{
