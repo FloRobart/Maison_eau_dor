@@ -11,8 +11,14 @@
         <img class="logo-login" src="{{ asset('images/maisoneaudor.png') }}" alt="Logo maison eau d'or">
         <p class="titre-login">Se connecter</p>
         <form action="#" method="post" class="form-login">
-        <input class="email-login" type="email" id="email" name="email" placeholder="Email" required>
+        <div class="ense-login">
+            <label class="lbl_email-login" for="email">Email</label>
+            <input class="email-login" type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="ensm-login">
+        <label class="lbl_mdp-login" for="password">Mot de passe</label>
         <input class="mdp-login" type="password" id="password" name="password" placeholder="Mot de Passe" required>
+        </div>
         <p class="lostmdp-login">Mot de passe oublié ?</p> 
         <input class="btnl-login" type="submit" value="Connexion">
     </form>

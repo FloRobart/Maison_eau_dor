@@ -15,7 +15,7 @@
 .titre-login{
     color: #000;
     font-family: Lora;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 400;
     margin: 0;
 }
@@ -29,22 +29,42 @@
     gap: 2em;
 }
 
+.lbl_email-login{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ense-login{
+    display: flex;
+    flex-direction: column;
+}
+
 .email-login{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 400;
     padding: 2%;
 }
 
+.lbl_mdp-login{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ensm-login{
+    display: flex;
+    flex-direction: column;
+}
+
 .mdp-login{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 400;
     padding: 2%;
 }
@@ -52,20 +72,21 @@
 .lostmdp-login{
     color: #2972FF;
     font-family: Lora;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     margin: 0;
+    cursor: pointer;
 }
 
 .btnl-login{
-    border-radius: 20px;
     border: 1px solid #000;
     background: #000;
     color: #FFF;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
-    padding: 2% 26% 2% 26%;
+    padding: 2% 22% 2% 22%;
+    cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -77,16 +98,15 @@
 .new-login{
     color: #000;
     font-family: Lora;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     margin: 0;
 }
 
 .create-login{
-    border-radius: 20px;
     border: 1px solid #000;
     background: #000;
-    padding: 2% 10% 2% 10%;
+    padding: 2% 8% 2% 8%;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -94,9 +114,10 @@
     background: #000;
     color: #FFF;
     font-family: Lora;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     border: none;
+    cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 

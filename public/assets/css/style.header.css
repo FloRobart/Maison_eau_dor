@@ -1,6 +1,7 @@
 header {
     top: 0;
-    width: 100%;
+    right: 0;
+    left: 0;
     position: fixed;
     z-index: 1000;
     background-color: #ffffff;
@@ -14,7 +15,6 @@ header {
 .logo-header {
     max-width: 100%;
     justify-content: center;
-    margin-bottom: 2%;
 }
 
 .ens_icon-header {
@@ -24,7 +24,7 @@ header {
 }
 
 #icon-header{
-    padding: 10%;
+    padding: 10% 10% 0% 10%;
     width: 30px;
     height: 30px;
 }
