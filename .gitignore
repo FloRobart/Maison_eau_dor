@@ -1,2 +1,5 @@
 # Dossier de configuration personnel de l'application (cache, logs, etc.)
 var
+
+# Variables d'environnement pour le développement (notemment pour la base de données / propre à chacun)
+.env.dev.local 
