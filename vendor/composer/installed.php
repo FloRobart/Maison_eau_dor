@@ -566,6 +566,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'stripe/stripe-php' => array(
+            'pretty_version' => 'v13.6.0',
+            'version' => '13.6.0.0',
+            'reference' => '6863bd70637fa1e2c022eceec44b89b7687634a1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stripe/stripe-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/asset' => array(
             'pretty_version' => 'v7.0.0',
             'version' => '7.0.0.0',
