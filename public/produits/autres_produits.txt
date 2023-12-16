@@ -1,0 +1,165 @@
+Sprays Maison 
+250
+12,50
+Des sprays parfumés spécialement conçus pour rafraîchir l'atmosphère de votre maison. Créez une ambiance accueillante avec ces parfums d'ambiance délicats qui imprègnent chaque coin de votre espace de notes exquises.
+ Options :
+* Africa Bay : Citron & Musc 
+* Ahlam : Fruit Rouge & Vanille 
+* Barbadjani : Coco & Cassis 
+* Bubble Blue : Bubble Gum & Barbe à Papa
+* Cherry Bomb : Cerise & Amande 
+* Magic Aïsha : Vanille & Patchouli 
+* Nuraï Island : Ananas & Coco 
+* Pink Sugar : Barbe à Papa 
+* Rêve de Coton : Lessive & Fraîcheur 
+* Sweat Dream : Litchi & Rose 
+* Pure Medellin : Fruit & Musc Blanc
+* Vanille Coco : Coco & Vanille 
+sprays
+Muscs Tahara Intimes
+15
+12,50
+Des muscs intimes conçus pour évoquer la sensualité et la féminité. légers et envoûtants, ces muscs offrent une expérience olfactive subtile et séduisante.
+Options :
+* Ananas
+* Banane 
+* Barbe à papa
+* Cerise
+* Coco
+* Fraise 
+* Fruits rouges
+* Jasmin
+* Melon
+* Monoï 
+* Musc blanc 
+* Pastèque
+* Pêche 
+* Pomme d’amour
+* Speculoos
+* Thé Vert 
+* Vanille
+musc
+Lingettes Tahara
+30
+35,00
+Découvrez nos Lingettes Tahara, une touche de fraîcheur en toute simplicité. Laissez-vous envelopper par leur parfum subtil, une fusion de notes douces qui évoquent la pureté et la propreté. Pratiques et raffinées, nos Lingettes Tahara sont le complément parfait pour une sensation de fraîcheur instantanée, où que vous soyez. Une touche de pureté à portée de main.
+musc
+Masque Nila 
+100
+12,50
+Eclaircit le teint et les zones sombres hyperpigmentées du corps comme les genoux , coudes, aisselles, parties intimes. 
+Unifie et éclaircit le teint. 
+Réduit les taches brunes, acné, cicatrices. 
+Efface le masque de grossesse. 
+Soin anti âge qui adoucit la peau. 
+Filtre la couleur cuivrée que laisse le henné sur les cheveux blanc. 
+Hydrate la peau et Atténue les cernes 
+Conseil d'utilisation : Appliquer une à deux fois par semaine en couche épaisse et laisser poser 10 à 30 minutes.
+cosmétique
+Rose Face Mask 
+15
+8,00
+Le masque hydratant visage Rose Face Mask apaise et tonifie la peau pour lui redonner éclat et souplesse. 
+Il permet de recréer le film hydrolipidique dont la peau a besoin pour se protéger des bactéries. Le masque visage fresh dispose d'une formule gel rafraîchissante, infusée d’eau de rose pure et de pétales de rose.
+La texture de ce masque hydratant fond littéralement au contact de la peau pour offrir un véritable moment de bien-être et un plaisir sensoriel unique; 85 % des utilisateurs ont déclaré que leur peau paraissait nourrie, désaltérée et apaisée.
+Le petit plus de ce masque visage à la rose ?
+Ce soin hydratant visage fresh est composé à 97%(2) d’ingrédients d’origine naturelle
+Un délicat parfum de roses fraîches qui hydrate, apaise et rafraîchit la peau instantanément.
+Ce doux parfum de rose se retrouve également dans notre crème hydratante visage Rose Face Cream. Montrer moins
+cosmétique
+Brumes Gris Montaigne 
+250
+10
+Inspirées par l'élégance intemporelle, ces brumes captivent avec des notes sophistiquées, créant une aura subtile et envoûtante. Parfaites pour une touche de luxe au quotidien.
+Options : 
+* Bellisima
+* Bellaya
+* Caraïbe Coco
+* Fantasia 
+* Mya Belle 
+* Victorya
+brume
+Brumes RP
+250
+10
+Des brumes rafraîchissantes parfumées, idéales pour rehausser votre routine beauté quotidienne. Offre une sensation apaisante tout en laissant un parfum délicat sur la peau.
+Options : 
+* Amber Blush 
+* Bella
+* Candy Love 
+* Cherry Blossom
+* Coco Sun
+* Diamond 
+* Majestic 
+* Maya Bay 
+* Oud Mood
+* Paradise 
+* Pink Lady 
+* So Oud 
+* Vanilla Sky 
+brume
+Big Hair Uniikone
+500
+35,00
+Un traitement capillaire unique qui revitalise et fortifie les cheveux, offrant brillance et volume exceptionnels pour une chevelure éclatante.
+Options : 
+* Amla Tanino
+* Résistance 
+* The one 
+produit capillaires
+Booster capillaire anti chute 
+100
+30,00 
+Formulé pour prévenir la chute des cheveux, ce booster capillaire renforce les follicules, favorise la croissance des cheveux et améliore la densité capillaire.
+produit capillaires
+Cire redone 
+150
+5,00
+Une cire coiffante innovante qui apporte une tenue souple et naturelle tout en donnant une brillance saine. Parfaite pour sculpter et définir les coiffures avec style.
+Options : 
+* Blanc
+* Bleu 
+* Gris
+* Noir 
+* Orange 
+* Rouge 
+* Vert Olive
+* Violet
+produit capillaires
+KeraQueens Lifting capillaire
+500
+35,00 
+Un soin capillaire avancé qui nourrit en profondeur, répare les cheveux abîmés et redonne élasticité et vitalité pour des cheveux éclatants de santé.
+Options : 
+* Collagène Vitamine E & Acide Hyaluronique 
+* Keratine & Ail 
+* Kératine & Argan
+* Kératine & Figue de Barbarie 
+* Keratine Intense
+* Kératine & Nigelle 
+* Kératine & Ricin
+produit capillaires
+KeraQueens Rituel Quotidien
+100
+30,00 
+Une routine capillaire complète comprenant des produits spécialement conçus pour nettoyer en douceur, hydrater et protéger les cheveux au quotidien, pour une chevelure soyeuse et bien entretenue.
+Options : 
+* Kératine & Aloe Vera 
+* Kératine & Coco
+* Kératine & Figue de Barbarie 
+* Kératine & Huile d'Amla 
+* Kératine & Tanin
+* Kératine & Ricin
+produit capillaires
+Rose Baie
+500
+30,00 
+Un produit capillaire délicieusement parfumé, enrichi en extraits de rose et de baie, qui apporte une douceur et une fragrance agréable tout en nourrissant les cheveux en profondeur.
+Options : 
+* Kératine X Aloe Vera 
+* Kératine X Coco
+* Kératine X Figue De Barbarie
+* Kératine X Huile D'Amla 
+* Kératine X Huile D’Avocat
+* Kératine X Huile De Ricin
+produit capillaires
