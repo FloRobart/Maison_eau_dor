@@ -1,0 +1,440 @@
+/* Path: public/assets/css/catalogue.css */
+
+/*
+.header {
+	background-color: #333;
+	padding: 15px;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000; /* Assure que le header est au-dessus du reste du contenu * /
+}
+
+.header .header-menu {
+	display: flex;
+	padding: 0px 50px;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+*/
+
+
+/*
+   #########################################
+   #                                       #
+   #                CONTENT                #
+   #                                       #
+   #########################################
+*/
+.content {
+	margin-top: 250px; /* marge pour éviter que le contenu soit caché derrière le header */
+	padding: 0 10%;
+}
+
+.catalogue {
+	display: flex;
+	padding: 4% 0;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.research {
+	display: flex;
+	flex-direction: row;
+}
+
+.search, .filter {
+	display: inline-block;
+}
+
+/* labels search et filtre */
+.search p, .filter p {
+	margin: 1em 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	line-height: normal;
+}
+
+
+
+/*
+   ################
+   #              #
+   #    SEARCH    #
+   #              #
+   ################
+*/
+/* Zone de recherche */
+.search {
+	width: 80%;
+	padding: 0 2%;
+}
+
+/* Barre de recherche */
+.searchbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 3rem;
+	border: 2px solid rgba(0,0,0,.250)
+}
+
+.searchbar label[for=searchbar] {
+	clip:rect(0 0 0 0);
+	border:0;
+	height:1px;
+	margin:-1px;
+	overflow:hidden;
+	padding:0;
+	position:absolute;
+	white-space:nowrap;
+	width:1px
+}
+
+.searchbar input {
+	border: none;
+	cursor: auto;
+	width: 100%;
+	height: 96%;
+	padding-left: 2rem;
+	outline: none;
+}
+
+.searchbar input:active:hover {
+	background-color: lightgray;
+}
+
+.searchbar i {
+	width: 20px;
+	height: 100%;
+	padding: 0 2rem;
+	align-items: center;
+	display: flex;
+}
+
+.searchbar i:active {
+	background-color: lightgray;
+	cursor: pointer;
+}
+
+
+/*
+   ################
+   #              #
+   #    FILTER    #
+   #              #
+   ################
+*/
+/* Zone de filtre */
+.filter {
+	width: 20%;
+	padding: 0 2%;
+}
+
+.filter button {
+	/* Positionnement */
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	height: 3.25rem;
+	padding: 0 0 0 1rem;
+	/* Style */
+	border: 2px solid rgba(0,0,0,.250);
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.filter button i {
+	/*width: 15px;
+	height: 15px;
+	padding: 1rem 1rem;*/
+	width: 15px;
+	height: 100%;
+	padding: 0 1rem;
+	align-items: center;
+	display: flex;
+}
+
+.filter-content {
+	/* Positionnement */
+	/*display: none;*/  /* écrit direct dans le html pour eviter un double clic du au fait que le js ne le trouve pas directement */
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 14.6%;  /* ça sort un peu de nul part mais c'est pour que ça corresponde à la largeur du bouton (même quand on redimensionne la fenêtre) */
+	z-index: 100;
+	/* Style */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.filter-content a {
+	/* Positionnement */
+	display: block;
+	padding: 12px 0;
+	text-align: center;
+	overflow-y: scroll;
+	/* Style */
+	color: black;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	text-decoration: none;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.250);
+}
+
+.filter-content a:hover {
+	background-color: #ddd;
+}
+
+.filtre-actif {
+	background-color: #ddd !important; /* !important pour que ça prenne le dessus sur les autres (.filter-content a et le hover) */
+}
+
+
+
+/*
+   #########################################
+   #                                       #
+   #                PRODUIT                #
+   #                                       #
+   #########################################
+*/
+.produit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1 1 20%;
+	margin: 1%; 
+}
+
+.produit .image-container {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.produit .image-container img {
+	width: 100%;
+	height: 100%;
+	transition: transform .4s ease;
+}
+
+.produit img:hover {
+	-ms-transform: scale(1.15); /* IE 9 */
+	-webkit-transform: scale(1.15); /* Safari 3-8 */
+	transform: scale(1.15);
+}
+
+.produit .description {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 140px;
+	margin-top: 3%;
+	cursor: pointer;
+}
+
+.produit .description h2 {
+	/* Positionnement */
+	align-self: stretch;
+	margin: 0;
+	text-align: center;
+	/* Style */
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.produit .description p {
+	/* Positionnement */
+	align-self: stretch;
+	margin: 0;
+	text-align: center;
+	/* Style */
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 23px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.produit .description button {
+	/* Positionnement */
+	width: 100%;
+	height : 2rem;
+	/* Style */
+	color: #000;
+	text-align: center;
+	font-family: Roboto Flex;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	border: 1px solid #000;
+	background: #FFF;
+	cursor: pointer;
+}
+
+.produit .description button:hover {
+	background: #000;
+	color: #FFF;
+}
+
+
+/*
+   #########################################
+   #                                       #
+   #              PAGINATION               #
+   #                                       #
+   #########################################
+*/
+#pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin: 2% 0;
+}
+
+.pagination-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2rem;
+	width: 2rem;
+	padding: 0.5rem;
+	/* Style */
+	font-weight: 700;
+	line-height: 120%;
+	text-decoration: none;
+}
+
+.pagination-item-current-page {
+	/* Style */
+	color: #fff;
+	background-color: #000;
+	border-radius: 50%;
+	cursor: default;
+}
+
+.generated-link-item {
+	/* Style */
+	color: #000;
+	cursor: pointer;
+}
+
+.pagination-item-disabled {
+	/* Style */
+	color: #000;
+	cursor: default;
+}
+
+
+
+.footer {
+	background-color: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+}
+
+
+
+
+/*
+   #########################################
+   #                                       #
+   #                MEDIA                  #
+   #                                       #
+   #########################################
+*/
+/* 1100px */
+@media screen and (max-width: 1100px) {
+	.search {
+		width: 70%;
+		transition: width 0.5s;
+	}
+
+	.filter {
+		width: 30%;
+		transition: width 0.5s;
+	}
+}
+
+/* Pour les écrans de 960px et moins */
+@media screen and (max-width: 960px) {
+	.header .header-menu {
+		padding: 0px 10px;
+	}
+
+	.content {
+		padding: 0 5%;
+	}
+
+	.catalogue {
+		padding: 4% 0;
+	}
+
+	/*
+	   ################
+	   #    SEARCH    #
+	   ################
+	*/
+	.research {
+		flex-direction: column;
+	}
+
+	.search {
+		width: 100%;
+		padding: 0 0;
+	}
+
+	.searchbar i {
+		padding: 0 1rem;
+	}
+
+
+	/*
+	   ################
+	   #    FILTER    #
+	   ################
+	*/
+	.filter {
+		width: 100%;
+		padding: 0 0;
+	}
+
+	.filter button {
+		height: 2.5rem;
+	}
+
+	.filter-content {
+		min-width: 87.5%;
+	}
+
+	.filter button i {
+		padding: 0 1rem;
+	}
+
+	/*
+	   ################
+	   #    PRODUIT   #
+	   ################
+	*/
+	.produit {
+		margin: 1% 0;
+	}
+}

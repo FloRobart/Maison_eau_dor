@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catalogue</title>
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/catalogue.css') }}">
+</head>
+
+<body>
+
+	{% block header %}
+	{% include 'header.html.twig' %}
+	{% endblock %}
+
+	<div class="content">
+		<div class="research">
+			<div class="search">
+				<p>RECHERCHER</p>
+				<div class="searchbar">
+					<input type="text" name="search" id="recherche" placeholder="Rechercher">
+					<i id="searchSubmitIcon">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</i>
+				</div>
+			</div>
+			<div class="filter">
+				<p>TRIER PAR</p>
+				<button id="tri-btn">
+					<span id="tri-btn-text">---</span>
+					<i id="arrowDownDropdown">
+						<svg width="100%" height="100%" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Dribbble-Light-Preview" transform="translate(-220.000000, -6684.000000)" fill="#000000">
+									<g id="icons" transform="translate(56.000000, 160.000000)">
+										<path d="M164.292308,6524.36583 L164.292308,6524.36583 C163.902564,6524.77071 163.902564,6525.42619 164.292308,6525.83004 L172.555873,6534.39267 C173.33636,6535.20244 174.602528,6535.20244 175.383014,6534.39267 L183.70754,6525.76791 C184.093286,6525.36716 184.098283,6524.71997 183.717533,6524.31405 C183.328789,6523.89985 182.68821,6523.89467 182.29347,6524.30266 L174.676479,6532.19636 C174.285736,6532.60124 173.653152,6532.60124 173.262409,6532.19636 L165.705379,6524.36583 C165.315635,6523.96094 164.683051,6523.96094 164.292308,6524.36583" id="arrow_down-[#338]"></path>
+									</g>
+								</g>
+							</g>
+						</svg>
+					</i>
+				</button>
+				<div class="filter-content" id="tri" style="display: none;">
+					<!-- Générer via JS : catalogue.js -->
+				</div>
+			</div>
+		</div>
+
+
+		<div class="catalogue" id="catalogue-container">
+			<!-- Générer via JS : catalogue.js -->
+		</div>
+
+		<div id="pagination-container"> 
+			<nav id="pagination">
+				<!-- Générer via JS : pagination.js -->
+			</nav>
+		</div>
+	</div>
+
+	{% block footer %}
+	{% include 'footer.html.twig' %}
+	{% endblock %}
+
+
+	<script type="text/javascript" src="{{ asset('assets/js/catalogue.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('assets/js/pagination.js') }}"></script>
+</html>
