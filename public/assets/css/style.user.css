@@ -1,0 +1,280 @@
+.body-user{
+    margin-top: 12%;
+}
+
+.titre-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 4%;
+}
+
+.content-user{
+    display: flex;
+}
+
+.nav-user{
+    display: inline-flex;
+    padding: 28px 146px 508px 29px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex-shrink: 0;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.info-user{
+    width: 100%;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.titre_info-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 1% 2% 0% 4%;
+}
+
+.form-user{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 33%;
+    margin-top: 5%;
+}
+
+.np-user{
+    display: flex;
+    gap: 10%;
+}
+
+.ensn-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_nom-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nom-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+}
+
+.ensp-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_prenom-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.prenom-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+}
+
+.ense-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_email-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.email-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+    width: 107.5%;
+}
+
+.ensm-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_mdp-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mdp-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+    width: 107.5%;
+}
+
+.ensnm-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_newmdp-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.newmdp-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+    width: 107.5%;
+}
+
+.ac-user{
+    display: flex;
+    gap: 10%;
+}
+
+.ensa-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_adr-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.adr-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+}
+
+.ensc-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_city-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.city-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+}
+
+.cpp-user{
+    display: flex;
+    gap: 10%;
+}
+
+.enscp-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_cp-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cp-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+}
+
+.ensp-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl_pays-user{
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pays-user{
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1%;
+}
+
+.btncm-user{
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    background: #000;
+    color: #FFF;
+    font-family: Lora;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 2%;
+    width: 110%;
+    cursor: pointer;
+}
