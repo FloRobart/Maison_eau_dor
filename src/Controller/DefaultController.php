@@ -25,6 +25,12 @@ class DefaultController extends AbstractController
         return $this->render('register.html.twig');
     }
 
+    #[Route('/espace_utilisateur', name: 'default.user', methods: ['GET'])]
+    public function user(): Response
+    {
+        return $this->render('base_user.html.twig');
+    }
+
     #[Route('/contact', name: 'default.contact', methods: ['GET'])]
     public function contact(): Response
     {

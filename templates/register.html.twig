@@ -11,11 +11,28 @@
         <img class="logo-register" src="{{ asset('images/maisoneaudor.png') }}" alt="Logo maison eau d'or">
         <p class="titre-register">S'inscrire</p>
         <form action="#" method="post" class="form-register">
-        <input class="prenom-register" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
-        <input class="nom-register" type="text" id="nom" name="nom" placeholder="Nom" required>
-        <input class="email-register" type="email" id="email" name="email" placeholder="Email" required>
-        <input class="mdp-register" type="password" id="password" name="password" placeholder="Mot de Passe" required>
-        <input class="confirm-register" type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirmer le mot de passe" required>
+        <div class="ens_info-register">
+            <div class="ensp-register">
+                <label class="lbl_prenom-register" for="prenom">Prénom</label>
+                <input class="prenom-register" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+            </div>
+            <div class="ensn-register">
+                <label class="lbl_nom-register" for="nom">Nom</label>
+                <input class="nom-register" type="text" id="nom" name="nom" placeholder="Nom" required>
+            </div>
+        </div>
+        <div class="ense-register">
+            <label class="lbl_email-register" for="email">Email</label>
+            <input class="email-register" type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="ensm-register">
+            <label class="lbl_mdp-register" for="password">Mot de passe</label>
+            <input class="mdp-register" type="password" id="password" name="password" placeholder="Mot de Passe" required>
+        </div>
+        <div class="ensc-register">
+            <label class="lbl_confirm-register" for="confirmpassword">Confirmer le mot de passe</label>
+            <input class="confirm-register" type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirmer le mot de passe" required>
+        </div>
         <input class="btnr-register" type="submit" value="Créer son compte">
     </form>
         <p class="client-register">Déjà inscrit ?</p>

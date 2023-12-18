@@ -61,15 +61,15 @@
 }
 
 .btn_panier-accueil{
-    border-radius: 25px;
     color: #fff;
     font-size: 20px;
     font-family: Roboto;
     font-weight: 700;
     border: 1px solid #000;
     background: #000;
-    padding : 2% 25% 2% 25%;
+    padding : 2% 21.5% 2% 21.5%;
     transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
 }
 
 .btn_panier-accueil:hover{
@@ -100,6 +100,7 @@
 .slide-accueil {
     box-sizing: border-box;
     width: 100%;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -175,6 +176,7 @@
     background: #F5DAB9;
     border: 1px solid #F5DAB9;
     padding: 1% 10% 1% 10%;
+    cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 

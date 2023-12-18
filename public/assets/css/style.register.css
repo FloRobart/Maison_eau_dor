@@ -4,7 +4,6 @@
 
 .content-register{
     display: flex;
-    width: 500.835px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -22,72 +21,121 @@
 
 .form-register{
     display: flex;
-    width: 500.835px;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 2em;
+    gap: 1.5em;
+}
+
+.ens_info-register{
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+
+.ensp-register{
+    display: flex;
+    flex-direction: column;
 }
 
 .prenom-register{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
-    padding: 2%;
+    padding: 3%;
+}
+
+.lbl_prenom-register{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .nom-register{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
-    padding: 2%;
+    padding: 3% 2% 3% 3%;
+}
+
+.lbl_nom-register{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ense-register{
+    display: flex;
+    flex-direction: column;
 }
 
 .email-register{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     padding: 2%;
+}
+
+.lbl_email-register{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ensm-register{
+    display: flex;
+    flex-direction: column;
 }
 
 .mdp-register{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     padding: 2%;
+}
+
+.lbl_mdp-register{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ensc-register{
+    display: flex;
+    flex-direction: column;
 }
 
 .confirm-register{
-    border-radius: 20px;
     border: 1px solid #000;
     color: #000000;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     padding: 2%;
 }
 
+.lbl_confirm-register{
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .btnr-register{
-    border-radius: 20px;
     border: 1px solid #000;
     background: #000;
     color: #FFF;
     font-family: Lora;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     padding: 2% 17% 2% 17%;
+    cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -105,10 +153,9 @@
 }
 
 .login-register{
-    border-radius: 20px;
     border: 1px solid #000;
     background: #000;
-    padding: 2% 10% 2% 10%;
+    padding: 1% 5% 1% 5%;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -119,6 +166,7 @@
     font-size: 20px;
     font-weight: 700;
     border: none;
+    cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 
