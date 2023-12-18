@@ -67,7 +67,7 @@ class ParseProduitFiles {
             $produit->setTitreProduit($line[0]);
             $produit->setPrixProduit($line[2]);
             $produit->setDescProduit($line[3]);
-            $produit->setStockProduit(0);
+            $produit->setStockProduit(100);
             $produit->addIdCategorie($this->categorieRepository->find($line[4]));
             $produit->addIdFormat($this->formatRepository->find($line[1]));
             $this->em->persist($produit);

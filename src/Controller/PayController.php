@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use Composer\Util\Http\Response;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Stripe\Stripe;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class PayController extends AbstractController
 {
@@ -15,6 +17,16 @@ class PayController extends AbstractController
 	public function __construct(EntityManagerInterface $em)
 	{
 		$this->em = $em;
+	}
+
+	#[Route('/payment', name: 'payment_list')]
+	public function index(): SymfonyResponse
+	{
+		//$payments = $this->em->getRepository(Payment::class)->findAll();
+
+		return new SymfonyResponse($this->render('payment.html.twig', [
+			//'payments' => $payments,
+		]));
 	}
 
 	#[Route('/create-session-stripe', name: 'pay.stripe.checkout')]

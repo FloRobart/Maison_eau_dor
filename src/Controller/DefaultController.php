@@ -31,9 +31,45 @@ class DefaultController extends AbstractController
         return $this->render('register.html.twig');
     }
 
+    #[Route('/espace_utilisateur', name: 'default.user', methods: ['GET'])]
+    public function user(): Response
+    {
+        return $this->render('base_user.html.twig');
+    }
+
     #[Route('/contact', name: 'default.contact', methods: ['GET'])]
     public function contact(): Response
     {
         return $this->render('contact.html.twig');
     }
+
+	#[Route('/mentions-legales', name: 'default.legal', methods: ['GET'])]
+	public function legal(): Response
+	{
+		return $this->render('legal.html.twig');
+	}
+
+	#[Route('/A_propos', name: 'default.about', methods: ['GET'])]
+	public function about(): Response
+	{
+		return $this->render('about.html.twig');
+	}
+
+	#[Route('/politique-de-confidentialite', name: 'default.privacy', methods: ['GET'])]
+	public function privacy(): Response
+	{
+		return $this->render('privacy.html.twig');
+	}
+
+	#[Route('/conditions-generales-de-vente', name: 'default.cgv', methods: ['GET'])]
+	public function cgv(): Response
+	{
+		return $this->render('cgv.html.twig');
+	}
+
+	#[Route('/politique-de-cookies', name: 'default.cookies', methods: ['GET'])]
+	public function cookies(): Response
+	{
+		return $this->render('cookies.html.twig');
+	}
 }

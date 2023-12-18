@@ -10,12 +10,6 @@ accueil:
     controller: App\Controller\DefaultController::index
     methods: ['GET']
 
-# Catalogue
-catalogue:
-    path: /catalogue
-    controller: App\Controller\CatalogueController.php::index
-    methods: ['GET']
-
 # Génération Base données
 insertion_base_index:
     path: /insertion/base
@@ -31,3 +25,8 @@ insertion_base_produits:
     path: /insertion/base/produits
     controller: App\Controller\BackOffice\CreationProduitsBaseController.php::index
     methods: ['GET']
+
+# Paiemment
+payment_list:
+    path: /payment
+    controller: App\Controller\PayController::index

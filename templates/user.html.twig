@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="{{ asset('assets/css/style.user.css') }}">
+<body class="body-user">
+    <p class="titre-user">Votre Compte</p>
+    <div class="content-user">
+        <div class="nav-user">
+            <p class="nav_info-user">Informations</p>
+            <p class="log_out-user">Déconnexion</p>
+        </div>
+        <div class="info-user">
+            <p class="titre_info-user">Vos informations personnelles</p>
+            <form action="#" method="post" class="form-user">
+                <div class="np-user">
+                    <div class="ensn-user">
+                        <label class="lbl_nom-user" for="nom">Nom</label>
+                        <input class="nom-user" type="text" id="nom" name="nom" placeholder="Nom" required>
+                    </div>
+                    <div class="ensp-user">
+                        <label class="lbl_prenom-user" for="prenom">Prénom</label>
+                        <input class="prenom-user" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                    </div>
+                </div>
+                <div class="ense-user">
+                    <label class="lbl_email-user" for="email">Addresse e-mail</label>
+                    <input class="email-user" type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="ensm-user">
+                    <label class="lbl_mdp-user" for="mdp">Mot de passe</label>
+                    <input class="mdp-user" type="password" id="mdp" name="mdp" placeholder="Mot de passe" required>
+                </div>
+                
+                <div class="ensnm-user">
+                    <label class="lbl_newmdp-user" for="newmdp">Nouveau mot de passe</label>
+                    <input class="newmdp-user" type="password" id="newmdp" name="newmdp" placeholder="Nouveau mot de passe" required>
+                </div>
+                
+                <div class="ac-user">
+                    <div class="ensa-user">
+                        <label class="lbl_adr-user" for="adr">Adresse</label>
+                        <input class="adr-user" type="text" id="adr" name="adr" placeholder="Adresse" required>
+                    </div>
+
+                    <div class="ensc-user">
+                        <label class="lbl_city-user" for="city">Ville</label>
+                        <input class="city-user" type="text" id="city" name="city" placeholder="Ville" required>
+                    </div>
+                </div>
+                <div class="cpp-user">
+                    <div class="enscp-user">
+                        <label class="lbl_cp-user" for="cp">Code postal</label>
+                        <input class="cp-user" type="text" id="cp" name="cp" placeholder="Code postal" required>
+                    </div>
+
+                    <div class="ensp-user">
+                        <label class="lbl_pays-user" for="pays">Pays</label>
+                        <input class="pays-user" type="text" id="pays" name="pays" placeholder="Pays" required>
+                    </div>
+                </div>
+                <input class="btncm-user" type="submit" value="Confirmer les modifications">
+
+            </form>
+        </div>
+    </div>
+</body>
