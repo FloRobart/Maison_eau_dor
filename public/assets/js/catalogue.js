@@ -40,18 +40,6 @@ var produits = [
 	// { id: "produit17", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 17", desc: "...", prix: "42,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-17" },
 ];
 
-// +------------------------+
-// | Données des catégories |
-// +------------------------+
-var tags = [
-	{ id: "tag1", nom: "Catégorie 1" },
-	{ id: "tag2", nom: "Catégorie 2" },
-	{ id: "tag3", nom: "Catégorie 3" },
-	{ id: "tag4", nom: "Catégorie 4" },
-];
-
-
-
 /*
 +-----------+
 | RECHERCHE |
@@ -68,33 +56,40 @@ document.getElementById("searchSubmitIcon").addEventListener("click", function()
 	rechercherProduit();
 });
 
-
-// Fonction pour rechercher un produit en JS pour le moment (à remplacer par une requête PHP à la base de donnée)
-/*
-https://www.mongodb.com/docs/manual/reference/method/db.collection.find/
-The following operation uses the $regex operator to return documents in the bios collection where name.last field starts with the letter N (or is "LIKE N%")
-
-db.bios.find(
-   { "name.last": { $regex: /^N/ } }
-)
-*/
-function rechercherProduit() {
-	var recherche = document.getElementById("recherche").value.toLowerCase();
-	var produits = document.getElementsByClassName("produit");
-
-	for (var i = 0; i < produits.length; i++) {
-		var produit = produits[i];
-		var titre = produit.getElementsByClassName("description")[0].getElementsByTagName("h2")[0].textContent.toLowerCase();
-
-		if (titre.indexOf(recherche) == -1) {
-			produit.style.display = "none";
-		} else {
-			produit.style.display = "flex";
-		}
-	}
+// Afficher le texte de la recherche dans le champ de recherche
+var urlParams = new URLSearchParams(window.location.search);
+var search = urlParams.get('search');
+if (search != null) {
+	document.getElementById("recherche").value = search;
 }
 
+// Fonction pour rechercher un produit en JS pour le moment (à remplacer par une requête PHP à la base de donnée)
+// function rechercherProduit() {
+// 	var recherche = document.getElementById("recherche").value.toLowerCase();
+// 	var produits = document.getElementsByClassName("produit");
 
+// 	for (var i = 0; i < produits.length; i++) {
+// 		var produit = produits[i];
+// 		var titre = produit.getElementsByClassName("description")[0].getElementsByTagName("h2")[0].textContent.toLowerCase();
+
+// 		if (titre.indexOf(recherche) == -1) {
+// 			produit.style.display = "none";
+// 		} else {
+// 			produit.style.display = "flex";
+// 		}
+// 	}
+// }
+
+// Fonction pour rechercher un produit (URL pour PHP)
+function rechercherProduit() {
+	var recherche = document.getElementById("recherche").value.toLowerCase();
+
+	if (recherche == "") {
+		window.location.href = window.location.href.split("?")[0];
+	} else {
+		window.location.href = window.location.href.split("?")[0] + "?search=" + recherche + "&sortField=name&sortDirection=asc"; 
+	}
+}
 
 
 
@@ -158,19 +153,17 @@ filtres.forEach(function(filtre) {
 	var a = document.createElement("a");
 	
 
-	// PERMET DE CREER LE LIEN EN GARDANT LES AUTRES PARAMETRES DE L'URL (pas utilisé pour les filtres car il renvoir à la première page [peut être plus tard])
-	// ici on utilise window.location.href.split("?")[0] pour le statique, mais en dynamique ce sera suremment autre chose
-	/*var url = window.location.href;
-	if ( urlParams.get('page') != null ) {
-		// recreer les parametres de l'url
-		url = window.location.href.split("?")[0] + "?page=" + urlParams.get('page') + "&sortField=" + filtre.sort + "&sortDirection=" + filtre.direction;
+	// PERMET DE CREER LE LIEN EN GARDANT LES AUTRES PARAMETRES DE L'URL (ex: search)
+	var url = window.location.href;
+	if ( urlParams.get('search') != null ) { // si il y a un parametre search dans l'url
+		url = window.location.href.split("?")[0] + "?search=" + urlParams.get('search') + "&sortField=" + filtre.sort + "&sortDirection=" + filtre.direction;
 	}
 	else {
 		url = window.location.href.split("?")[0] + "?sortField=" + filtre.sort + "&sortDirection=" + filtre.direction;
 	}
 	a.href = url; 
-	*/
-	a.href = window.location.href.split("?")[0] + "?sortField=" + filtre.sort + "&sortDirection=" + filtre.direction; // TODO : changer le lien pour qu'il renvoie vers la page avec le filtre PHP dans l'URL
+	
+	//a.href = window.location.href.split("?")[0] + "?sortField=" + filtre.sort + "&sortDirection=" + filtre.direction; // TODO : changer le lien pour qu'il renvoie vers la page avec le filtre PHP dans l'URL
 
 
 	a.textContent = filtre.nom;
@@ -182,7 +175,7 @@ filtres.forEach(function(filtre) {
 	tri.appendChild(a);
 });
 
-// si filtre actif, on affiche le nom du filtre actif
+// si filtre actif, on affiche le nom du filtre actif dans le bouton
 var filtresBtnText = document.getElementById("tri-btn-text");
 let filtreActif = filtres.find(filtre => filtre.actif);
 if (filtreActif != undefined) {
@@ -204,16 +197,6 @@ document.getElementById("tri-btn").addEventListener("click", function(event) {
 	event.stopPropagation();
 });
 
-// Changer le filtre actif
-tri.addEventListener("click", function(event) {
-	var filtres = document.getElementById("tri").getElementsByTagName("a");
-
-	for (var i = 0; i < filtres.length; i++) {
-		filtres[i].className = "";
-	}
-
-	event.target.className = "filtre-actif";
-});
 /*
 A-Z
 Z-A

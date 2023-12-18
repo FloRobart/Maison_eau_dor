@@ -16,7 +16,7 @@ class DefaultController extends AbstractController
     #[Route('/catalogue', name: 'default.catalogue', methods: ['GET'])]
     public function catalogue(): Response
     {
-        return $this->render('catalogue.html.twig');
+        return $this->forward(CatalogueController::class . '::index');
     }
 
     #[Route('/connexion', name: 'default.login', methods: ['GET'])]
