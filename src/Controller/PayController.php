@@ -24,7 +24,7 @@ class PayController extends AbstractController
 	{
 		//$payments = $this->em->getRepository(Payment::class)->findAll();
 
-		return new SymfonyResponse($this->render('payment/index.html.twig', [
+		return new SymfonyResponse($this->render('payment.html.twig', [
 			//'payments' => $payments,
 		]));
 	}
