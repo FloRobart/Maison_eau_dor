@@ -16,14 +16,9 @@ insertion_base_index:
     controller: App\Controller\BackOffice\IndexCreationBaseController.php::index
     methods: ['GET']
 
-insertion_base_categories:
-    path: /insertion/base/categorie
-    controller: App\Controller\BackOffice\CreationCategorieBaseController.php::index
-    methods: ['GET']
-
-insertion_base_produits:
-    path: /insertion/base/produits
-    controller: App\Controller\BackOffice\CreationProduitsBaseController.php::index
+insertion_base_all:
+    path: /insertion/base/all
+    controller: App\Controller\BackOffice\MainInsertionController.php::index
     methods: ['GET']
 
 # Paiemment

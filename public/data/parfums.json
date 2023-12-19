@@ -1,0 +1,428 @@
+{
+	"parfums": [
+		{
+			"nom": "Africa Bay",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Africa Bay, un parfum envoûtant qui mêle des notes fraîches de citron et de cassis, des accords floraux de violette et de jasmin, et des notes sensuelles de musc et d'ambre. Une fragrance qui capture l'esprit exotique et ensoleillé de l'Afrique.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Ahlam",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Plongez dans un voyage olfactif envoûtant avec Ahlam, un extrait de parfum qui éveille les sens et laisse un sillage inoubliable.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Al layl",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Al Layl, le parfum de la nuit. La vanille et l'ambre s'unissent pour créer une harmonie envoûtante et mystérieuse. Laissez-vous captiver par cette fragrance qui révèle la beauté sombre et séduisante de la nuit.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Bella vida",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Bella Vida, un parfum où le cassis et la poire dansent en tête, tandis que l'iris et le jasmin captivent au cœur. Le praliné et la vanille en fond offrent une finale gourmande. Une expérience olfactive pleine de vie.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Blue Chain",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Blue Chain, un parfum captivant qui mêle des notes fraîches d'agrumes, des accords épicés de noix de muscade et de gingembre, et des notes boisées d'encens, de vétiver et de cèdre. Un mélange rafraîchissant et envoûtant pour l'homme moderne et confiant.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Dakar Sugar",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Dakar Sugar, le parfum secret, un bonbon captivant à porter seul ou à mélanger pour créer une signature olfactive unique. Laissez-vous séduire par sa douceur sucrée et révélez votre créativité parfumée.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Dr chronic",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Dr Chronic, un parfum envoûtant qui associe des notes épicées de cannelle et de poire, des accords terreux de patchouli et d'ambre, et des notes chaleureuses de musc et de santal. Cette composition audacieuse capture l'esprit mystérieux et captivant du Dr Chronic, révélant une fragrance séduisante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Fantasia",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Fantasia, un extrait de parfum captivant. Les notes de kiwi et de litchi en tête créent une ouverture fruitée. Le chocolat Blanc et le cupcake au cœur ajoutent une touche gourmande. La touche de musc offre une base chaleureuse.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Fire Night",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Fire Night, un extrait de parfum envoûtant. Les notes de lavande, mandarine et camomille créent une ouverture fraîche. Le santal, le jasmin et le muguet au cœur ajoutent une touche boisée et florale. L’ambre et la fève Tonka en fond offrent une expérience olfactive captivante, évoquant la magie.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Flower Bomb",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Laissez-vous surprendre par l'irrésistible FlowerBomb, un parfum ambré floral qui a conquis les cœurs en un clin d'œil. Laissez-vous envoûter par sa féminité audacieuse.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Goku",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Goku, un parfum captivant qui marie des notes de tête d'amande et d'encens, des accords de cœur de cèdre et de sauge sclarée, et des notes de fond envoûtantes de benjoin. Cette composition unique crée une fragrance à la fois puissante et mystérieuse, capturant l'esprit intrépide et courageux de Goku.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Grigris",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Succombez à Grigris, le parfum qui séduit les hommes comme les femmes.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Hayley",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Hayley, un parfum envoûtant qui mêle des notes pétillantes de fruit de la passion, de citron et de cassis, des accords doux de pêche et de framboise, et des notes sensuelles de musc et de vanille.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Hypnotic",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Hypnotic, un parfum envoûtant où la coco, la prune et l'abricot dansent en tête, le jasmin et la tubéreuse captivent au cœur, et la vanille et les amandes en fond offrent une finale chaleureuse. Une expérience olfactive délicieusement hypnotique.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Imagination",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Imagination, un parfum audacieux qui mêle des notes d'agrumes vives de cédrat, bergamote et orange, des accords épicés de gingembre, ainsi que des notes sophistiquées de thé noir et gaïac. Une fragrance qui invite à explorer les horizons de l'imagination.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Immense",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Immense, un extrait de parfum vibrant. Les notes de pamplemousse et de gingembre créent une ouverture dynamique, tandis que la sauge, le romarin et le géranium au cœur ajoutent une intensité herbacée. L’ambroxan et l'ambre ajoutent une touche chaleureuse.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Love is Shy",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Love is Shy, un parfum envoûtant qui marie la fraîcheur du néroli et de la bergamote avec la chaleur du caramel et de la vanille. Un voyage olfactif captivant, célébrant la délicatesse des émotions naissantes.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Magic Aisha",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Plongez dans l'enchantement de Magic Aisha, un extrait de parfum mystique qui dévoile une magie envoûtante. La bergamote et le citron offrent une fraîcheur éclatante, tandis que le patchouli et la fleur d'oranger au cœur créent une harmonie captivante, une expérience olfactive capturant la magie dans chaque goutte.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Maracuja",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Plongez dans l'essence exotique de Maracuja, un extrait de parfum qui révèle l'harmonie enchanteresse du fruit de la passion, de la pêche, de la poire et de la framboise. Une subtile touche florale de muguet s'entrelace avec la chaleur du musc et de la vanille. Une expérience sensorielle qui vous transporte vers des horizons exotiques.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Mawadi",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Mawadi, un extrait de parfum captivant. Les notes initiales de Pêche et de fleur de pommer offrent une fraîcheur délicate. La fleur d'ananas au cœur ajoute une touche florale exotique, tandis que les notes de musc, rose sauvage et patchouli en fond créent une aura envoûtante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Medusa",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Medusa, un extrait de parfum envoûtant. Les notes de tête de poire et de fleur d'oranger créent une ouverture fraîche et florale. L'amande amère et la réglisse ajoutent une touche gourmande et intrigante. Les notes de fond de vanille et de patchouli offrent une base chaleureuse et mystérieuse à cette fragrance captivante marie la fraîcheur et la gourmandise.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Melle coco",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Melle Coco, un extrait de parfum captivant. Les notes d'orange et de mandarine en tête créent une ouverture fruitée. Le jasmin et l'ylang-ylang au cœur ajoutent une touche florale élégante. Le musc blanc, de vanille et de fève tonka offrent une base irrésistible.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Mr So",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Mr So, un extrait de parfum audacieux. Les notes de bergamote de calabria en tête créent une ouverture fraîche. La lavande et le poivre rose au cœur ajoutent une touche épicée. Les notes de fond d'ambroxan et de cèdre offrent une expérience olfactive captivante et chaleureuse.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Mula Rouge",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Mula Rouge, un extrait de parfum captivant. Les notes de fraise, cerise et framboise créent une ouverture fruitée, tandis que le caramel et le gingembre au cœur ajoutent une douceur gourmande. Les notes de fond d'oud et de vanille offrent une profondeur séduisante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Nomade",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Nomade, un extrait de parfum envoûtant. Les notes d'oud, d'encens et de rose créent une ouverture mystique. La framboise et le safran au cœur ajoutent une touche vibrante, tandis que le benjoin offre une chaleur réconfortante. Une expérience olfactive captivante qui évoque la liberté du voyage.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Oudy’s",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Oudy's, un extrait de parfum raffiné. La ciste en tête offre une ouverture captivante, la rose et le patchouli au cœur créent une harmonie florale, tandis que les notes de fond d'oud et de santal ajoutent une profondeur boisée.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Pink Sugar",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Pink Sugar, un extrait de parfum irrésistiblement sucré. La barbe à papa et le sucre roux créent une ouverture gourmande, tandis que le poivre rose et le caramel au cœur ajoutent une touche épicée. Les notes musc offrent une expérience olfactive délicieusement sucrée.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Princesse",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Princesse, un extrait de parfum élégant. Les notes de bourgeon de cassis en tête créent une ouverture fruitée. Le freesia au cœur ajoute une touche florale délicate. Les notes de fond de vanille et de patchouli offrent une base raffinée et captivante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Purple Drunk",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez l'univers enivrant du Purple Drunk, un parfum audacieux qui marie l'énergie vive du citron et du cyprès.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Rose des sables",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Immergez-vous dans l'élégance intemporelle de Rose des Sables, une fragrance envoûtante évoquant la douceur florale de la rose, subtilement mélangée à des notes chaudes et ensoleillées.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Rubis Rouge",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Plongez dans l'univers luxueux de Rubis Rouge, un parfum avec une fragrance unique, riche en contrastes et en mystère. Optez pour cette expérience olfactive exceptionnelle.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "SilentShane",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Silent Shane, un parfum envoûtant qui mêle des notes de pêche juteuse, de tubéreuse sensuelle, de clémentine vive, de jasmin élégant et de vanille réconfortante. Une fragrance qui évoque la tranquillité.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Stronger",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez Stronger, une fragrance puissante qui incarne la force intérieure et la détermination. Cette essence captivante laisse une empreinte mémorable.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Suprême Flower",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Découvrez la grâce florale ultime avec 'Suprême Flower', et laissez-vous séduire par ses accords délicats.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Sweat dream",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Laissez-vous emporter par l'enchantement sucré de 'Sweet Dream'. Cette fragrance captivante évoque une douce symphonie olfactive qui vous transporte vers des rêves délicieusement enveloppants.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "The classic",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Optez pour le parfum 'The classic' avec une fragrance qui incarne le charme classique, parfait pour chaque occasion.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Trafalgar",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Explorez Trafalgar, un extrait de parfum vibrant avec des notes fruitées de framboise, fraise et cerise en tête, tandis que le cassis et le pamplemousse au cœur ajoutent une acidité dynamique. Les notes de musc et de patchouli en fond offrent une expérience olfactive fruitée, acidulée et enveloppante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Vanilla Gold",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Immergez-vous dans le luxe enchanteur de 'Vanilla Gold'. Cette fragrance capture l'essence dorée de la vanille, dévoilant une expérience olfactive riche et captivante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Vanilla coco",
+			"format": 50,
+			"stock": 100,
+			"prix": 30.00,
+			"description": "Plongez dans l'évasion tropicale de Vanille Coco, une fusion enchanteresse de notes exotiques qui captivent vos sens.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Bali",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "'Bali' évoque la beauté naturelle et la sérénité de l'île, vous transportant dans un paradis tropical où le temps semble suspendu. Plongez dans l'essence envoûtante de Bali avec ce parfum captivant.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Barbadjani",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Explorez Barbadjani, un extrait de parfum envoûtant. Les notes de coco, cassis, jasmin et muguet créent une ouverture florale et fruitée. Au cœur, le santal et le jasmin ajoutent une touche boisée et florale. Les notes de fond de vanille offrent une expérience olfactive délicieusement enivrante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "California Love",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "California Love est un parfum lumineux et mystérieux, puissant, authentique et subtil.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Exotic Sweet",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Découvrez Exotic Sweet, un extrait de parfum irrésistible. Les notes de chantilly, framboise et melon créent une ouverture gourmande. Le caramel et la fraise au cœur ajoutent une douceur sucrée. Les notes de vanille et de cannelle en fond offrent une chaleur enveloppante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "French Riviera",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Découvrez 'French Riviera', un parfum qui vous transporte instantanément sur les plages ensoleillées de la Côte d'Azur. Ses notes fraîches d'agrumes et de fleurs blanches se mêlent à des accords boisés et marins, créant ainsi une fragrance élégante et envoûtante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Hussein Dey",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Découvrez notre nouvelle évasion 'Hussein Dey', un extrait de parfum gourmand. Les notes de Pistache, Loukoum et Guimauve créent une ouverture sucrée et délicieuse. Au cœur de cette composition olfactive, la Crème glacée, la Barbe à papa et la Feuille de menthe ajoutent une touche rafraîchissante. Les notes de Noisette et de Vanille offrent une chaleur réconfortante à cette fragrance captivante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Ko'Koh Tachai",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Explorez notre nouvelle évasion 'Ko'Koh Tachai', un extrait de parfum raffiné. Les notes de Coco et de Lavande créent une ouverture exotique et apaisante. Au cœur de cette composition olfactive, le Santal Blanc et les Fruits exotiques ajoutent une touche boisée et vibrante. Les notes de Musc et d'Ananas offrent une base sensuelle à cette fragrance délicieusement envoûtante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Kryptonik",
+			"format": 50,
+			"stock": 100,
+			"prix": 40.00,
+			"description": "Notre évasion gourmande Kryptonik incarne la puissance et la sophistication, vous transportant dans un monde où le mystère règne en maître.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Kuala Lumpur",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Découvrez Kuala Lumpur, un parfum qui vous transporte au cœur de la capitale malaisienne. Ses notes exotiques d'orchidées et de patchouli s'entremêlent avec des accords épicés et boisés, créant ainsi une fragrance envoûtante et captivante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Malachite",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Découvrez notre évasion gourmande Malachite, une symphonie olfactive captivante mêlant des notes fraîches de cashmere à des accords sensuels de musc et de rose.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Nurai Sland",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Explorez Nurai Island, un extrait de parfum tropical. Les notes d'ananas, coco et chantilly créent une ouverture fruitée et gourmande. La crème coco et la vanille au cœur ajoutent une douceur exotique. Les notes de fond de musc ajoutent une touche délicieusement paradisiaque.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Pure Medellin",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Laissez-vous séduire par le mystérieux Pure Medellin qui laisse une impression inoubliable. Une fusion de notes fruitées.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Tichy Beach",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Découvrez 'Tichy Beach', un parfum qui évoque le charme ensoleillé des plages de Tichy. Ses notes fraîches d'agrumes se mêlent à des accords marins et floraux, créant ainsi une fragrance rafraîchissante et vivifiante.",
+			"categorie": "parfum"
+		},
+		{
+			"nom": "Vanilla Cream",
+			"format": 50,
+			"stock": 100,
+			"prix": 35.00,
+			"description": "Laissez-vous séduire par la sublime Vanilla Cream qui laisse une impression inoubliable. Une fusion de notes fruitées.",
+			"categorie": "parfum"
+		}
+	]
+}
