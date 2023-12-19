@@ -12,15 +12,22 @@ header {
     border-bottom: 1px solid #000000;
 }
 
-.logo-header {
-    max-width: 100%;
-    justify-content: center;
+.top-header{
+    display: flex;
+    padding-bottom: 0.7em;
+}
+
+.logo-header{
+    width: 13em;
+    height: 4em;
 }
 
 .ens_icon-header {
     padding-right: 2%;
     display: flex;
     margin-left: auto;
+    position: absolute;
+    right: 0;
 }
 
 #icon-header{
@@ -29,16 +36,223 @@ header {
     height: 30px;
 }
 
+.burger-header{
+    display: none;
+}
+
+.x-header{
+    display: none;
+}
+
 .ul-header {
     list-style: none;
     display: flex;
 }
 
 .li-header {
-    margin-right: 60px;
+    margin-right: 2.2em;
     font-family: Lora;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
+    cursor: pointer;
+    transition: font-size 0.5s ease;
+}
+
+/* Media Query pour les écrans en dessous de 768px */
+@media screen and (max-width: 767px) {
+    .burger-header{
+        display: block;
+        position: absolute;
+        right: 0;
+        padding: 3%;
+        transition: all 0.3s ease;
+    }
+
+    .x-header{
+        position: absolute;
+        right: 0;
+        padding: 3%;
+        transition: all 0.3s ease;
+    }
+
+    .nav-header{
+        display: none;
+    }
+
+    .nav-active{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding-top: 4%;
+        overflow: hidden; /* Ajoutez cette ligne pour l'animation */
+        transition: height 0.5s ease; /* Ajoutez cette ligne pour l'animation */
+    }
+
+    .ul-header{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding-inline: 0;
+    }
+
+    .li-header{
+        margin: 0;
+        font-family: Lora;
+        font-size: 20px;
+        padding-bottom: 10%;
+        transition: font-size 0.5s ease
+    }
+
+    #iconp-header{
+        display: none;
+    }
+
+    #iconb-header{
+        display: none;
+    }
+
+    #iconc-header{
+        display: none;
+    }
+
+    .ens_icon-header{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .li-header {
+        font-size: 12px; /* Ajustez la taille de police pour cette plage de largeurs d'écran */
+    }
+
+    .menu_parfums-header{
+        margin-top: 24%;
+    }
+
+    .menu_brumes-header{
+        margin-top: 27%;
+    }
+
+    .menu_pc-header{
+        margin-top: 11%;
+    }
+
+
+    .li-header:hover .menu_parfums-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_brumes-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_pc-header{
+        display: block;
+    }
+
+    .burger-header{
+        display: none;
+    }
+
+    .x-header{
+        display: none;
+    }
+}
+
+/* Media Query pour les écrans de 768px à 1200px */
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .li-header {
+        font-size: 16px; /* Ajustez la taille de police pour cette plage de largeurs d'écran */
+    }
+
+    .menu_parfums-header{
+        margin-top: 18%;
+    }
+
+    .menu_brumes-header{
+        margin-top: 20%;
+    }
+
+    .menu_pc-header{
+        margin-top: 8.5%;
+    }
+
+    .li-header:hover .menu_parfums-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_brumes-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_pc-header{
+        display: block;
+    }
+}
+
+/* Media Query pour les écrans au-dessus de 1200px */
+@media screen and (min-width: 1200px) {
+    .li-header {
+        font-size: 20px; /* Ajustez la taille de police pour les écrans au-dessus de 1200px */
+    }
+
+    .menu_parfums-header{
+        margin-top: 14.5%;
+    }
+
+    .menu_brumes-header{
+        margin-top: 16%;
+    }
+
+    .menu_pc-header{
+        margin-top: 6.7%;
+    }
+
+    .li-header:hover .menu_parfums-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_brumes-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_pc-header{
+        display: block;
+    }
+}
+
+/* Media Query pour les écrans au-dessus de 1440px */
+@media screen and (min-width: 1440px) {
+    .li-header {
+        font-size: 24px; /* Ajustez la taille de police pour les écrans au-dessus de 1200px */
+    }
+
+    .li-header:hover .menu_parfums-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_brumes-header{
+        display: block;
+    }
+    
+    .li-header:hover .menu_pc-header{
+        display: block;
+    }
+
+    .menu_parfums-header{
+        margin-top: 12.5%;
+    }
+
+    .menu_brumes-header{
+        margin-top: 13.5%;
+    }
+
+    .menu_pc-header{
+        margin-top: 5.5%;
+    }
 }
 
 .menu_parfums-header {
@@ -47,7 +261,6 @@ header {
     width: 200%;
     padding: 0;
     position: absolute;
-    margin-top: 12.5%;
     background-color: #ffffff;
     color: #000000;
     font-family: Lora;
@@ -68,7 +281,6 @@ header {
     width: 200%;
     padding: 0;
     position: absolute;
-    margin-top: 13.5%;
     background-color: #ffffff;
     color: #000000;
     font-family: Lora;
@@ -89,7 +301,6 @@ header {
     width: 100%;
     padding: 0;
     position: absolute;
-    margin-top: 5.5%;
     background-color: #ffffff;
     color: #000000;
     font-family: Lora;
@@ -103,17 +314,4 @@ header {
     width: 100%;
     padding: 8% 2% 2% 2%;
 }
-
-.li-header:hover .menu_parfums-header{
-    display: block;
-}
-
-.li-header:hover .menu_brumes-header{
-    display: block;
-}
-
-.li-header:hover .menu_pc-header{
-    display: block;
-}
-
 
