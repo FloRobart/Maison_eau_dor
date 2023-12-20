@@ -66,9 +66,9 @@ p{
 
 .logo-footer{
     position: relative;
-    height: 76px;
-    left: 10%;
-    margin-top: 7%;
+    width: 240px;
+    left: 7%;
+    margin-top: 5.5%;
 }
 
 .menu-footer{
