@@ -33,7 +33,7 @@
    #########################################
 */
 .content {
-	margin-top: 250px; /* marge pour éviter que le contenu soit caché derrière le header */
+	margin-top: 180px; /* marge pour éviter que le contenu soit caché derrière le header */
 	padding: 0 10%;
 }
 
@@ -438,3 +438,10 @@
 		margin: 1% 0;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.content {
+		margin-top: 120px;
+	}
+}
+
