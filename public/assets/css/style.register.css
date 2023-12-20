@@ -2,6 +2,11 @@
     margin: 2%;
 }
 
+.logo-register{
+    width: 240px;
+    height: 76px;
+}
+
 .content-register{
     display: flex;
     flex-direction: column;
@@ -155,7 +160,7 @@
 .login-register{
     border: 1px solid #000;
     background: #000;
-    padding: 1% 5% 1% 5%;
+    padding: 0.7% 3% 0.7% 3%;
     transition: background-color 0.5s, color 0.5s;
 }
 
