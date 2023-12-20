@@ -1,6 +1,6 @@
 let currentIndex = 0;
 const slidesContainer = document.querySelector('.carousel-accueil');
-const totalSlides = 7; // Modifiez le total des slides à 6
+const totalSlides = 7;
 const slidesToShow = 3;
 let slideWidth;
 

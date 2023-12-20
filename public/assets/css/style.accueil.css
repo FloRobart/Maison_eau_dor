@@ -153,6 +153,7 @@
     font-family: Lora;
     font-size: 18px;
     font-weight: 400;
+    transition: font-size 0.5s ease;
 }
 
 .enstxt-accueil{
@@ -189,7 +190,54 @@
     margin-top: 2%;
 }
 
-.imgbar-accueil{
+.contbar-accueil{
     width: 100%;
     height: 380px;
+    overflow: hidden;
+}
+
+.imgbar-accueil{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 350px){
+    .barbg-accueil{
+        display: block;
+    }
+
+    .txt1bar-accueil, .txt2bar-accueil, .txt3bar-accueil{
+        font-size: 16px;
+    }
+
+    .contbar-accueil{
+        display: none;
+    }
+
+    .contentinfo-accueil{
+        padding: 0% 4% 2% 4%;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 767px){
+    .contbar-accueil{
+        display: none;
+    }
+
+    .barbg-accueil{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contentinfo-accueil{
+        padding: 0% 4% 1% 4%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 950px){
+    .imgbar-accueil{
+        width: auto;
+        overflow: hidden;
+        height: 385px;
+    }
 }
