@@ -22,7 +22,8 @@ header {
 }
 
 .ens_icon-header {
-    padding-right: 2%;
+    top: 7%;
+    padding-right: 3%;
     display: flex;
     margin-left: auto;
     position: absolute;
@@ -54,7 +55,32 @@ header {
     font-size: 20px;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
     transition: font-size 0.5s ease;
+}
+
+.ap-header{
+    text-decoration: none;
+}
+
+.am-header{
+    text-decoration: none;
+}
+
+.amt-header{
+    text-decoration: none;
+}
+
+.ac-header{
+    text-decoration: none;
+}
+
+.ab-header{
+    text-decoration: none;
+}
+
+.apc-header{
+    text-decoration: none;
 }
 
 /* Media Query pour les écrans en dessous de 768px */
