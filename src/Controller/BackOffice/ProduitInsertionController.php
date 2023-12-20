@@ -23,7 +23,7 @@ class ProduitInsertionController extends AbstractController
 
 
 		// lecture du fichier JSON des produits
-		$produits = file_get_contents($package->getUrl('data/parfums.json'));
+		$produits = file_get_contents($package->getUrl('data/produits.json'));
 		// décoder le fichier
 		$produits = json_decode($produits, true);
 		if ( $produits === null ) {
@@ -36,39 +36,39 @@ class ProduitInsertionController extends AbstractController
 		$createdFormats = []; // Garde en mémoire les formats créés
 
 		// Création des parfums
-		foreach ( $produits["parfums"] as $parfum ) {
-			//dd($parfum, $parfum['categorie']);
+		foreach ( $produits["produits"] as $produit ) {
+			//dd($produit, $produit['categorie']);
 			// Création d'un produit
 			$prod = new Produit();
-			$prod->setDescProduit($parfum['description']);
-			$prod->setTitreProduit($parfum['nom']);
-			$prod->setPrixProduit($parfum['prix']);
-			$prod->setStockProduit($parfum['stock']);
+			$prod->setDescProduit($produit['description']);
+			$prod->setTitreProduit($produit['nom']);
+			$prod->setPrixProduit($produit['prix']);
+			$prod->setStockProduit($produit['stock']);
 
 			// Catégorie
-			if (!isset($createdCategories[$parfum['categorie']])) { // Si la catégorie n'a pas encore été créée
+			if (!isset($createdCategories[$produit['categorie']])) { // Si la catégorie n'a pas encore été créée
 				// Création d'une catégorie
 				$category = new Categorie();
-				$category->setNomCategorie($parfum['categorie']);
+				$category->setNomCategorie($produit['categorie']);
 				$category->addProduit($prod);
 				$this->entityManager->persist($category);
-				$createdCategories[$parfum['categorie']] = $category; // Garde en mémoire la catégorie créée
+				$createdCategories[$produit['categorie']] = $category; // Garde en mémoire la catégorie créée
 			} else {
-				$category = $createdCategories[$parfum['categorie']]; // Récupère la catégorie créée à partir de la mémoire
+				$category = $createdCategories[$produit['categorie']]; // Récupère la catégorie créée à partir de la mémoire
 				$category->addProduit($prod);
 			}
 			$prod->addIdCategorie($category);
 
 			// Format
-			if (!isset($createdFormats[$parfum['format']])) { // Si le format n'a pas encore été créé
+			if (!isset($createdFormats[$produit['format']])) { // Si le format n'a pas encore été créé
 				// Création d'un format
 				$format = new Format();
-				$format->setFormatProduit($parfum['format']);
+				$format->setFormatProduit($produit['format']);
 				$format->addProduit($prod);
 				$this->entityManager->persist($format);
-				$createdFormats[$parfum['format']] = $format; // Garde en mémoire le format créé
+				$createdFormats[$produit['format']] = $format; // Garde en mémoire le format créé
 			} else {
-				$format = $createdFormats[$parfum['format']]; // Récupère le format créé à partir de la mémoire
+				$format = $createdFormats[$produit['format']]; // Récupère le format créé à partir de la mémoire
 				$format->addProduit($prod);
 			}
 			$prod->addIdFormat($format);
@@ -85,9 +85,34 @@ class ProduitInsertionController extends AbstractController
 			// Pour chaque photo, ajout de l'entité Photo en base
 
 			// Chemin des photos 
-			$cheminPhotos = 'images/';
-			$dossierCible = $cheminPhotos . str_replace(" ", "_", strtolower($parfum['nom'])) . '/'; // Nom du dossier cible (nom du produit: "Ahlam" => "images/ahlam/")
-			//                                                                                                                    "Nurai Sland" => "images/nurai_sland/" 
+			$nomProduitTraite = mb_strtolower($produit['nom']); // en minuscule (avec les accents)
+			// Remplace les caractères accentués 
+			$nomProduitTraite = strtr($nomProduitTraite, [
+				"à" => "a", "â" => "a", "ä" => "a", "á" => "a", "ã" => "a", "å" => "a", "æ" => "ae",
+				"ç" => "c",
+				"è" => "e", "é" => "e", "ê" => "e", "ë" => "e",
+				"ì" => "i", "í" => "i", "î" => "i", "ï" => "i",
+				"ñ" => "n",
+				"ò" => "o", "ô" => "o", "ö" => "o", "ó" => "o", "õ" => "o", "ø" => "o",
+				"ù" => "u", "û" => "u", "ü" => "u", "ú" => "u",
+				"ý" => "y", "ÿ" => "y",
+				"œ" => "oe",
+				"À" => "A", "Â" => "A", "Ä" => "A", "Á" => "A", "Ã" => "A", "Å" => "A", "Æ" => "AE",
+				"Ç" => "C",
+				"È" => "E", "É" => "E", "Ê" => "E", "Ë" => "E",
+				"Ì" => "I", "Í" => "I", "Î" => "I", "Ï" => "I",
+				"Ñ" => "N",
+				"Ò" => "O", "Ô" => "O", "Ö" => "O", "Ó" => "O", "Õ" => "O", "Ø" => "O",
+				"Ù" => "U", "Û" => "U", "Ü" => "U", "Ú" => "U",
+				"Ý" => "Y",
+				"Œ" => "OE",
+			]); // Chiant mais Normalizer, iconv et mb_convert_encoding n'ont pas fonctionné 
+			$nomProduitTraite = strtr($nomProduitTraite, ["'" => "", " " => "_",]); // Remplace les apostrophes et les espaces
+			$dossierCible = 'images/produits/' . $nomProduitTraite . '/';
+			// Nom du dossier cible ( "Ahlam"          => "images/produits/ahlam/"           )
+			//                        "Nurai Sland"    => "images/produits/nurai_sland/"     
+			//                        "Suprême Flower" => "images/produits/supreme_flower/"  (╯°□°）╯︵ ┻━┻
+			//                        "Oudy's"         => "images/produits/oudys/"           
 			// On pourrait créer le dossier ici si il n'existe pas, mais le créer manuellement evite des problèmes de droits (précédemment vécu sur PortfolioMaker)
 
 

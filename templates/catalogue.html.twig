@@ -46,9 +46,22 @@
 			</div>
 		</div>
 
-
 		<div class="catalogue" id="catalogue-container">
-			<!-- Générer via JS : catalogue.js -->
+		{% for produit in produits %}
+			<div class="produit" id="{{ produit.id }}">
+				<div class="image-container">
+					{# Charger le chemin de l'image depuis le tableau photos #}
+					{% set path = photos[produit.id] %}
+					<img src= "{{ asset( path ) }}" alt="{{ produit.titreProduit }}">
+				</div>
+
+				<div class="description">
+					<h2>{{ produit.titreProduit }}</h2>
+					<p>{{ produit.prixProduit|number_format(2, ',', ' ') }} €</p>
+					<button data-produit-id="{{ produit.id }}">Ajouter au panier</button>
+				</div>
+			</div>
+		{% endfor %}
 		</div>
 
 		<div id="pagination-container"> 
@@ -62,7 +75,10 @@
 	{% include 'footer.html.twig' %}
 	{% endblock %}
 
-
+	{# variables globales (transfert PHP -> JS) #}
+	<script> var nbPageGlobal = {{ nbPages }}; </script>
 	<script type="text/javascript" src="{{ asset('assets/js/catalogue.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('assets/js/pagination.js') }}"></script>
+
+</body>
 </html>
