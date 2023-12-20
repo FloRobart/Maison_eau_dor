@@ -85,8 +85,6 @@ header {
         height: 100%;
         justify-content: center;
         padding-top: 4%;
-        overflow: hidden; /* Ajoutez cette ligne pour l'animation */
-        transition: height 0.5s ease; /* Ajoutez cette ligne pour l'animation */
     }
 
     .ul-header{
