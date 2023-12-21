@@ -73,8 +73,8 @@ function rechercherProduit() {
 var filtres = [
 	{ id: "a-z",              nom: "A-Z",              actif: false, sort: "name",      direction: "asc"  },
 	{ id: "z-a",              nom: "Z-A",              actif: false, sort: "name",      direction: "desc" },
-	{ id: "prix-croissant",   nom: "Prix croissant",   actif: false, sort: "price",     direction: "asc"  },
-	{ id: "prix-decroissant", nom: "Prix décroissant", actif: false, sort: "price",     direction: "desc" },
+	{ id: "prix-croissant",   nom: "Prix croissant",   actif: false, sort: "prix",     direction: "asc"  },
+	{ id: "prix-decroissant", nom: "Prix décroissant", actif: false, sort: "prix",     direction: "desc" },
 	// { id: "plus-recent",      nom: "Plus récent",      actif: false, sort: "createdAt", direction: "desc" }, // Pas de date pour le moment
 	// { id: "plus-ancien",      nom: "Plus ancien",      actif: false, sort: "createdAt", direction: "asc"  }, // Pas de date pour le moment
 ];
@@ -113,13 +113,12 @@ filtres.forEach(function(filtre) {
 	
 
 	// PERMET DE CREER LE LIEN EN GARDANT LES AUTRES PARAMETRES DE L'URL (ex: search)
-	var url = window.location.href;
-	if ( urlParams.get('search') != null ) { // si il y a un parametre search dans l'url
-		url = window.location.href.split("?")[0] + "?search=" + urlParams.get('search') + "&sortField=" + filtre.sort + "&sortDirection=" + filtre.direction;
-	}
-	else {
-		url = window.location.href.split("?")[0] + "?sortField=" + filtre.sort + "&sortDirection=" + filtre.direction;
-	}
+	var url = window.location.href.split("?")[0];
+	var tmpParams = new URLSearchParams(window.location.search);
+	tmpParams.set('sortField', filtre.sort);
+	tmpParams.set('sortDirection', filtre.direction);
+	tmpParams.delete('page'); // Supprimer la page pour revenir à la première page (car changement de tri)
+	url += "?" + tmpParams.toString();
 	a.href = url; 
 	
 	//a.href = window.location.href.split("?")[0] + "?sortField=" + filtre.sort + "&sortDirection=" + filtre.direction; // TODO : changer le lien pour qu'il renvoie vers la page avec le filtre PHP dans l'URL
