@@ -57,14 +57,6 @@
 			"categorie": "parfum"
 		},
 		{
-			"nom": "Fantasia",
-			"format": 50,
-			"stock": 100,
-			"prix": 30.00,
-			"description": "Explorez Fantasia, un extrait de parfum captivant. Les notes de kiwi et de litchi en tête créent une ouverture fruitée. Le chocolat Blanc et le cupcake au cœur ajoutent une touche gourmande. La touche de musc offre une base chaleureuse.",
-			"categorie": "parfum"
-		},
-		{
 			"nom": "Fire Night",
 			"format": 50,
 			"stock": 100,
@@ -89,14 +81,6 @@
 			"categorie": "parfum"
 		},
 		{
-			"nom": "Grigris",
-			"format": 50,
-			"stock": 100,
-			"prix": 30.00,
-			"description": "Succombez à Grigris, le parfum qui séduit les hommes comme les femmes.",
-			"categorie": "parfum"
-		},
-		{
 			"nom": "Hayley",
 			"format": 50,
 			"stock": 100,
@@ -110,14 +94,6 @@
 			"stock": 100,
 			"prix": 30.00,
 			"description": "Découvrez Hypnotic, un parfum envoûtant où la coco, la prune et l'abricot dansent en tête, le jasmin et la tubéreuse captivent au cœur, et la vanille et les amandes en fond offrent une finale chaleureuse. Une expérience olfactive délicieusement hypnotique.",
-			"categorie": "parfum"
-		},
-		{
-			"nom": "Imagination",
-			"format": 50,
-			"stock": 100,
-			"prix": 30.00,
-			"description": "Découvrez Imagination, un parfum audacieux qui mêle des notes d'agrumes vives de cédrat, bergamote et orange, des accords épicés de gingembre, ainsi que des notes sophistiquées de thé noir et gaïac. Une fragrance qui invite à explorer les horizons de l'imagination.",
 			"categorie": "parfum"
 		},
 		{
@@ -182,22 +158,6 @@
 			"stock": 100,
 			"prix": 30.00,
 			"description": "Découvrez Mr So, un extrait de parfum audacieux. Les notes de bergamote de calabria en tête créent une ouverture fraîche. La lavande et le poivre rose au cœur ajoutent une touche épicée. Les notes de fond d'ambroxan et de cèdre offrent une expérience olfactive captivante et chaleureuse.",
-			"categorie": "parfum"
-		},
-		{
-			"nom": "Mula Rouge",
-			"format": 50,
-			"stock": 100,
-			"prix": 30.00,
-			"description": "Découvrez Mula Rouge, un extrait de parfum captivant. Les notes de fraise, cerise et framboise créent une ouverture fruitée, tandis que le caramel et le gingembre au cœur ajoutent une douceur gourmande. Les notes de fond d'oud et de vanille offrent une profondeur séduisante.",
-			"categorie": "parfum"
-		},
-		{
-			"nom": "Nomade",
-			"format": 50,
-			"stock": 100,
-			"prix": 30.00,
-			"description": "Explorez Nomade, un extrait de parfum envoûtant. Les notes d'oud, d'encens et de rose créent une ouverture mystique. La framboise et le safran au cœur ajoutent une touche vibrante, tandis que le benjoin offre une chaleur réconfortante. Une expérience olfactive captivante qui évoque la liberté du voyage.",
 			"categorie": "parfum"
 		},
 		{
@@ -350,22 +310,6 @@
 			"stock": 100,
 			"prix": 35.00,
 			"description": "Découvrez 'French Riviera', un parfum qui vous transporte instantanément sur les plages ensoleillées de la Côte d'Azur. Ses notes fraîches d'agrumes et de fleurs blanches se mêlent à des accords boisés et marins, créant ainsi une fragrance élégante et envoûtante.",
-			"categorie": "parfum"
-		},
-		{
-			"nom": "Hussein Dey",
-			"format": 50,
-			"stock": 100,
-			"prix": 35.00,
-			"description": "Découvrez notre nouvelle évasion 'Hussein Dey', un extrait de parfum gourmand. Les notes de Pistache, Loukoum et Guimauve créent une ouverture sucrée et délicieuse. Au cœur de cette composition olfactive, la Crème glacée, la Barbe à papa et la Feuille de menthe ajoutent une touche rafraîchissante. Les notes de Noisette et de Vanille offrent une chaleur réconfortante à cette fragrance captivante.",
-			"categorie": "parfum"
-		},
-		{
-			"nom": "Ko'Koh Tachai",
-			"format": 50,
-			"stock": 100,
-			"prix": 35.00,
-			"description": "Explorez notre nouvelle évasion 'Ko'Koh Tachai', un extrait de parfum raffiné. Les notes de Coco et de Lavande créent une ouverture exotique et apaisante. Au cœur de cette composition olfactive, le Santal Blanc et les Fruits exotiques ajoutent une touche boisée et vibrante. Les notes de Musc et d'Ananas offrent une base sensuelle à cette fragrance délicieusement envoûtante.",
 			"categorie": "parfum"
 		},
 		{
