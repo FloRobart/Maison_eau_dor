@@ -1,63 +1,177 @@
-<!-- Formulaire de paiement demandant les détails de la carte bancaire et l'email de l'utilisateur -->
-	<fieldset id="iugu-credit-card-fields"> <p class="form-row form-row-first">
-		<label for="iugu-card-number"><?php esc_html_e( 'Card Number', 'iugu-woocommerce' ); ?>
-			<span class="required">*</span>
-		</label>
-		<input id="iugu-card-number" class="input-text wc-credit-card-form-card-number" type="text" maxlength="20" autocomplete="off" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;" style="font-size: 1.5em; padding: 8px;" data-iugu="number"/>
-	</p>
-	<p class="form-row form-row-last">
-		<label for="iugu-card-holder-name"><?php esc_html_e( 'Name Printed on the Card', 'iugu-woocommerce' ); ?>
-			<span class="required">*</span>
-		</label>
-		<input id="iugu-card-holder-name" name="iugu_card_holder_name" class="input-text" type="text" autocomplete="off" placeholder="Propriétaire de la carte" style="font-size: 1.5em; padding: 8px;" data-iugu="full_name"/>
-	</p>
-	<div class="clear"></div>
-	<p class="form-row form-row-first">
-		<label for="iugu-card-expiry"><?php esc_html_e( 'Expiry (MM/YYYY)', 'iugu-woocommerce' ); ?>
-			<span class="required">*</span>
-		</label>
-		<input id="iugu-card-expiry" class="input-text wc-credit-card-form-card-expiry" type="text" autocomplete="off" placeholder="MM/YY" style="font-size: 1.5em; padding: 8px;" data-iugu="expiration"/>
-	</p>
-	<p class="form-row form-row-last">
-		<label for="iugu-card-cvc"><?php esc_html_e( 'Security Code', 'iugu-woocommerce' ); ?>
-			<span class="required">*</span>
-		</label>
-		<input id="iugu-card-cvc" class="input-text wc-credit-card-form-card-cvc" type="text" autocomplete="off" placeholder="CVC" style="font-size: 1.5em; padding: 8px;" data-iugu="verification_value"/>
-	</p>
-	<?php if ( 1 < $installments ) : ?>
-	<p class="form-row form-row-wide">
-		<label for="iugu-card-installments"><?php esc_html_e( 'Installments', 'iugu-woocommerce' ); ?>
-			<span class="required">*</span>
-		</label>
-		<select id="iugu-card-installments" name="iugu_card_installments" style="font-size: 1.5em; padding: 4px; width: 100%;">
-			<?php
-				for ( $i = 1; $i <= $installments; $i++ ) :
-					$total_to_pay      = $order_total;
-					$installment_total = $total_to_pay / $i;
-					$interest_text     = __( 'free interest', 'iugu-woocommerce' );
+<link rel="stylesheet" href="{{ asset('assets/css/style.pay.css') }}">
+<body class="body-pay">
+	<div class="content-pay">
+		<div class="ensform-pay">
+			<p class="titre-pay">Confirmation de commande</p>
+			<div class="contact-pay">
+				<div class="titrest-pay">
+				<p class="titrec-pay">1. Contact</p>
+				<p class="legalc-pay">Uniquement à des fins de facturations et de commande</p>
+				</div>
+				<form action="#" method="post" class="form_contact-pay">
+					<div class="ensn-pay">
+						<label class="lbl_nom-pay" for="nom">Nom Complet</label>
+						<input class="nom-pay" type="text" id="nom" name="nom" placeholder="Nom Complet" required>
+					</div>
+					<div class="ense-pay">
+						<label class="lbl_email-pay" for="email">E-mail</label>
+						<input class="email-pay" type="email" id="email" name="email" placeholder="E-mail" required>
+					</div>
+					<div class="enst-pay">
+						<label class="lbl_tele-pay" for="telephone">Numéro de téléphone</label>
+						<input class="tele-pay" type="text" id="telephone" name="telephone" placeholder="Numéro de téléphone" required>
+					</div>
+				</form>
+			</div>
+			<div class="liv-pay">
+				<p class="titrel-pay">2. Méthode de livraison</p>
+				<form action="#" method="post" class="form_livraison-pay">
+					<div class="ensl-pay">
+						<input class="liv-pay" type="radio" id="livraison" name="livraison">
+						<label class="lbl_liv-pay" for="livraison">Livraison</label>
+					</div>
+					<div class="ensnl-pay">
+						<label class="lbl_nom-pay" for="nom">Nom Complet</label>
+						<input class="nom-pay" type="text" id="nom" name="nom" placeholder="Nom Complet" required>
+					</div>
+					<div class="ensrnum-pay">
+						<div class="ensr-pay">
+							<label class="lbl_rue-pay" for="rue">Rue</label>
+							<input class="rue-pay" type="text" id="rue" name="rue" placeholder="Rue" required>
+						</div>
+						<div class="ensnum-pay">
+							<label class="lbl_num-pay" for="numéro">Numéro</label>
+							<input class="num-pay" type="text" id="numéro" name="numéro" placeholder="Numéro" required>
+						</div>
+					</div>
+					<div class="ensvcp-pay">
+						<div class="ensv-pay">
+							<label class="lbl_ville-pay" for="ville">Ville</label>
+							<input class="ville-pay" type="text" id="ville" name="ville" placeholder="Ville" required>
+						</div>
+						<div class="enscp-pay">
+							<label class="lbl_cp-pay" for="cp">Code postal</label>
+							<input class="cp-pay" type="text" id="cp" name="cp" placeholder="Code postal" required>
+						</div>
+					</div>
+					<div class="ensp-pay">
+						<label class="lbl_pays-pay" for="pays">Pays</label>
+						<input class="pays-pay" type="text" id="pays" name="pays" placeholder="Pays" required>
+					</div>
+					<div class="choixl-pay">
+						<div class="ensld-pay">
+							<div class="livraison-pay">
+								<input class="livd-pay" type="radio" id="livraisond" name="livraisond">
+								<label class="lbl_livd-pay" for="livraisond">Livraison Le Havre, Harfleur Gonfreville l'orcher</label>
+							</div>
+							<p class="stl-pay">À partir de 18:30</p>
+							<p class="free-pay">GRATUIT</p>
+						</div>
+						<div class="enslp-pay">
+							<div class="poste-pay">
+								<input class="livp-pay" type="radio" id="livraisonp" name="livraisonp">
+								<label class="lbl_livp-pay" for="livraisonp">Envoi postaux et points relais</label>
+							</div>
+							<p class="stl-pay">Entre 48h et 72h (jour ouvrée)</p>
+							<p class="free-pay">GRATUIT</p>
+						</div>
+					</div>
+					<div class="ensrl-pay">
+						<input class="retrait-pay" type="radio" id="retrait" name="retrait">
+						<label class="lbl_retrait-pay" for="retrait">Retrait</label>
+					</div>
+				</form>
+					<div class="content_retrait-pay">
+						<p class="txt1r-pay">Récupérer en boutique</p>
+						<p class="txt2r-pay">Récupérer en boutique, 123 Avenue René Coty, 76600, Le Havre, France</p>
+						<p class="txt3r-pay">Entre 14:30 et 18:30</p>
+						<p class="txt4r-pay">GRATUIT</p>
+					</div>
+			</div>
+			<!-- Formulaire de paiement demandant les détails de la carte bancaire et l'email de l'utilisateur -->
+			<div class="pay-pay">
+				<p class="titrep-pay">3. Moyen de paiement</p>
+				<p class="stp-pay">Payer avec Carte de crédit/débit</p>
+				<fieldset id="iugu-credit-card-fields"> <p class="form-row form-row-first" id="ensnc-pay">
+						<label for="iugu-card-number"><?php esc_html_e( 'Card Number', 'iugu-woocommerce' ); ?>
+							<span class="required"></span>
+							N° de carte
+						</label>
+						<input id="iugu-card-number" class="input-text wc-credit-card-form-card-number" type="text" maxlength="20" autocomplete="off" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;" data-iugu="number"/>
+					</p>
+					<p class="form-row form-row-last" id="ensnom-pay">
+						<label for="iugu-card-holder-name"><?php esc_html_e( 'Name Printed on the Card', 'iugu-woocommerce' ); ?>
+							<span class="required"></span>
+							Nom sur la carte
+						</label>
+						<input id="iugu-card-holder-name" name="iugu_card_holder_name" class="input-text nomc-pay" type="text" autocomplete="off" placeholder="Propriétaire de la carte" data-iugu="full_name"/>
+					</p>
+					<div class="clear"></div>
+					<div class="ensdatcry-pay">
+						<p class="form-row form-row-first" id="ensex-pay">
+							<label for="iugu-card-expiry"><?php esc_html_e( 'Expiry (MM/YYYY)', 'iugu-woocommerce' ); ?>
+								<span class="required"></span>
+								Date d'éxpiration
+							</label>
+							<input id="iugu-card-expiry" class="input-text wc-credit-card-form-card-expiry" type="text" autocomplete="off" placeholder="MM/YY" data-iugu="expiration"/>
+						</p>
+						<p class="form-row form-row-last" id="enscry-pay">
+							<label for="iugu-card-cvc"><?php esc_html_e( 'Security Code', 'iugu-woocommerce' ); ?>
+								<span class="required"></span>
+								Cryptogramme visuel
+							</label>
+							<input id="iugu-card-cvc" class="input-text wc-credit-card-form-card-cvc" type="text" autocomplete="off" placeholder="CVC" data-iugu="verification_value"/>
+						</p>
+					</div>
+					<?php if ( 1 < $installments ) : ?>
+					<p class="form-row form-row-wide">
+						<label for="iugu-card-installments"><?php esc_html_e( 'Installments', 'iugu-woocommerce' ); ?>
+							<span class="required"></span>
+						</label>
+						<select id="iugu-card-installments" name="iugu_card_installments" style="font-size: 1.5em; padding: 4px; width: 100%;">
+							<?php
+								for ( $i = 1; $i <= $installments; $i++ ) :
+									$total_to_pay      = $order_total;
+									$installment_total = $total_to_pay / $i;
+									$interest_text     = __( 'free interest', 'iugu-woocommerce' );
 
-					// Set the interest rate.
-					if ( $i > $free_interest ) {
-						$total_rate        = isset( $rates[ $i ] ) ? $rates[ $i ] / 100 : 1 / 100;
-						$total_to_pay      = $order_total * ( ( 1 - ( $transaction_rate / 100 ) ) / ( 1 - $total_rate ) );
-						$installment_total = $total_to_pay / $i;
-						$interest_text     = __( 'with interest', 'iugu-woocommerce' );
-					}
+									// Set the interest rate.
+									if ( $i > $free_interest ) {
+										$total_rate        = isset( $rates[ $i ] ) ? $rates[ $i ] / 100 : 1 / 100;
+										$total_to_pay      = $order_total * ( ( 1 - ( $transaction_rate / 100 ) ) / ( 1 - $total_rate ) );
+										$installment_total = $total_to_pay / $i;
+										$interest_text     = __( 'with interest', 'iugu-woocommerce' );
+									}
 
-					// Stop when the installment total is less than the smallest installment configure.
-					if ( $installment_total < $smallest_installment ) {
-						break;
-					}
-					?>
-			<option value="<?php echo esc_attr( $i ); ?>">
-				<?php
-							/* translators: %s: total amount */
-							echo esc_attr( sprintf( __( '%dx of %$1s %$2s (Total: %$3s)', 'iugu-woocommerce' ), $i, sanitize_text_field( wc_price( $installment_total ) ), $interest_text, sanitize_text_field( wc_price( $total_to_pay ) ) ) );
-						?>
-			</option>
-			<?php endfor; ?>
-		</select>
-	</p>
-	<?php endif; ?>
-	<div class="clear"></div>
-</fieldset>
+									// Stop when the installment total is less than the smallest installment configure.
+									if ( $installment_total < $smallest_installment ) {
+										break;
+									}
+									?>
+							<option value="<?php echo esc_attr( $i ); ?>">
+								<?php
+											/* translators: %s: total amount */
+											echo esc_attr( sprintf( __( '%dx of %$1s %$2s (Total: %$3s)', 'iugu-woocommerce' ), $i, sanitize_text_field( wc_price( $installment_total ) ), $interest_text, sanitize_text_field( wc_price( $total_to_pay ) ) ) );
+										?>
+							</option>
+							<?php endfor; ?>
+						</select>
+					</p>
+					<?php endif; ?>
+					<div class="clear"></div>
+				</fieldset>
+			</div>
+			<div class="finform-pay">
+				<p class="paccept-pay">En continuant, vous acceptez les conditions générales</p>
+				<div class="ensaccept-pay">
+					<input class="accept-pay" type="checkbox" id="accept" name="accept">
+					<label class="lbl_accept-pay" for="accept">J'accepte le traitement de mes donneés par Maison Eau D'or à des fins marketing.</label>
+				</div>
+				<button class="btnpay-pay">PAYER</button>
+			</div>
+		</div>
+		<div class="panier-pay">
+			<p>panier</p>
+		</div> 
+	</div>
+</body>

@@ -22,7 +22,8 @@ header {
 }
 
 .ens_icon-header {
-    padding-right: 2%;
+    top: 7%;
+    padding-right: 3%;
     display: flex;
     margin-left: auto;
     position: absolute;
@@ -54,7 +55,38 @@ header {
     font-size: 20px;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
     transition: font-size 0.5s ease;
+}
+
+.ap-header{
+    text-decoration: none;
+    color: #000000;
+}
+
+.am-header{
+    text-decoration: none;
+    color: #000000;
+}
+
+.amt-header{
+    text-decoration: none;
+    color: #000000;
+}
+
+.ac-header{
+    text-decoration: none;
+    color: #000000;
+}
+
+.ab-header{
+    text-decoration: none;
+    color: #000000;
+}
+
+.apc-header{
+    text-decoration: none;
+    color: #000000;
 }
 
 /* Media Query pour les écrans en dessous de 768px */
@@ -103,18 +135,6 @@ header {
         transition: font-size 0.5s ease
     }
 
-    #iconp-header{
-        display: none;
-    }
-
-    #iconb-header{
-        display: none;
-    }
-
-    #iconc-header{
-        display: none;
-    }
-
     .ens_icon-header{
         display: none;
     }
@@ -124,19 +144,6 @@ header {
     .li-header {
         font-size: 12px; /* Ajustez la taille de police pour cette plage de largeurs d'écran */
     }
-
-    .menu_parfums-header{
-        margin-top: 24%;
-    }
-
-    .menu_brumes-header{
-        margin-top: 27%;
-    }
-
-    .menu_pc-header{
-        margin-top: 11%;
-    }
-
 
     .li-header:hover .menu_parfums-header{
         display: block;
@@ -165,18 +172,6 @@ header {
         font-size: 16px; /* Ajustez la taille de police pour cette plage de largeurs d'écran */
     }
 
-    .menu_parfums-header{
-        margin-top: 18%;
-    }
-
-    .menu_brumes-header{
-        margin-top: 20%;
-    }
-
-    .menu_pc-header{
-        margin-top: 8.5%;
-    }
-
     .li-header:hover .menu_parfums-header{
         display: block;
     }
@@ -194,18 +189,6 @@ header {
 @media screen and (min-width: 1200px) {
     .li-header {
         font-size: 20px; /* Ajustez la taille de police pour les écrans au-dessus de 1200px */
-    }
-
-    .menu_parfums-header{
-        margin-top: 14.5%;
-    }
-
-    .menu_brumes-header{
-        margin-top: 16%;
-    }
-
-    .menu_pc-header{
-        margin-top: 6.7%;
     }
 
     .li-header:hover .menu_parfums-header{
@@ -226,45 +209,6 @@ header {
     .li-header {
         font-size: 24px; /* Ajustez la taille de police pour les écrans au-dessus de 1200px */
     }
-
-    .li-header:hover .menu_parfums-header{
-        display: block;
-    }
-    
-    .li-header:hover .menu_brumes-header{
-        display: block;
-    }
-    
-    .li-header:hover .menu_pc-header{
-        display: block;
-    }
-
-    .menu_parfums-header{
-        margin-top: 12.5%;
-    }
-
-    .menu_brumes-header{
-        margin-top: 13.5%;
-    }
-
-    .menu_pc-header{
-        margin-top: 5.5%;
-    }
-}
-
-.menu_parfums-header {
-    display: none;
-    list-style: none;
-    width: 200%;
-    padding: 0;
-    position: absolute;
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Lora;
-    font-size: 18px;
-    text-align: left;
-    border-top: 1px solid #000000;
-    box-shadow: black 2px 2px 5px 0px;
 }
 
 .lismp-header{
@@ -272,39 +216,9 @@ header {
     padding: 8% 2% 2% 2%;
 }
 
-.menu_brumes-header {
-    display: none;
-    list-style: none;
-    width: 200%;
-    padding: 0;
-    position: absolute;
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Lora;
-    font-size: 18px;
-    text-align: left;
-    border-top: 1px solid #000000;
-    box-shadow: black 2px 2px 5px 0px;
-}
-
 .lismb-header{
     width: 100%;
     padding: 8% 2% 2% 2%;
-}
-
-.menu_pc-header {
-    display: none;
-    list-style: none;
-    width: 100%;
-    padding: 0;
-    position: absolute;
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Lora;
-    font-size: 18px;
-    text-align: left;
-    border-top: 1px solid #000000;
-    box-shadow: black 2px 2px 5px 0px;
 }
 
 .lismc-header{
