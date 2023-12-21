@@ -369,44 +369,108 @@
 			"categorie": "parfum"
 		},
 		{
-			"nom": "Dummy Test Maison",
+			"nom": "Sprays Maison",
 			"format": 250,
-			"stock": 100,
-			"prix": 90.00,
-			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"stock": 12.50,
+			"prix": 12.50,
+			"description": "Des sprays parfumés spécialement conçus pour rafraîchir l'atmosphère de votre maison. Créez une ambiance accueillante avec ces parfums d'ambiance délicats qui imprègnent chaque coin de votre espace de notes exquises.",
 			"categorie": "maison"
-		},
+		},	  	  
 		{
-			"nom": "Dummy Test Muscs",
-			"format": 250,
-			"stock": 100,
-			"prix": 90.00,
-			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"nom": "Muscs Tahara Intimes",
+			"format": 15,
+			"stock": 12.50,
+			"prix": 12.50,
+			"description": "Des muscs intimes conçus pour évoquer la sensualité et la féminité. Légers et envoûtants, ces muscs offrent une expérience olfactive subtile et séduisante.",
 			"categorie": "muscs"
 		},
 		{
-			"nom": "Dummy Test Cosmétiques",
-			"format": 250,
-			"stock": 100,
-			"prix": 90.00,
-			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"nom": "Lingettes Tahara",
+			"format": 30,
+			"stock": 35.00,
+			"prix": 35.00,
+			"description": "Découvrez nos Lingettes Tahara, une touche de fraîcheur en toute simplicité. Laissez-vous envelopper par leur parfum subtil, une fusion de notes douces qui évoquent la pureté et la propreté. Pratiques et raffinées, nos Lingettes Tahara sont le complément parfait pour une sensation de fraîcheur instantanée, où que vous soyez. Une touche de pureté à portée de main.",
+			"categorie": "muscs"
+		},
+		{
+			"nom": "Masque Nila",
+			"format": 100,
+			"stock": 12.50,
+			"prix": 12.50,
+			"description": "Eclaircit le teint et les zones sombres hyperpigmentées du corps comme les genoux, coudes, aisselles, parties intimes. Unifie et éclaircit le teint. Réduit les taches brunes, acné, cicatrices. Efface le masque de grossesse. Soin anti âge qui adoucit la peau. Filtre la couleur cuivrée que laisse le henné sur les cheveux blanc. Hydrate la peau et Atténue les cernes. Conseil d'utilisation : Appliquer une à deux fois par semaine en couche épaisse et laisser poser 10 à 30 minutes.",
 			"categorie": "cosmétiques"
 		},
 		{
-			"nom": "Dummy Test Brumes",
+			"nom": "Rose Face Mask",
+			"format": 15,
+			"stock": 8.00,
+			"prix": 8.00,
+			"description": "Le masque hydratant visage Rose Face Mask apaise et tonifie la peau pour lui redonner éclat et souplesse. Il permet de recréer le film hydrolipidique dont la peau a besoin pour se protéger des bactéries. Le masque visage fresh dispose d'une formule gel rafraîchissante, infusée d’eau de rose pure et de pétales de rose. La texture de ce masque hydratant fond littéralement au contact de la peau pour offrir un véritable moment de bien-être et un plaisir sensoriel unique; 85 % des utilisateurs ont déclaré que leur peau paraissait nourrie, désaltérée et apaisée. Le petit plus de ce masque visage à la rose ? Ce soin hydratant visage fresh est composé à 97%(2) d’ingrédients d’origine naturelle Un délicat parfum de roses fraîches qui hydrate, apaise et rafraîchit la peau instantanément. Ce doux parfum de rose se retrouve également dans notre crème hydratante visage Rose Face Cream.",
+			"categorie": "cosmétiques"
+		},
+		{
+			"nom": "Brumes Gris Montaigne",
 			"format": 250,
-			"stock": 100,
-			"prix": 90.00,
-			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"stock": 10,
+			"prix": 10.00,
+			"description": "Inspirées par l'élégance intemporelle, ces brumes captivent avec des notes sophistiquées, créant une aura subtile et envoûtante. Parfaites pour une touche de luxe au quotidien.",
 			"categorie": "brumes"
 		},
 		{
-			"nom": "Dummy Test Capillaires",
+			"nom": "Brumes RP",
 			"format": 250,
-			"stock": 100,
-			"prix": 90.00,
-			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"stock": 10,
+			"prix": 10.00,
+			"description": "Des brumes rafraîchissantes parfumées, idéales pour rehausser votre routine beauté quotidienne. Offre une sensation apaisante tout en laissant un parfum délicat sur la peau.",
+			"categorie": "brumes"
+		},		  
+		{
+			"nom": "Big Hair Uniikone",
+			"format": 500,
+			"stock": 35,
+			"prix": 35.00,
+			"description": "Un traitement capillaire unique qui revitalise et fortifie les cheveux, offrant brillance et volume exceptionnels pour une chevelure éclatante.",
 			"categorie": "capillaires"
-		}
+		  },
+		  {
+			"nom": "Booster capillaire",
+			"format": 100,
+			"stock": 30,
+			"prix": 30.00,
+			"description": "Formulé pour prévenir la chute des cheveux, ce booster capillaire renforce les follicules, favorise la croissance des cheveux et améliore la densité capillaire.",
+			"categorie": "capillaires"
+		  },
+		  {
+			"nom": "Cire redone",
+			"format": 150,
+			"stock": 5,
+			"prix": 5.00,
+			"description": "Une cire coiffante innovante qui apporte une tenue souple et naturelle tout en donnant une brillance saine. Parfaite pour sculpter et définir les coiffures avec style.",
+			"categorie": "capillaires"
+		  },
+		  {
+			"nom": "KeraQueens Lifting capillaire",
+			"format": 500,
+			"stock": 35,
+			"prix": 35.00,
+			"description": "Un soin capillaire avancé qui nourrit en profondeur, répare les cheveux abîmés et redonne élasticité et vitalité pour des cheveux éclatants de santé.",
+			"categorie": "capillaires"
+		  },
+		  {
+			"nom": "KeraQueens Quotidien",
+			"format": 100,
+			"stock": 30,
+			"prix": 30.00,
+			"description": "Une routine capillaire complète comprenant des produits spécialement conçus pour nettoyer en douceur, hydrater et protéger les cheveux au quotidien, pour une chevelure soyeuse et bien entretenue.",
+			"categorie": "capillaires"
+		  },
+		  {
+			"nom": "Rose Baie",
+			"format": 500,
+			"stock": 30,
+			"prix": 30.00,
+			"description": "Un produit capillaire délicieusement parfumé, enrichi en extraits de rose et de baie, qui apporte une douceur et une fragrance agréable tout en nourrissant les cheveux en profondeur.",
+			"categorie": "capillaires"
+		  }  
 	]
 }
