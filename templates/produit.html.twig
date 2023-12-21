@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catalogue</title>
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/produit.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Logo header / footer -->
+</head>
+
+<body>
+
+{% block header %}
+{% include 'header.html.twig' %}
+{% endblock %}
+
+<div class="content">
+
+{# Si le produit existe (!= null) #}
+{% if produit != null %}
+	{# Affichage du chemin #}
+	<div class="path">
+		<a href="{{ path('accueil') }}">Accueil</a>
+		<p>/</p>
+		<a href="{{ path('catalogue') }}">Catalogue</a>
+		<p>/</p>
+	{% if produit != null %}
+		<a href="{{ path(produit.categorie.nom) }}">{{ produit.categorie.nom }}</a> {# ex : "parfum", "maison", ... #}
+		<p>/</p>
+		<a href="{{ path('produit', {'id': produit.id}) }}">{{ produit.titre }}</a>
+	{% endif %}
+	</div>
+
+	{# Affichage du produit #}
+	<div class="produit">
+		<div class="img">
+		{# Si le produit à plusieurs images cherche le path de la première image (celle qui contient le numéro 1) #}
+		{% set pathImgPrincipal = null %}
+		{% set pathImgAutre = null %}
+		{% for photo in produit.photos %}
+			{% if photo.pathPhoto is defined %}
+				{% set filename = photo.pathPhoto|split('/')|last %} 
+				{% if '1' in filename %}
+					{% set pathImgPrincipal = photo.pathPhoto %}
+				{% elseif '2' in filename %}
+					{% set pathImgAutre = photo.pathPhoto %}
+				{% else %}
+					{% set pathImgPrincipal = photo.pathPhoto %} 
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+		{# {{ dump(pathImgPrincipal ?? '') }} #}
+		{# {{ dump(pathImgAutre ?? '') }} #}
+
+		{% if pathImgAutre is defined and pathImgAutre is not null %}
+			<img src="{{ asset(pathImgPrincipal) }}" alt="Image du produit main" class="imgPrincipal">
+			<img src="{{ asset(pathImgAutre) }}" alt="Image du produit hover" class="imgAutre">
+		{% else %}
+			<img src="{{ asset(pathImgPrincipal) }}" alt="Image du produit mainS" class="imgPrincipalSolo">
+		{% endif %}
+
+		{#
+		{% for photo in produit.photos %}
+			{{ dump(photo.pathPhoto) }}
+			{% if photo.pathPhoto is defined and '1' in photo.pathPhoto %}
+				{% set pathImgPrincipal = photo.pathPhoto %}
+			{% elseif '2' in photo.pathPhoto %}
+				{% set pathImgAutre = photo.pathPhoto %}
+			{% endif %}
+		{% endfor %}
+			{{ dump(pathImgPrincipal ?? '') }}
+			{{ dump(pathImgAutre ?? '') }} #}
+		</div>
+		<div class="info">
+			<h2>{{ produit.titre }}</h2>
+			<div class="prix">
+				<p>{{ produit.prix|number_format(2, ',', ' ') }} €</p>
+				<p class="old">{{ produit.prix|number_format(2, ',', ' ') }} €</p>
+			</div>
+			<p class="format">Format  <span>{{ produit.format.nom }} ml </span></p>
+			<div class="quantite">
+				<p>Quantité</p>
+				<div class="btn">
+					<button id="moins" style="display: none;">-</button>
+					<input type="text" name="quantite" id="quantite" value="1">
+					<button id="plus">+</button>
+				</div>
+			</div>
+			<button id="acheter">Acheter</button>
+			<button id="panier">Ajouter au panier</button>
+			<h3>Description :</h3>
+			<p class="desc">{{ produit.description|replace({'.': '.<br>'})|raw }}</p>
+		</div>
+	</div>
+
+{% if similaires|length > 0 %}
+	{# Affichage des produits similaires #}
+	<div class="similaires">
+		<h2>Vous aimerez aussi...</h2>
+		<div class="produitsSim">
+			{% for similaire in similaires %}
+				<div class="similaire">
+					<a href="{{ path('produit', {'id': similaire.id}) }}">
+						<img src="{{ asset(similaire.image) }}" alt="Image du produit similaire">
+						<p>{{ similaire.titre }}</p>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+
+
+{# Si le produit n'existe pas #}
+{% else %}
+	<p>Le produit n'existe pas</p>
+{% endif %}
+
+</div>
+
+{# {% block footer %}
+{% include 'footer.html.twig' %}
+{% endblock %} #}
+
+<script type="text/javascript" src="{{ asset('assets/js/produit.js') }}"></script>
+
+
+</body>
+</html>
