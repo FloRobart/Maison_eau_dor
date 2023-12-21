@@ -69,6 +69,7 @@
     background: #000;
     padding : 2% 21.5% 2% 21.5%;
     transition: background-color 0.5s, color 0.5s;
+    transition: font-size 0.5s ease;
     cursor: pointer;
 }
 
@@ -234,10 +235,22 @@
     }
 }
 
+@media screen and (min-width: 500px) and (max-width: 750px){
+    .btn_panier-accueil{
+        font-size: 14px;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 950px){
     .imgbar-accueil{
         width: auto;
         overflow: hidden;
         height: 385px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px){
+    .btn_panier-accueil{
+        font-size: 18px;
     }
 }
