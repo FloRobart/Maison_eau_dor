@@ -1,0 +1,563 @@
+.body-pay{
+    margin-top: 12%;
+}
+
+.content-pay{
+    display: flex;
+    gap: 20px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+.ensform-pay{
+    width: 100%;
+}
+
+.panier-pay{
+    display: block;
+    width: 380px;
+    height: 670px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    margin-top: 6.5%;
+}
+
+.titre-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    transition: font-size 0.5s ease
+}
+
+.titrest-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+}
+
+.titrec-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.legalc-pay{
+    color: rgba(0, 0, 0, 0.30);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-pay{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 2%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.form_contact-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.ensn-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.nom-pay{
+    width: 100%;
+    padding: 1%;
+}
+
+.ense-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.email-pay{
+    width: 100%;
+    padding: 1%;
+}
+
+.enst-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.tele-pay{
+    width: 100%;
+    padding: 1%;
+}
+
+.liv-pay{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 2%;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.titrel-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.form_livraison-pay{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ensl-pay{
+    display: flex;
+    gap: 10px;
+}
+
+.ensnl-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.ensrnum-pay{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+}
+
+.ensr-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.rue-pay{
+    width: 100%;
+    padding: 2%;
+}
+
+.ensnum-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.num-pay{
+    width: 100%;
+    padding: 2%;
+}
+
+.ensvcp-pay{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+}
+
+.ensv-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.ville-pay{
+    width: 100%;
+    padding: 2%;
+}
+
+.enscp-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.cp-pay{
+    width: 100%;
+    padding: 2%;
+}
+
+.ensp-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.pays-pay{
+    width: 100%;
+    padding: 1%;
+}
+
+.choixl-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.ensld-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.livraison-pay{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.lbl_livd-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.stl-pay{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Roboto Flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-left: 3.5%;
+}
+
+.free-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.65px;
+    margin-left: 3.5%;
+}
+
+.enslp-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+    margin-bottom: 4%;
+}
+
+.poste-pay{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.lbl_livp-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.ensrl-pay{
+    display: flex;
+    gap: 10px;
+}
+
+.lbl_retrait-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.75px;
+}
+
+.content_retrait-pay{
+    display: flex;
+    padding: 0px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.txt1r-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.txt2r-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.txt3r-pay{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Roboto Flex;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.txt4r-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.65px;
+}
+
+.pay-pay{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 2%;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.titrep-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.stp-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#iugu-credit-card-fields{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#ensnc-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.wc-credit-card-form-card-number{
+    width: 100%;
+    padding: 1%;
+}
+
+#ensnom-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.nomc-pay{
+    width: 100%;
+    padding: 1%;
+}
+
+.ensdatcry-pay{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+#ensex-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.wc-credit-card-form-card-expiry{
+    width: 100%;
+    padding: 2%;
+}
+
+#enscry-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.wc-credit-card-form-card-cvc{
+    width: 100%;
+    padding: 2%;
+}
+
+.finform-pay{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.paccept-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ensaccept-pay{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lbl_accept-pay{
+    color: #000;
+    font-family: Roboto Flex;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btnpay-pay{
+    width: 50%;
+    padding: 2%;
+    position: relative;
+    left: 50%;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto Flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btnpay-pay:hover{
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 399px) {
+    .titre-pay{
+        font-size: 20px;
+    }
+
+    .panier-pay{
+        display: none;
+    }
+
+    .body-pay{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 549px) {
+
+    .titre-pay{
+        font-size: 30px;
+    }
+
+    .panier-pay{
+        display: none;
+    }
+
+    .body-pay{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 1000px) {
+    .panier-pay{
+        display: none;
+    }
+
+    .body-pay{
+        margin-top: 15%;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>À propos</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.about.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+        {% include 'header.html.twig' %}
+
+        <div class="content">
+            <div class="concept-content">
+                <div class="texte">
+                    <h1>À LA RENCONTRE DE MAISON EAU D'OR</h1>
+                    <p>Maison Eau d’Or est une entreprise spécialisée dans la vente de parfums mixtes aux diverses senteurs depuis 2021.</p>
+                    <p>Le fondateur crée lui-même ses parfums “Les évasions gourmandes” grâce à son bar à parfums en mélangeant plusieurs senteurs pour obtenir des parfums riches et uniques. Il propose également la vente de parfums d’autres marques.</p>
+                    <p>Très rapidement, Maison Eau d’or a développé ses produits en proposant : des sprays d’intérieur, des muscs intimes, des brumes pour corps et cheveux ainsi que des cosmétiques.</p>
+                </div>
+
+                <div class="video">
+                    <video  controls>
+                        <source src="{{ asset('videos/about_concept.mp4') }}" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+            </div>
+
+            <div class="identite-content">
+                <div class="texte">
+                    <h1>MAIS AU FAIT... QUI SE CACHE DERRIÈRE MAISON EAU D'OR ?</h1>
+                    <p>C'est M. qui a fondé la marque Maison Eau d'or en 2019-2020 durant le confinement, une période qui a chamboulé un bon nombre de commerces.</p>
+                    <p>Pour ce qui est de M. , il  a su saisir l'opportunité du COVID pour se lancer dans la parfumerie, et il a pu se créer une clientèle fidèle, à l'aide des réseaux sociaux, notamment Snapchat et Facebook.</p>
+                    <p>C'est en 2021 qu'il a ouvert sa boutique au Havre au 123 Avenue René Coty 76 600. Étant le seul à se lancer dans cette aventure, dès le départ, il a eu le brin de folie et la force de caractère pour tout gérer lui-même. La création de parfums est devenue sa destinée, sa passion, son obsession.</p>
+                </div>
+            </div>
+
+            <div class="tiktok-content">
+                <div class="texte">
+                    <h1>BACKSTAGE DE MAISON EAU D'OR</h1>
+                    <p>Rejoignez-nous, retrouvez toute l'actualité sur nos différents réseaux sociaux SnapChat, TikTok, Instagram et Facebook.</p>
+                    <a href="https://www.snapchat.com/fr-FR"><i class="fa-brands fa-snapchat"></i></a><a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a><a href="https://www.instagram.com/maisoneaudor/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/maisoneaudor76/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+
+                <div class="video">
+                    <video  controls>
+                        <source src="{{ asset('videos/about_tiktok1.mp4') }}" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+
+                    <video  controls>
+                        <source src="{{ asset('videos/about_tiktok2.mp4') }}" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        {% include 'footer.html.twig' %}
+</body>

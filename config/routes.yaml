@@ -59,10 +59,17 @@ catalogue:
     controller: App\Controller\CatalogueController::index
     methods: ['GET']
 
+# Produit
+produit:
+    path: /produit/{id}
+    controller: App\Controller\ProduitController::index
+    methods: ['GET']
+
 # Paiemment
 payment_list:
     path: /payment
     controller: App\Controller\PayController::index
+
 
 #Succes
 success_stripe:
@@ -73,3 +80,9 @@ success_stripe:
 failure_stripe:
     path: /failure
     controller: App\Controller\PayController::StripeFailure
+
+# A propos
+about_page:
+    path: /about
+    controller: App\Controller\DefaultController::about
+    methods: ['GET']

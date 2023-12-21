@@ -1,0 +1,420 @@
+/* Path: public/assets/css/produit.css */
+
+/* Enlève les marges et les paddings par défaut */
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+   #########################################
+   #                                       #
+   #                CONTENT                #
+   #                                       #
+   #########################################
+*/
+.content {
+	margin-top: 180px; /* marge pour éviter que le contenu soit caché derrière le header */
+	padding: 0 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	transition: padding 0.5s ease;
+}
+
+.path {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 1em 0;
+}
+
+.path p {
+	margin: 0 1em;
+}
+
+.path a {
+	text-decoration: none;
+	color: #bbb;
+}
+
+.path a:hover {
+	color: #000;
+}
+
+
+/*
+   #########################################
+   #                                       #
+   #                PRODUIT                #
+   #                                       #
+   #########################################
+*/
+.produit {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	transition: all 0.5s ease;
+}
+
+/* Images */
+.img {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	margin-right: 10%;
+	border: 1px solid #999;
+	transition: all 0.5s ease;
+}
+
+.imgPrincipalSolo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.imgPrincipal, .imgAutre {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: opacity 0.6s ease-in-out;
+}
+
+.imgAutre {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.img:hover .imgPrincipal {
+	opacity: 0;
+}
+
+.img:hover .imgAutre {
+	opacity: 1;
+}
+
+
+
+/* Infos */
+.info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* Infos : Titre */
+.info h2 {
+	margin: 1rem 0;
+	font-size: 3em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Infos : Format */
+.format {
+	margin: 1em 0;
+	font-size: 1.2em;
+}
+
+.format span {
+	margin: 0 .75em;
+	padding: 0.3em 1em;
+	font-weight: bold;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+/* Prix */
+.prix {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.prix p {
+	margin: 0 2em 0.5em 0;
+	font-size: 1.6em;
+}
+
+.prix .old {
+	display: none;
+	text-decoration: line-through;
+	color: #999;
+}
+
+
+
+/* Quantité */
+.quantite {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 100%;
+	margin: 0.5em 0;
+}
+
+.quantite p {
+	margin: 0.5em 2em 0.5em 0;
+	font-size: 1.2em;
+}
+
+.quantite .btn {
+	display: flex;
+	flex-direction: row;
+	width: 12rem;
+}
+
+/* Quantité : Boutons */
+.quantite .btn button {
+	width: 25%;
+	border: 1px solid #000;
+	background: #FFF;
+	font-weight: bold;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.quantite .btn button:focus:active {
+	background: #000;
+	color: #FFF;
+}
+
+/* Quantité : Input */
+.quantite .btn input {
+	width: 50%;
+	text-align: center;
+	border: 1px solid #000;
+	cursor: default;
+	font-weight: bold;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.quantite .btn input:focus {
+	outline: none;
+}
+
+
+
+
+
+
+
+/* Buttons Acheter et Ajouter au panier */
+#acheter, #panier {
+	width: 27rem;
+	height: 2.5rem;
+	margin: 0.5rem 0;
+	color: #FFF;
+	text-align: center;
+	font-family: Roboto Flex, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	border: 1px solid #000;
+	background: #000;
+	cursor: pointer;
+}
+
+/* Acheter */
+#acheter {
+	color: #FFF;
+	background: #000;
+}
+
+#acheter:hover {
+	background: #111;
+}
+
+/* Ajouter au panier */
+#panier {
+	color: #000;
+	background: #FFF;
+}
+
+#panier:hover {
+	background: #EEE;
+}
+
+
+/* Description */
+.info h3 {
+	margin: 1rem 0 0.5rem 0;
+	font-size: 1.5em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #D9AF7E;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.info .desc {
+	margin: 0.5rem 0;
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+
+/* 
+   #########################################
+   #                                       #
+   #              SIMILAIRES               #
+   #                                       #
+   #########################################
+*/
+.similaires {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin: 2em 0;
+}
+
+.similaires h2 {
+	font-size: 1.6em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.produitsSim {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding-right: 50%;
+}
+
+.similaire {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.similaire a {
+	text-align: center;
+	margin: .5em 0;
+	text-decoration: none;
+	color: #000;
+}
+
+.similaire a img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.similaire a p {
+	margin: 1rem 0;
+	font-size: 1.2em;
+}
+
+
+
+
+
+
+
+/*
+   ########################################
+   #                                      #
+   #                MEDIA                 #
+   #                                      #
+   ########################################
+*/
+@media screen and (max-width: 1440px) {
+	.content {
+		padding: 0 5%;
+	}
+
+	.img {
+		margin-right: 5%;
+	}
+
+	.info h2 {
+		font-size: 2.5em;
+	}
+
+	.info .format span {
+		margin: 0 .5em;
+		padding: 0.5em;
+		font-size: 0.8em;
+	}
+
+	.info .prix p {
+		margin: 0 1em 0.5em 0;
+		font-size: 1.2em;
+	}
+
+	.produitsSim {
+		padding-right: 25%;
+	}
+
+	#acheter, #panier {
+		width: 20rem;
+		height: 2.5rem;
+		margin: 0.5rem 0;
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.produit {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	img {
+		margin-right: 0;
+	}
+
+	.info {
+		align-items: center;
+	}
+
+	.info .prix {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.quantite {
+		justify-content: center;
+	}
+
+	.produitsSim {
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.content {
+		margin-top: 100px;
+	}
+
+	.path p {
+		margin: 0 0.5em;
+	}
+
+	.produitsSim {
+		flex-direction: column;
+		margin: 1% 0;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.img {
+		width: 100%;
+		height: 100%;
+		margin-right: 0;
+	}
+}
+
+
