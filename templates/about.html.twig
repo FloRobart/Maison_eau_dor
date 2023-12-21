@@ -11,49 +11,67 @@
 <body>
         {% include 'header.html.twig' %}
 
-        <div class="content">
-            <div class="concept-content">
-                <div class="texte">
-                    <h1>À LA RENCONTRE DE MAISON EAU D'OR</h1>
-                    <p>Maison Eau d’Or est une entreprise spécialisée dans la vente de parfums mixtes aux diverses senteurs depuis 2021.</p>
-                    <p>Le fondateur crée lui-même ses parfums “Les évasions gourmandes” grâce à son bar à parfums en mélangeant plusieurs senteurs pour obtenir des parfums riches et uniques. Il propose également la vente de parfums d’autres marques.</p>
-                    <p>Très rapidement, Maison Eau d’or a développé ses produits en proposant : des sprays d’intérieur, des muscs intimes, des brumes pour corps et cheveux ainsi que des cosmétiques.</p>
+        <div class="content-about">
+            <div class="concept-about">
+                <div class="txtc-about">
+                    <h1 class="titrec-about">À LA RENCONTRE DE MAISON EAU D'OR</h1>
+                    <p class="txtc1-about">Maison Eau d’Or est une entreprise spécialisée dans la vente de parfums mixtes aux diverses senteurs depuis 2021.</p>
+                    <p class="txtc2-about">Le fondateur crée lui-même ses parfums “Les évasions gourmandes” grâce à son bar à parfums en mélangeant plusieurs senteurs pour obtenir des parfums riches et uniques. Il propose également la vente de parfums d’autres marques.</p>
+                    <p class="txtc3-about">Très rapidement, Maison Eau d’or a développé ses produits en proposant : des sprays d’intérieur, des muscs intimes, des brumes pour corps et cheveux ainsi que des cosmétiques.</p>
                 </div>
 
-                <div class="video">
-                    <video  controls>
+                <div class="contentvc-about">
+                    <video class="videoc-about" controls muted>
                         <source src="{{ asset('videos/about_concept.mp4') }}" type="video/mp4">
                         Votre navigateur ne supporte pas la balise vidéo.
                     </video>
                 </div>
             </div>
 
-            <div class="identite-content">
-                <div class="texte">
-                    <h1>MAIS AU FAIT... QUI SE CACHE DERRIÈRE MAISON EAU D'OR ?</h1>
-                    <p>C'est M. qui a fondé la marque Maison Eau d'or en 2019-2020 durant le confinement, une période qui a chamboulé un bon nombre de commerces.</p>
-                    <p>Pour ce qui est de M. , il  a su saisir l'opportunité du COVID pour se lancer dans la parfumerie, et il a pu se créer une clientèle fidèle, à l'aide des réseaux sociaux, notamment Snapchat et Facebook.</p>
-                    <p>C'est en 2021 qu'il a ouvert sa boutique au Havre au 123 Avenue René Coty 76 600. Étant le seul à se lancer dans cette aventure, dès le départ, il a eu le brin de folie et la force de caractère pour tout gérer lui-même. La création de parfums est devenue sa destinée, sa passion, son obsession.</p>
+            <div class="huile-about">
+                <div class="contentih-about">
+                    <img class="imgh-about" src="{{ asset('images/ensp.jpg') }}" alt="Ensemble de parfums">
+                </div>
+
+                <div class="txth-about">
+                    <p class="titreh-about">L'HUILE, L'INGRÉDIENT MIRACLE</p>
+                    <p class="txth1-about">Maison Eau d’Or utilise de l’huile dans tous ses parfums de manière à ce qu’ils tiennent mieux et plus longtemps sur la peaux et les vêtements.</p>
+                    <p class="txth2-about">Contrairement à l'eau, les huiles ne s'évaporent pas aussi rapidement, ce qui signifie que la fragrance reste présente sur la peau pendant une période prolongée. De plus, les huiles ont la capacité d'être absorbées par la peau. Lorsqu'elles sont mélangées avec des notes parfumées, elles permettent à la fragrance de pénétrer plus profondément dans la peau.</p>
+                    <p class="txth3-about">L'huile a une meilleure adhérence aux fibres des vêtements par rapport à l'eau. Ainsi,  lorsque vous vaporisez un parfum contenant de l'huile sur vos vêtements, la fragrance a tendance à s'y accrocher plus longtemps, offrant ainsi une empreinte olfactive qui persiste même après plusieurs heures.</p>
+                    <p class="txth4-about">L’huile contribue également à la stabilité des ingrédients du parfum, aidant ainsi à maintenir l'intégrité de la fragrance au fil du temps. Cela peut être particulièrement important pour les parfums qui sont stockés pendant de longues périodes avant d'être utilisés.</p>
                 </div>
             </div>
 
-            <div class="tiktok-content">
-                <div class="texte">
-                    <h1>BACKSTAGE DE MAISON EAU D'OR</h1>
-                    <p>Rejoignez-nous, retrouvez toute l'actualité sur nos différents réseaux sociaux SnapChat, TikTok, Instagram et Facebook.</p>
-                    <a href="https://www.snapchat.com/fr-FR"><i class="fa-brands fa-snapchat"></i></a><a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a><a href="https://www.instagram.com/maisoneaudor/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/maisoneaudor76/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <div class="identite-about">
+                <div class="txti-about">
+                    <p class="titrei-about">MAIS AU FAIT... QUI SE CACHE DERRIÈRE MAISON EAU D'OR ?</p>
+                    <p class="txti1-about">C'est M. qui a fondé la marque Maison Eau d'or en 2019-2020 durant le confinement, une période qui a chamboulé un bon nombre de commerces.</p>
+                    <p class="txti1-about">Pour ce qui est de M. , il  a su saisir l'opportunité du COVID pour se lancer dans la parfumerie, et il a pu se créer une clientèle fidèle, à l'aide des réseaux sociaux, notamment Snapchat et Facebook.</p>
+                    <p class="txti1-about">C'est en 2021 qu'il a ouvert sa boutique au Havre au 123 Avenue René Coty 76 600. Étant le seul à se lancer dans cette aventure, dès le départ, il a eu le brin de folie et la force de caractère pour tout gérer lui-même. La création de parfums est devenue sa destinée, sa passion, son obsession.</p>
                 </div>
+                <div class="contentii-about">
+                    <img class="imgi-about" src="{{ asset('images/boutique.jpg') }}" alt="Boutique">
+                </div>
+            </div>
 
-                <div class="video">
-                    <video  controls>
+            <div class="tiktok-about">
+                <div class="tikv-about">
+                    <video class="videot-about" controls>
                         <source src="{{ asset('videos/about_tiktok1.mp4') }}" type="video/mp4">
                         Votre navigateur ne supporte pas la balise vidéo.
                     </video>
 
-                    <video  controls>
+                    <video class="videot-about"  controls>
                         <source src="{{ asset('videos/about_tiktok2.mp4') }}" type="video/mp4">
                         Votre navigateur ne supporte pas la balise vidéo.
                     </video>
+                </div>
+                <div class="reso-about">
+                    <p class="titrer-about">BACKSTAGE DE MAISON EAU D'OR</p>
+                    <p class="txtr-about">Rejoignez-nous, retrouvez toute l'actualité sur nos différents réseaux sociaux SnapChat, TikTok, Instagram et Facebook.</p>
+                    <div class="ensl-about">
+                        <a class="logo-about" href="https://www.snapchat.com/fr-FR"><i class="fa-brands fa-snapchat fa-2xl"></i></a><a class="logo-about" href="https://www.tiktok.com/@maisoneaudor?lang=fr" target="_blank"><i class="fab fa-tiktok fa-2xl"></i></a><a class="logo-about" href="https://www.instagram.com/maisoneaudor/?hl=fr" target="_blank"><i class="fab fa-instagram fa-2xl"></i></a><a class="logo-about" href="https://www.facebook.com/maisoneaudor76/" target="_blank"><i class="fab fa-facebook fa-2xl"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
