@@ -62,19 +62,19 @@ body, html {
 
 /* Images */
 .img {
+	justify-content: center;
+	display: flex;
 	width: 500px;
 	height: 500px;
 	position: relative;
-	overflow: hidden;
+	overflow: show;
 	margin-right: 10%;
-	border: 1px solid #999;
 	transition: all 0.5s ease;
 }
 
 .imgPrincipalSolo {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	max-width: 500px;
+	max-height: 500px;
 }
 
 .imgPrincipal, .imgAutre {
@@ -305,8 +305,8 @@ body, html {
 }
 
 .similaire a img {
-	width: 200px;
-	height: 200px;
+	max-width: 200px;
+	max-height: 200px;
 	object-fit: cover;
 }
 
