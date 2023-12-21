@@ -7,10 +7,16 @@
     <div class="container_bestsales-accueil">
         <div class="carousel_bestsales-accueil">
             <div class="slidebs-accueil">
+			<form action="{{ path('pay_stripe_checkoutone')}}" method="post">
                 <img src="{{ asset('images/produits/ahlam/ahlam1.png') }}" alt="Produit 1">
                 <p class="nomp-accueil">Ahlam</p>
                 <p class="prixp-accueil">30,00€</p>
-                <button class="btn_panier-accueil" onclick="location.href={{path('payment_create')}};">AJOUTER AU PANIER </button>
+                <button class="btn_panier-accueil" >AJOUTER AU PANIER </button>
+				<input type="hidden" name="product_name" value="Ahlam">
+				<input type="hidden" name="product_price" value="30">
+				<input type="hidden" name="product_image" value="{{ asset('images/produits/ahlam/ahlam1.png') }}">
+				<button class="btn_panier-accueil"  type="submit">ACHETER </button>
+			</form>
             </div>
             <div class="slidebs-accueil">
                 <img src="{{ asset('images/magic_aïsha.png') }}" alt="Produit 2">

@@ -29,7 +29,7 @@ class PayController extends AbstractController
 		]));
 	}
 
-	#[Route('/create-session-stripe', name: 'pay.stripe.checkout')]
+	#[Route('/create-session-stripe', name: 'pay_stripe_checkout')]
 	public function stripeCheckout(): RedirectResponse
 	{
 
@@ -92,15 +92,66 @@ class PayController extends AbstractController
 		return new RedirectResponse($checkout_session->url);
 	}
 
-	#[Route('/success', name: 'pay.stripe.checkout')]
-	public function StripeSuccess(): RedirectResponse
+	#[Route('/success', name: 'success_stripe')]
+	public function StripeSuccess(): SymfonyResponse
 	{
 		return $this->render('paySuccess.html.twig');
 	}
 
-	#[Route('/failure', name: 'pay.stripe.checkout')]
+	#[Route('/failure', name: 'failure_stripe')]
 	public function StripeFailure(): RedirectResponse
 	{
 		return $this->render('payFailure.html.twig');
+	}
+
+	#[Route('/test-session-stripe', name: 'pay_stripe_checkouttest')]
+	public function stripeCheckoutTest(): RedirectResponse
+	{
+
+		$productStripe = [];
+
+		/*//TODO: get product from database
+		$order = null;*/
+
+		//TODO: change redirect route when cart is created
+		/*if (!$order) {
+			return $this->redirectToRoute('cart.index');
+		}*/
+		//TODO: change values when database is created
+		//Prend les produits de la commande et les ajoute dans un tableau
+		
+			$productStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => 30 * 100,
+					'product_data' => [
+						'name' => "ParfumTest"
+					],
+				],
+				'quantity' => 1,
+			];
+		
+
+		//Ajoute les frais de port dans le tableau
+		
+
+		//header('Content-Type: application/json');
+		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
+
+		Stripe::setApiKey('sk_test_51ONMaZG2UBG3DZO2CttNYXNE0fspQMIfQafk5BM1dqLOHnTiQW90Qb2ruH37d8ZO9HTWONsjLFnGg5ld7cGURqVW00jGcwgbI6');
+
+		$checkout_session = \Stripe\Checkout\Session::create([
+			'customer_email' => $this->getUser(),
+			'payment_method_types' => ['card'],
+			'line_items' => [[
+				# Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
+				$productStripe
+			]],
+			'mode' => 'payment',
+			'success_url' => $YOUR_DOMAIN . '/success',
+			'cancel_url' => $YOUR_DOMAIN . '/failure',
+		]);
+
+		return new RedirectResponse($checkout_session->url);
 	}
 }
