@@ -62,9 +62,11 @@ class CatalogueController extends AbstractController
 			case 'id':
 				$sort = 'id';
 				break;
+			case 'nom':
 			case 'name':
 				$sort = 'titreProduit';
 				break;
+			case 'price':
 			case 'prix':
 				$sort = 'prixProduit';
 				break;
@@ -86,8 +88,9 @@ class CatalogueController extends AbstractController
 			}
 		}
 
-		// dd($ids, $categorie);
-
+		
+		
+		// dd($sort, $order, $search, $idCategorie);
 		
 		// Récupération des produits
 		$produits = $this->entityManager->getRepository(Produit::class)->findProduitSimilarByName(

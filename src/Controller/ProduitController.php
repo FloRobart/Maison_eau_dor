@@ -40,25 +40,29 @@ class ProduitController extends AbstractController
 			$produitsSimilaires = $categorie->getProduits()->toArray();
 		
 			// On enlève le produit actuel du tableau des produits similaires
-			$pSFiltre = array_filter($produitsSimilaires, function($produit) use ($id) {
-				return $produit->getId() !== $id;
-			}); 
+			$pSFiltre = [];
+			foreach ($produitsSimilaires as $pS) {
+				if ($pS->getId() !== $id) {
+					$pSFiltre[] = $pS;
+				}
+			}
 
 			// Choix aléatoire de 3 produits similaires
 			$tmpSimilaires = [];
 			if (count($pSFiltre) < 3) {
 				// Si on a moins de 3 produits similaires, on prend tous les produits similaires
-				$tmpSimilaires = $pSFiltre;
+				foreach ($pSFiltre as $pS) {
+					$tmpSimilaires[] = $pS;
+				}
 			} else {
-				for ($i = 0; $i < 3; $i++) {
+				while (count($tmpSimilaires) < 3) {
 					$rand = floor(rand(0, count($pSFiltre) - 1));
-					$tmpSimilaires[] = $pSFiltre[
-						$rand == ($id-1) ? $rand + 1 : $rand
-					]; // On ajoute 1 pour éviter de tomber sur le produit actuel (qui vient d'être enlevé du tableau)
+					if (!in_array($pSFiltre[ $rand ], $tmpSimilaires)) { // Si le produit n'est pas déjà dans le tableau
+						$tmpSimilaires[] = $pSFiltre[ $rand ];
+					}
 				}
 			}
 
-			// dd($tmpSimilaires);
 
 			// Récupération des photos du produit et des produits similaires
 			$photos = $produit->getIdPhoto()->toArray();
