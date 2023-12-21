@@ -63,3 +63,10 @@ catalogue:
 payment_list:
     path: /payment
     controller: App\Controller\PayController::index
+
+# A propos
+about_page:
+    path: /about
+    controller: App\Controller\DefaultController::about
+    methods: ['GET']
+
