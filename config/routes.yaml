@@ -4,6 +4,38 @@ controllers:
         namespace: App\Controller
     type: attribute
 
+# Header
+parfum: 
+    path: /catalogue?categorie=parfum
+    controller: App\Controller\CatalogueController::index
+    methods: ['GET']
+
+maison: 
+    path: /catalogue?categorie=maison
+    controller: App\Controller\CatalogueController::index
+    methods: ['GET']
+
+muscs: 
+    path: /catalogue?categorie=muscs
+    controller: App\Controller\CatalogueController::index
+    methods: ['GET']
+
+cosmetiques: 
+    path: /catalogue?categorie=cosmetiques
+    controller: App\Controller\CatalogueController::index
+    methods: ['GET']
+
+brumes: 
+    path: /catalogue?categorie=brumes
+    controller: App\Controller\CatalogueController::index
+    methods: ['GET']
+
+capillaires: 
+    path: /catalogue?categorie=capillaires
+    controller: App\Controller\CatalogueController::index
+    methods: ['GET']
+
+
 # Accueil
 accueil:
     path: /
@@ -19,6 +51,12 @@ insertion_base_index:
 insertion_base_all:
     path: /insertion/base/all
     controller: App\Controller\BackOffice\MainInsertionController.php::index
+    methods: ['GET']
+
+# Catalogue
+catalogue:
+    path: /catalogue
+    controller: App\Controller\CatalogueController::index
     methods: ['GET']
 
 # Paiemment

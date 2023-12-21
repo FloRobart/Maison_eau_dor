@@ -1,14 +1,4 @@
-/* select nb d'object dans la base */
-var nbObj = 50;
-
-// ###########################################################
-// TODO: Les donées sont à récupérer depuis la base de donnée 
-// ###########################################################
-
-
-/* Détermine le nombre de page */
-var nbPage = Math.ceil(nbObj/16);
-
+var nbPage = nbPageGlobal; // Variable globale définie dans le fichier twig de la page (qui contient les produits)
 
 /* Afin d'utiliser la navigation par page, avoir les objets suivants : 
 (on peut aussi les créer en js pour la modularité si on veut pour les autres pages)
@@ -19,6 +9,7 @@ var nbPage = Math.ceil(nbObj/16);
 		</div>
 
 */
+console.log(nbPage);
 
 
 /* Ce qui sera crée : (si nbPage = 5 et pageActuelle = 1)
@@ -29,11 +20,11 @@ var nbPage = Math.ceil(nbObj/16);
 	</svg>
 </span>
 <span class="pagination-item pagination-item-current-page">1</span>
-<a class="pagination-item generated-link-item" href="/produits?page=2">2</a>
-<a class="pagination-item generated-link-item" href="/produits?page=3">3</a>
-<a class="pagination-item generated-link-item" href="/produits?page=4">4</a>
-<a class="pagination-item generated-link-item" href="/produits?page=5">5</a>
-<a class="pagination-item generated-link-item pagination-item-next-page" href="/produits?page=2">
+	<a class="pagination-item generated-link-item" href="/produits?page=2">2</a>
+	<a class="pagination-item generated-link-item" href="/produits?page=3">3</a>
+	<a class="pagination-item generated-link-item" href="/produits?page=4">4</a>
+	<a class="pagination-item generated-link-item" href="/produits?page=5">5</a>
+	<a class="pagination-item generated-link-item pagination-item-next-page" href="/produits?page=2">
 	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 12.7071C15.0976 12.3166 15.0976 11.6834 14.7071 11.2929L10.7071 7.29289C10.3166 6.90237 9.68342 6.90237 9.29289 7.29289C8.90237 7.68342 8.90237 8.31658 9.29289 8.70711L12.5858 12L9.29289 15.2929C8.90237 15.6834 8.90237 16.3166 9.29289 16.7071C9.68342 17.0976 10.3166 17.0976 10.7071 16.7071L14.7071 12.7071Z" fill="black"></path>
 	</svg>
@@ -64,6 +55,8 @@ var pagination = document.getElementById("pagination");
 var paginationContainer = document.getElementById("pagination-container");
 
 
+// Désactive la pagination si il n'y a qu'une page (ou moins)
+if (nbPage > 1) { //ça se ferme à la fin
 /*
  +-------------------+
  |   Previous page   |
@@ -149,3 +142,5 @@ else {
 	paginationItemNextPage.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 12.7071C15.0976 12.3166 15.0976 11.6834 14.7071 11.2929L10.7071 7.29289C10.3166 6.90237 9.68342 6.90237 9.29289 7.29289C8.90237 7.68342 8.90237 8.31658 9.29289 8.70711L12.5858 12L9.29289 15.2929C8.90237 15.6834 8.90237 16.3166 9.29289 16.7071C9.68342 17.0976 10.3166 17.0976 10.7071 16.7071L14.7071 12.7071Z" fill="black"></path></svg>';
 	pagination.appendChild(paginationItemNextPage);
 }
+
+} // Fin if (nbPage <= 1)

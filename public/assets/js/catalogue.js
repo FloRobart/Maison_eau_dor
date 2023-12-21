@@ -116,8 +116,8 @@ var filtres = [
 	{ id: "z-a",              nom: "Z-A",              actif: false, sort: "name",      direction: "desc" },
 	{ id: "prix-croissant",   nom: "Prix croissant",   actif: false, sort: "price",     direction: "asc"  },
 	{ id: "prix-decroissant", nom: "Prix décroissant", actif: false, sort: "price",     direction: "desc" },
-	{ id: "plus-recent",      nom: "Plus récent",      actif: false, sort: "createdAt", direction: "desc" },
-	{ id: "plus-ancien",      nom: "Plus ancien",      actif: false, sort: "createdAt", direction: "asc"  },
+	// { id: "plus-recent",      nom: "Plus récent",      actif: false, sort: "createdAt", direction: "desc" }, // Pas de date pour le moment
+	// { id: "plus-ancien",      nom: "Plus ancien",      actif: false, sort: "createdAt", direction: "asc"  }, // Pas de date pour le moment
 ];
 
 // Détermine l'actif via l'URL
@@ -212,78 +212,28 @@ Plus ancien
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 +----------+
 | PRODUITS |
 +----------+ 
 */
-// Fonction pour ajouter les produits au catalogue
-function ajouterProduitsAuCatalogue() {
-	var catalogueContainer = document.getElementById("catalogue-container");
-
-	produits.forEach(function(produit) {
-		var produitDiv = document.createElement("div");
-		produitDiv.className = "produit";
-		produitDiv.id = produit.id;
-
-		var imageContainer = document.createElement("div");
-		imageContainer.className = "image-container";
-		imageContainer.onclick = function(event) {
-			window.location.href = "produit.html?id=" + produit.id;
-			event.stopPropagation();
-		};
-
-		var image = document.createElement("img");
-		image.src = produit.image;
-		image.alt = produit.nom;
-
-		var descriptionDiv = document.createElement("div");
-		descriptionDiv.className = "description";
-		descriptionDiv.onclick = function(event) {
-			window.location.href = "produit.html?id=" + produit.id;
-			event.stopPropagation();
-		};
-
-		var titre = document.createElement("h2");
-		titre.textContent = produit.nom;
-
-		var prix = document.createElement("p");
-		prix.textContent = produit.prix + " €";
-
-		var bouton = document.createElement("button");
-		bouton.textContent = "Ajouter au panier";
-		bouton.onclick = function(event) {
-			ajouterAuPanier(event.target.parentNode.parentNode.id); // event.target = bouton, event.target.parentNode = descriptionDiv, event.target.parentNode.parentNode = produitDiv
-			event.stopPropagation();
-		};
-
-		imageContainer.appendChild(image);
-
-		descriptionDiv.appendChild(titre);
-		descriptionDiv.appendChild(prix);
-		descriptionDiv.appendChild(bouton);
-
-		produitDiv.appendChild(imageContainer);
-		produitDiv.appendChild(descriptionDiv);
-
-		catalogueContainer.appendChild(produitDiv);
+// Ajouter un écouteur de clic aux boutons générés
+document.querySelectorAll('.produit button').forEach(function(button) {
+	button.addEventListener('click', function(event) {
+		var produitId = event.target.getAttribute('data-produit-id');
+		ajouterAuPanier(produitId);
+		event.stopPropagation();
 	});
-}
+});
+
+// Ajouter des écouteurs de clic aux éléments de produit pour rediriger vers la page du produit
+document.querySelectorAll('.produit .image-container, .produit .description').forEach(function(element) {
+	element.addEventListener('click', function(event) {
+		var produitId = event.currentTarget.parentNode.id;
+		window.location.href = 'produit.html?id=' + produitId;
+		event.stopPropagation();
+	});
+});
 
 // Ajouter produit au panier
 function ajouterAuPanier(id) {
@@ -309,17 +259,6 @@ function ajouterAuPanier(id) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* 
 +--------------+
 | WINDOW EVENT |
@@ -333,6 +272,3 @@ window.addEventListener("click", function(event) {
 		filtres.style.display = "none";
 	}
 });
-
-// Appel de la fonction pour ajouter les produits au catalogue lors du chargement de la page
-ajouterProduitsAuCatalogue();

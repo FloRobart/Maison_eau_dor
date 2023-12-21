@@ -1,5 +1,5 @@
 {
-	"parfums": [
+	"produits": [
 		{
 			"nom": "Africa Bay",
 			"format": 50,
@@ -201,7 +201,7 @@
 			"categorie": "parfum"
 		},
 		{
-			"nom": "Oudy’s",
+			"nom": "Oudy's",
 			"format": 50,
 			"stock": 100,
 			"prix": 30.00,
@@ -423,6 +423,46 @@
 			"prix": 35.00,
 			"description": "Laissez-vous séduire par la sublime Vanilla Cream qui laisse une impression inoubliable. Une fusion de notes fruitées.",
 			"categorie": "parfum"
+		},
+		{
+			"nom": "Dummy Test Maison",
+			"format": 250,
+			"stock": 100,
+			"prix": 90.00,
+			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"categorie": "maison"
+		},
+		{
+			"nom": "Dummy Test Muscs",
+			"format": 250,
+			"stock": 100,
+			"prix": 90.00,
+			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"categorie": "muscs"
+		},
+		{
+			"nom": "Dummy Test Cosmétiques",
+			"format": 250,
+			"stock": 100,
+			"prix": 90.00,
+			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"categorie": "cosmétiques"
+		},
+		{
+			"nom": "Dummy Test Brumes",
+			"format": 250,
+			"stock": 100,
+			"prix": 90.00,
+			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"categorie": "brumes"
+		},
+		{
+			"nom": "Dummy Test Capillaires",
+			"format": 250,
+			"stock": 100,
+			"prix": 90.00,
+			"description": "Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"categorie": "capillaires"
 		}
 	]
 }
