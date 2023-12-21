@@ -1,44 +1,3 @@
-/*
-+---------+
-| DONNÉES | (brutes à remplacer par des appels via Symfony) [direct dans le code via PHP j'imagine]
-+---------+ 
-*/
-// +----------------------+
-// | Données des produits |
-// +----------------------+
-
-
-var produits = [
-	{ id: "produit1", image: "images/ahlam.png", nom: "Produit 1", desc: "...", prix: "10.99" , tag: ["tag1", "tag2"], date: "2021-01-01" },
-	{ id: "produit2", image: "images/ahlam.png", nom: "Produit 2", desc: "...", prix: "12.99" , tag: ["tag1", "tag3"], date: "2021-01-02" },
-	{ id: "produit3", image: "images/ahlam.png", nom: "Produit 3", desc: "...", prix: "14.99" , tag: ["tag1", "tag4"], date: "2021-01-03" },
-	{ id: "produit4", image: "images/ahlam.png", nom: "Produit 4", desc: "...", prix: "16.99" , tag: ["tag2", "tag3"], date: "2021-01-04" },
-
-	{ id: "produit5", image: "images/ahlam.png", nom: "Produit 5", desc: "...", prix: "18.99" , tag: ["tag2", "tag4"], date: "2021-01-05" },
-	{ id: "produit6", image: "images/ahlam.png", nom: "Produit 6", desc: "...", prix: "20.99" , tag: ["tag3", "tag4"], date: "2021-01-06" },
-	{ id: "produit7", image: "images/ahlam.png", nom: "Produit 7", desc: "...", prix: "22.99" , tag: ["tag1", "tag2", "tag3"], date: "2021-01-07" },
-	{ id: "produit8", image: "images/ahlam.png", nom: "Produit 8", desc: "...", prix: "24.99" , tag: ["tag1", "tag2", "tag4"], date: "2021-01-08" },
-	{ id: "produit9", image: "images/ahlam.png", nom: "Produit 9", desc: "...", prix: "26.99" , tag: ["tag1", "tag3", "tag4"], date: "2021-01-09" },
-	{ id: "produit10", image: "images/ahlam.png", nom: "Produit 10", desc: "...", prix: "28.99" , tag: ["tag2", "tag3", "tag4"], date: "2021-01-10" },
-	{ id: "produit11", image: "images/ahlam.png", nom: "Produit 11", desc: "...", prix: "30.99" , tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-11" },
-	{ id: "produit12", image: "images/ahlam.png", nom: "Produit 12", desc: "...", prix: "32.99" , tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-12" },
-	{ id: "produit13", image: "images/ahlam.png", nom: "Produit 13", desc: "...", prix: "34.99" , tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-13" },
-	
-	// choisi une image au hasard parmi les 4 pour les produits suivants
-	// { id: "produit5", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 5", desc: "...", prix: "18,99", tag: ["tag2", "tag4"], date: "2021-01-05" },
-	// { id: "produit6", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 6", desc: "...", prix: "20,99", tag: ["tag3", "tag4"], date: "2021-01-06" },
-	// { id: "produit7", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 7", desc: "...", prix: "22,99", tag: ["tag1", "tag2", "tag3"], date: "2021-01-07" },
-	// { id: "produit8", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 8", desc: "...", prix: "24,99", tag: ["tag1", "tag2", "tag4"], date: "2021-01-08" },
-	// { id: "produit9", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 9", desc: "...", prix: "26,99", tag: ["tag1", "tag3", "tag4"], date: "2021-01-09" },
-	// { id: "produit10", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 10", desc: "...", prix: "28,99", tag: ["tag2", "tag3", "tag4"], date: "2021-01-10" },
-	// { id: "produit11", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 11", desc: "...", prix: "30,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-11" },
-	// { id: "produit12", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 12", desc: "...", prix: "32,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-12" },
-	// { id: "produit13", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 13", desc: "...", prix: "34,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-13" },
-	// { id: "produit14", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 14", desc: "...", prix: "36,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-14" },
-	// { id: "produit15", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 15", desc: "...", prix: "38,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-15" },
-	// { id: "produit16", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 16", desc: "...", prix: "40,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-16" },
-	// { id: "produit17", image: "images/" + Math.floor(Math.random() * 4 + 1) + ".png", nom: "Produit 17", desc: "...", prix: "42,99", tag: ["tag1", "tag2", "tag3", "tag4"], date: "2021-01-17" },
-];
 
 /*
 +-----------+
@@ -217,20 +176,20 @@ Plus ancien
 | PRODUITS |
 +----------+ 
 */
+// Ajouter des écouteurs de clic aux éléments de produit pour rediriger vers la page du produit
+document.querySelectorAll('.produit .image-container, .produit .description').forEach(function(element) {
+	element.addEventListener('click', function(event) {
+		var produitId = event.currentTarget.parentNode.id;
+		window.location.href = 'produit/' + produitId; // Je viens de découvrir 'produit/{id}' dans les routes, 👍 (je vais devoir encore refaire des trucs dans catalogue 😂🔫)
+		event.stopPropagation();
+	});
+});
+
 // Ajouter un écouteur de clic aux boutons générés
 document.querySelectorAll('.produit button').forEach(function(button) {
 	button.addEventListener('click', function(event) {
 		var produitId = event.target.getAttribute('data-produit-id');
 		ajouterAuPanier(produitId);
-		event.stopPropagation();
-	});
-});
-
-// Ajouter des écouteurs de clic aux éléments de produit pour rediriger vers la page du produit
-document.querySelectorAll('.produit .image-container, .produit .description').forEach(function(element) {
-	element.addEventListener('click', function(event) {
-		var produitId = event.currentTarget.parentNode.id;
-		window.location.href = 'produit.html?id=' + produitId;
 		event.stopPropagation();
 	});
 });

@@ -19,6 +19,12 @@ class DefaultController extends AbstractController
         return $this->forward(CatalogueController::class . '::index');
     }
 
+    #[Route('/produit', name: 'default.produit', methods: ['GET'])]
+    public function produit(): Response
+    {
+        return $this->forward(ProduitController::class . '::index');
+    }
+
     #[Route('/connexion', name: 'default.login', methods: ['GET'])]
     public function login(): Response
     {

@@ -59,6 +59,12 @@ catalogue:
     controller: App\Controller\CatalogueController::index
     methods: ['GET']
 
+# Produit
+produit:
+    path: /produit/{id}
+    controller: App\Controller\ProduitController::index
+    methods: ['GET']
+
 # Paiemment
 payment_list:
     path: /payment
