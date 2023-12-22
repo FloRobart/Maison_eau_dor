@@ -1,0 +1,272 @@
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+
+body {
+  width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+  }
+
+.content .content-E7W {
+    margin: 0 1.6rem;
+    width: calc(100% - 3.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.content .content-E7W div {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
+  }
+
+.content .content-E7W .heading-1-politique-de-7wz {
+  margin-bottom: 3.2195rem;
+  max-width: 44.9rem;
+  display: flex;
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 1.2000000477;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+
+.content .content-E7W .la-protection-de-votre-vie-prive-est-primordiale-aux-yeux-de-maison-eau-dor-ci-aprs-dnomm-indiffremment-nom-du-magasin-du-client-nous-et-nous-contrleur-de-donnes-nous-veillons-la-protection-de-votre-vie-prive-lors-de-vos-visites-sur-notre-site-internet-ou-pour-les-commandes-passes-en-ligne-2JG {
+  margin-bottom: 3.2rem;
+  max-width: 78.2rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .maison-eau-dor-fournit-des-produits-et-services-et-agit-en-qualit-de-responsable-du-traitement-des-donnes-caractre-personnel-que-vous-communiquez-lorsque-vous-passez-commande-vous-pouvez-contacter-le-dlgu-la-protection-des-donnes-de-maison-eau-dor-grce-au-formulaire-de-contact-qui-se-trouve-au-bas-de-cette-page-aj6 {
+  margin-bottom: 3.2rem;
+  max-width: 78.4rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .la-prsente-politique-en-matire-de-protection-de-la-vie-prive-dfinit-la-manire-dont-les-donnes-caractre-personnel-vous-concernant-sont-collectes-traites-et-partages-lors-de-votre-visite-sur-le-site-ou-de-votre-commande-sur-maisoneaudorsumuplink-le-site-internet-ZL8 {
+  margin-bottom: 6.4rem;
+  max-width: 77.5rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .quelles-sont-les-donnes-caractre-personnel-que-nous-collectons-M16 {
+  margin-bottom: 3.2rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.content .content-E7W .lorsque-vous-ralisez-ou-essayez-de-raliser-un-achat-via-le-site-internet-nous-collectons-certaines-donnes-vous-concernant-notamment-votre-nom-votre-adresse-de-facturation-votre-adresse-de-livraison-vos-informations-de-paiement-y-compris-les-numros-de-carte-de-crdit-votre-adresse-e-mail-et-votre-numro-de-tlphone-ces-informations-sont-dnommes-informations-relatives-la-commande-F6U {
+  margin-bottom: 3.2rem;
+  max-width: 78.6rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .lorsque-vous-visitez-le-site-internet-nous-collectons-automatiquement-certaines-informations-sur-votre-appareil-y-compris-des-donnes-concernant-votre-navigateur-internet-votre-adresse-ip-votre-fuseau-horaire-certains-cookies-sont-installs-sur-votre-appareil-en-outre-lorsque-vous-naviguez-sur-le-site-internet-nous-collectons-des-informations-sur-les-pages-ou-les-produits-spcifiques-que-vous-consultez-les-sites-ou-termes-de-recherche-qui-vous-ont-redirigs-vers-le-site-internet-ainsi-que-des-donnes-sur-la-manire-dont-vous-interagissez-avec-le-site-internet-ces-donnes-collectes-de-manire-automatise-sont-dnommes-informations-relatives-lappareil-CA8 {
+  margin-bottom: 1.6rem;
+  max-width: 78.6rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .nous-collectons-des-informations-sur-lappareil-en-utilisant-les-technologies-suivantes-les-cookies-sont-des-fichiers-de-donnes-qui-sont-placs-sur-votre-appareil-ou-votre-ordinateur-ils-contiennent-gnralement-un-identifiant-unique-anonyme-pour-plus-dinformations-relatives-aux-cookies-et-comment-dsactiver-ces-cookies-consultez-la-page-http-wwwallaboutcookiesorg-les-fichiers-journaux-suivent-les-activits-sur-le-site-internet-et-collectent-des-donnes-y-compris-votre-adresse-ip-votre-type-de-navigateur-votre-fournisseur-daccs-internet-les-pages-de-renvoi-sortie-et-les-horodatages-les-beacons-balises-ou-pixels-sont-des-fichiers-lectroniques-utiliss-pour-enregistrer-des-informations-sur-la-manire-dont-vous-naviguez-sur-le-site-internet-EW8 {
+  margin-bottom: 4.8rem;
+  max-width: 78.7rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .comment-nous-traitons-les-donnes-caractre-personnel-vous-concernant-1Hv {
+  margin-bottom: 3.2rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.content .content-E7W .les-informations-relatives-la-commande-sont-gnralement-traites-afin-dexcuter-les-commandes-passes-sur-le-site-internet-y-compris-afin-de-traiter-vos-informations-de-paiement-de-grer-les-modalits-dexpdition-et-dmettre-les-factures-et-ou-confirmation-de-commande-de-plus-ces-informations-relatives-la-commande-sont-traites-afin-de-communiquer-avec-vous-contrler-les-commandes-afin-de-dtecter-les-risques-ou-fraudes-ventuelles-et-vous-adresser-des-communications-informatives-ou-publicitaires-concernant-nos-produits-et-services-si-ces-communications-sont-conformes-aux-prfrences-que-vous-avez-partages-avec-nous-hAk {
+  margin-bottom: 3.2rem;
+  max-width: 78.5rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .les-donnes-vous-concernant-sont-traites-afin-de-satisfaire-nos-obligations-contractuelles-votre-gard-par-exemple-en-cas-de-commande-sur-notre-site-internet-ou-pour-dfendre-de-toute-autre-faon-nos-intrts-commerciaux-lgitimes-tels-que-lists-ci-dessus-LN8 {
+  margin-bottom: 3.2rem;
+  max-width: 78.7rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .les-informations-relatives-lappareil-en-particulier-votre-adresse-ip-sont-collectes-afin-de-dtecter-les-risques-et-fraudes-ventuelles-et-plus-gnralement-afin-damliorer-et-optimiser-le-site-internet-en-gnrant-par-exemple-une-analyse-des-donnes-relatives-la-manire-dont-nos-utilisateurs-naviguent-et-interagissent-avec-le-site-internet-et-pour-valuer-limpact-de-nos-campagnes-marketing-et-publicitaire-LmS {
+  margin-bottom: 7.241rem;
+  max-width: 79rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .partage-des-donnes-caractre-personnel-vous-concernant-tRa {
+  margin: 0rem 0rem 2.7rem 0.2rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.content .content-E7W .nous-partageons-les-donnes-caractre-personnel-vous-concernant-avec-des-tiers-afin-de-pouvoir-les-traiter-conformment-aux-conditions-dfinies-ci-dessus-par-exemple-nous-utilisons-sumup-pour-amliorer-notre-boutique-en-ligne-nous-utilisons-galement-google-analytics-pour-nous-comprendre-la-manire-dont-nos-clients-utilisent-le-site-pour-en-savoir-plus-sur-la-faon-dont-google-utilise-les-donnes-caractre-personnel-vous-concernant-consultez-la-page-suivante-https-wwwgooglecom-intl-en-policies-privacy-vous-pouvez-dsactiver-google-analytics-en-cliquant-sur-le-lien-suivant-https-toolsgooglecom-dlpage-gaoptout-NrY {
+  margin: 0rem 0rem 3.5rem 0.2rem;
+  max-width: 77.1rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .nous-sommes-susceptibles-de-partager-des-donnes-dans-le-cadre-de-contrats-conclus-avec-des-prestataires-de-services-qui-contribuent-certaines-de-nos-activits-ces-contrats-stipulent-que-les-prestataires-en-question-sont-en-droit-de-traiter-les-donnes-vous-concernant-uniquement-aux-fins-des-prestations-quils-excutent-pour-notre-compte-et-sinterdisent-de-les-utiliser-pour-leur-bnfice-propre-1Y8 {
+  margin: 0rem 0rem 1.6rem 0.2rem;
+  max-width: 78.2rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .de-mme-nous-sommes-susceptibles-de-divulguer-les-donnes-caractre-personnel-vous-concernant-afin-de-rpondre-une-exigence-lgale-ou-rglementaire-une-citation-comparatre-a-un-mandat-de-perquisition-et-ou-toute-autre-demande-dinformations-lgitime-que-nous-recevons-ou-pour-protger-nos-droits-de-toute-autre-manire-9nk {
+  margin: 0rem 0rem 3.9rem 0.2rem;
+  max-width: 78.6rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.content .content-E7W .transfert-international-des-donnes-WFv {
+  margin: 0rem 0rem 3.2rem 0.2rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.content .content-E7W .nous-sommes-susceptibles-de-transfrer-les-donnes-collectes-vous-concernant-des-tiers-agissant-pour-notre-compte-situs-dans-des-pays-hors-de-lespace-conomique-europen-eee-ou-dans-des-pays-considrs-par-la-commission-europenne-comme-offrant-un-niveau-de-protection-des-donnes-satisfaisant-il-est-possible-que-ces-autres-pays-noffrent-pas-le-mme-niveau-de-protection-aux-donnes-collectes-vous-concernant-toutefois-nous-continuerons-collecter-stocker-et-traiter-les-donnes-vous-concernant-en-tout-temps-conformment-la-prsente-politique-en-matire-de-protection-de-la-vie-prive-et-la-lgislation-applicable-en-matire-de-protection-des-donnes-nous-veillerons-ce-que-les-donnes-ne-soient-partages-quavec-des-organisations-offrant-un-niveau-de-protection-des-donnes-appropri-conformment-la-lgislation-applicable-en-matire-de-protection-des-donnes-et-ce-que-des-clauses-contractuelles-satisfaisantes-soient-conclues-avec-ces-parties-DAL {
+  margin: 0rem 0rem 6.441rem 0.2rem;
+  max-width: 76.8rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  font-family: Lora, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+
+.content .content-E7W .heading-1-politique-de-7wz {
+    margin-bottom: 3.2195rem;
+    max-width: 44.9rem;
+    display: flex;
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 1.2000000477;
+    color: #000000;
+    font-family: Lora, 'Source Sans Pro';
+    flex-shrink: 0;
+    text-align: left; /* Ajoutez cette ligne pour aligner le texte à gauche */
+}
+
+.content {
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    .content .content-E7W {
+      margin: 0 1rem;
+      width: auto;
+    }
+}
