@@ -22,6 +22,8 @@ cartButton.addEventListener('click', function () {
 	cartOverlay.style.right = '0';
 	canvas.style.opacity = '1';
 	canvas.style.width = '100%';
+	// Desactiver le scroll de la page
+	document.body.style.overflow = 'hidden';
 	updateCart();
 });
 
@@ -33,6 +35,8 @@ document.addEventListener('click', function (event) {
 		cartOverlay.style.right = '-100%';
 		canvas.style.opacity = '0';
 		canvas.style.width = '0';
+		// Reactiver le scroll de la page
+		document.body.style.overflow = 'auto';
 	}
 });
 
@@ -80,7 +84,9 @@ function updateCart() {
 		// Code pour afficher les articles du panier
 		// Mettez à jour le total et autres informations nécessaires
 		var cartContent = document.getElementById('cart-content');
-		var totalAmountElement = document.getElementById('total-amount');
+		var totalAmountElements = document.getElementsByClassName('total-amount');
+		var tvaElement = document.getElementById('cart-total-TVA-amount');
+
 
 		// Afficher les articles du panier
 		cartContent.innerHTML = '';
@@ -93,16 +99,30 @@ function updateCart() {
 					</div>
 					<div class="cart-item-content">
 						<h4>${item.title}</h4>
-						<p>${item.price}€</p>
+						<p>${item.prix}€</p>
 						<div class="cart-item-quantity">
 							<button class="cart-item-quantity-button" data-action="decrease" data-index="${index}">-</button>
-							<input type="text" class="cart-item-quantity-input" value="${item.quantity}">
+							<input type="text" class="cart-item-quantity-input" value="${item.quantite}">
 							<button class="cart-item-quantity-button" data-action="increase" data-index="${index}">+</button>
 						</div>
-						<button class="cart-item-remove-button" data-index="${index}">Supprimer</button>
 					</div>
+					<i class="cart-item-remove-button" data-index="${index}">
+						<svg fill="#000000" width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<title>trashcan</title>
+							<path d="M8 26c0 1.656 1.343 3 3 3h10c1.656 0 3-1.344 3-3l2-16h-20l2 16zM19 13h2v13h-2v-13zM15 13h2v13h-2v-13zM11 13h2v13h-2v-13zM25.5 6h-6.5c0 0-0.448-2-1-2h-4c-0.553 0-1 2-1 2h-6.5c-0.829 0-1.5 0.671-1.5 1.5s0 1.5 0 1.5h22c0 0 0-0.671 0-1.5s-0.672-1.5-1.5-1.5z"></path>
+						</svg>
+					</i>
 				</div>
 			`;
+		});
+
+		// Ajouter les écouteurs d'événements après la génération des éléments
+		const removeButtons = document.querySelectorAll('.cart-item-remove-button');
+		removeButtons.forEach(button => {
+			button.addEventListener('click', function (event) {
+				var index = event.target.getAttribute('data-index');
+				removeCartItem(index);
+			});
 		});
 
 		// Afficher le total
@@ -111,8 +131,14 @@ function updateCart() {
 			totalAmount += item.prix * item.quantite;
 		});
 
-		totalAmountElement.innerText = totalAmount.toFixed(2); // toFixed(2) pour afficher 2 chiffres après la virgule
+		console.log(totalAmountElements);
+		for (let i = 0; i < totalAmountElements.length; i++) {
+			totalAmountElements[i].innerText = totalAmount.toFixed(2);
+		}
 
+		// Afficher la TVA
+		const tva = totalAmount * 0.2;
+		tvaElement.innerText = tva.toFixed(2);
 
 
 		console.log('Réponse reçue:', data);
@@ -143,12 +169,7 @@ function removeCartItem(index) {
 	updateCart();
 }
 
-// Ecouter le clic sur le bouton de suppression d'un article du panier
-document.addEventListener('click', function (event) {
-	if (event.target.classList.contains('cart-item-remove-button')) {
-		removeCartItem(event.target.getAttribute('data-index'));
-	}
-});
+
 
 
 // Gérer la modification de la quantité d'un article du panier

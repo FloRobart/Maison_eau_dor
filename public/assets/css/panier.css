@@ -70,6 +70,7 @@
    +-----------------------*/
 #cart-content {
 	width: 100%;
+	overflow-y: scroll;
 	height: calc(100% - var(--h-header, 8%) - var(--h-footer, 40%) - 1em);
 }
 
@@ -84,15 +85,71 @@
 }
 
 .cart-item-image-container {
-	max-width: 10%;
-	max-height: 10%px;
+	max-width: 25%;
+	max-height: 35%;
 }
 
+.cart-item-content {
+	flex: 2 1 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.cart-item-content p {
+	margin: 1em 0;
+}
+
+.cart-item-content h4 {
+	margin: 0;
+}
+
+/* Image */
 .cart-item-image-container img {
 	max-width: 100%;
 	max-height: 100%;
 }
 
+/* Poubelle */
+.cart-item-remove-button {
+	position: relative;
+	width: 40px;
+	display: block;
+}
+
+
+/* Quantité */
+.cart-item-quantity {
+	display: flex;
+	flex-direction: row;
+	width: 12rem;
+	height: 1.7em;
+}
+
+.cart-item-quantity .cart-item-quantity-button {
+	width: 25%;
+	border: 1px solid #000;
+	background: #FFF;
+	font-weight: bold;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cart-item-quantity .cart-item-quantity-button:focus:active {
+	background: #000;
+	color: #FFF;
+}
+
+.cart-item-quantity .cart-item-quantity-input {
+	width: 50%;
+	text-align: center;
+	border: 1px solid #000;
+	cursor: default;
+	font-weight: bold;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cart-item-quantity .cart-item-quantity-input:focus {
+	outline: none;
+}
 
 
 

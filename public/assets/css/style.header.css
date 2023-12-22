@@ -35,6 +35,7 @@ header {
     width: 30px;
     height: 30px;
     color: #000000;
+    cursor: pointer;
 }
 
 .burger-header{
