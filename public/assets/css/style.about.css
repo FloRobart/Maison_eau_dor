@@ -1,382 +1,461 @@
-.content {
+.content-about {
     overflow: hidden;
     font-family: Lora;
-    margin-top: 12%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 12%;
+    margin-top: 14%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
 }
 
-.concept-content {
+.concept-about {
     display: flex;
     margin-bottom: 10%;
+    gap: 2%;
 }
 
-.texte {
-    flex: 1;
-  }
+.txtc-about {
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+}
 
-.texte h1 {
-    text-align: center;
+.titrec-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 36px;
     font-weight: bold;
-    margin-bottom: 5%;
-  }
+    text-align: center;
+    transition: font-size 0.5s ease;
+}
 
-.texte p {
-    margin-bottom: 5%;
-    line-height: 1.6;
-  }
+.txtc1-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
 
-  .video {
-    margin-left: 20px;
-  }
+.txtc2-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
 
-  .identite-content {
-    margin-right: 20%;
-    margin-bottom: 10%;
-  }
+.txtc3-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
 
-.tiktok-content {
+.contentvc-about {
+    width: 100%;
+}
+
+.videoc-about{
+    width: 100%;
+}
+
+.huile-about{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    gap: 2%;
+    margin-bottom: 10%;
 }
 
-.tiktok-content .video {
-    margin-right: 20px;
+.contentih-about{
+    width: 180%;
 }
 
-.tiktok-content video {
-    margin-bottom: 10px;
-    margin-right: 20px;
+.imgh-about{
+    width: 100%;
 }
 
-.tiktok-content video + video {
-    margin-right: 20px;
+.txth-about{
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
 }
 
-.tiktok-content .texte {
-    background-color: #F7E1C7;
-    border: 2px solid #000000;
-    padding: 20px;
-    max-width: 400px;
-    align-self: flex-start;
+.titreh-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 36px;
+    font-weight: bold;
+    transition: font-size 0.5s ease;
+    text-align: center;
 }
 
-.texte a i {
-    font-size: 24px;
-    color: #333;
-    margin-right: 10px;
+.txth1-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
 }
 
-@media screen and (max-width: 349px) {
-    .content {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 40%;
-        margin-bottom: 8%;
+.txth2-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
+
+.txth3-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
+
+.txth4-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
+
+.identite-about{
+    display: flex;
+    gap: 2%;
+    margin-bottom: 10%;
+}
+
+.txti-about{
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+}
+
+.titrei-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.txti1-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
+
+.txti2-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
+
+.txti3-about {
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    transition: font-size 0.5s ease;
+}
+
+.contentii-about{
+    width: 120%;
+}
+
+.imgi-about{
+    width: 100%;
+}
+
+.tiktok-about{
+    display: flex;
+    justify-content: center;
+    gap: 13%;
+}
+
+.tikv-about{
+    display: flex;
+    gap: 10%;
+}
+
+.videot-about{
+    height: 500px;
+}
+
+.reso-about{
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    background-color: #fff6e3;
+    border: 2px solid #000;
+    border-radius: 40px;
+    text-align: center;
+    width: 435px;
+    height: 250px;
+    margin-top: 7%;
+}
+
+.titrer-about{
+    color: #000;
+    font-family: Lora;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2% 5% 0% 5%;
+    transition: font-size 0.5s ease;
+}
+
+.txtr-about{
+    color: #000;
+    font-family: Lora;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0% 5% 2% 5%;
+    transition: font-size 0.5s ease;
+}
+
+.ensl-about{
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+
+.logo-about{
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 549px) {
+    .content-about{
+        margin-top: 28%;
     }
 
-    .concept-content,
-    .identite-content,
-    .tiktok-content {
+    .concept-about{
         flex-direction: column;
     }
 
-    .texte h1 {
-        text-align: left;
+    .contentvc-about{
+        margin-top: 2%;
     }
 
-    .video {
-        margin-left: 0;
-        margin-top: 10px;
+    .huile-about{
+        flex-direction: column-reverse;
     }
 
-    .identite-content {
-        margin-right: 5%;
-        margin-bottom: 5%;
+    .contentih-about{
+        width: 100%;
+        margin-top: 2%;
     }
 
-    .tiktok-content {
-        align-items: center;
+    .identite-about{
+        flex-direction: column;
+    }
+
+    .contentii-about{
+        margin-top: 2%;
+    }
+
+    .titrec-about, .titreh-about, .titrei-about{
+        font-size: 24px;
+    }
+    .txtc1-about, .txtc2-about, .txtc3-about{
+        font-size: 16px;
         text-align: center;
+        padding: 1%;
     }
 
-    .tiktok-content .video {
-        order: 1;
-        margin-right: 0;
-        margin-top: 10px;
+    .txth1-about, .txth2-about, .txth3-about, .txth4-about{
+        font-size: 16px;
+        text-align: center;
+        padding: 1%;
     }
 
-    .tiktok-content video,
-    .tiktok-content video + video {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .txti1-about, .txti2-about, .txti3-about{
+        font-size: 16px;
+        text-align: center;
+        padding: 1%;
     }
 
-    .tiktok-content .texte {
-        max-width: 190px;
+    .reso-about{
+        height: 160px;
+        margin: 0;
     }
 
-    .tiktok-content video {
-        width: 230px;
-        height: 230px;
+    .titrer-about{
+        font-size: 18px;
+    }
+
+    .txtr-about{
+        font-size: 12px;
+    }
+
+    .tikv-about{
+        display: none;
     }
 }
 
-@media screen and (min-width: 350px) and (max-width: 449px) {
-    .content {
-        margin-left: 8%;
-        margin-right: 8%;
-        margin-top: 30%;
-        margin-bottom: 6%;
+@media screen and (min-width: 550px) and (max-width: 767px) {
+    .content-about{
+        margin-top: 18%;
     }
 
-    .texte p {
-        margin-bottom: 4%;
-    }
-
-    .tiktok-content .video {
-        margin-top: 10%;
-    }
-
-    .tiktok-content video,
-    .tiktok-content video + video {
-        margin-bottom: 5%;
-    }
-
-    .concept-content,
-    .identite-content,
-    .tiktok-content {
+    .concept-about{
         flex-direction: column;
     }
 
-    .concept-content {
-        margin-bottom: 20%;
+    .contentvc-about{
+        margin-top: 2%;
     }
 
-    .identite-content {
-        margin-right: 0;
-        margin-bottom: 20%;
+    .huile-about{
+        flex-direction: column-reverse;
     }
 
-    .tiktok-content video {
-        width: 300px;
-        height: 300px;
+    .contentih-about{
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .identite-about{
+        flex-direction: column;
+    }
+
+    .contentii-about{
+        margin-top: 2%;
+    }
+
+    .titrec-about, .titreh-about, .titrei-about{
+        font-size: 24px;
+    }
+    .txtc1-about, .txtc2-about, .txtc3-about{
+        font-size: 16px;
+        text-align: center;
+        padding: 0.6%;
+    }
+
+    .txth1-about, .txth2-about, .txth3-about, .txth4-about{
+        font-size: 16px;
+        text-align: center;
+        padding: 0.6%;
+    }
+
+    .txti1-about, .txti2-about, .txti3-about{
+        font-size: 16px;
+        text-align: center;
+        padding: 0.6%;
+    }
+
+    .reso-about{
+        height: 160px;
+    }
+
+    .titrer-about{
+        font-size: 16px;
+    }
+
+    .txtr-about{
+        font-size: 10px;
+    }
+
+    .videot-about{
+        height: 260px;
     }
 }
 
-@media screen and (min-width: 450px) and (max-width: 549px) {
-    .content {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 25%;
-        margin-bottom: 4%;
+@media screen and (min-width: 768px) and (max-width: 899px) {
+    .content-about{
+        margin-top: 20%;
     }
 
-    .texte h1 {
+    .titrec-about, .titreh-about, .titrei-about{
+        font-size: 20px;
+    }
+    .txtc1-about, .txtc2-about, .txtc3-about{
+        font-size: 10px;
+    }
+
+    .txth1-about, .txth2-about, .txth3-about, .txth4-about{
+        font-size: 10px;
+    }
+
+    .txti1-about, .txti2-about, .txti3-about{
+        font-size: 10px;
+    }
+
+    .reso-about{
+        height: 210px;
+    }
+
+    .titrer-about{
+        font-size: 22px;
+    }
+
+    .txtr-about{
+        font-size: 14px;
+    }
+
+    .videot-about{
+        height: 360px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+    .content-about{
+        margin-top: 18%;
+    }
+
+    .titrec-about, .titreh-about, .titrei-about{
         font-size: 28px;
     }
-
-    .tiktok-content .texte {
-        padding: 15px;
-        max-width: 350px;
+    .txtc1-about, .txtc2-about, .txtc3-about{
+        font-size: 12px;
     }
 
-    .concept-content,
-    .identite-content,
-    .tiktok-content {
-        flex-direction: column;
+    .txth1-about, .txth2-about, .txth3-about, .txth4-about{
+        font-size: 12px;
     }
 
-    .concept-content {
-        margin-bottom: 20%;
+    .txti1-about, .txti2-about, .txti3-about{
+        font-size: 12px;
     }
 
-    .identite-content {
-        margin-right: 0;
-        margin-bottom: 20%;
+    .reso-about{
+        height: 210px;
     }
 
-    .tiktok-content video {
-        width: 400px;
-        height: 400px;
-    }
-}
-
-@media screen and (min-width: 550px) and (max-width: 649px) {
-    .content {
-        margin-left: 12%;
-        margin-right: 12%;
-        margin-top: 3%;
-        margin-bottom: 3%;
+    .titrer-about{
+        font-size: 22px;
     }
 
-    .tiktok-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .txtr-about{
+        font-size: 14px;
     }
 
-    .tiktok-content .video {
-        order: 1;
-        margin-right: 0;
-        margin-top: 10px;
-    }
-
-    .tiktok-content video,
-    .tiktok-content video + video {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .tiktok-content .texte {
-        max-width: none;
-        width: 100%;
-    }
-
-    .concept-content {
-        margin-bottom: 20%;
-    }
-
-    .identite-content {
-        margin-right: 0;
-        margin-bottom: 20%;
-    }
-
-    .tiktok-content video {
-        width: 400px;
-        height: 400px;
+    .videot-about{
+        height: 450px;
     }
 }
 
-@media screen and (min-width: 650px) and (max-width: 849px) {
-    .content {
-        margin-left: 15%;
-        margin-right: 15%;
-        margin-top: 25%;
-        margin-bottom: 2%;
+@media screen and (min-width: 1100px) and (max-width: 1250px) {
+    .content-about{
+        margin-top: 16%;
     }
 
-    .concept-content,
-    .identite-content,
-    .tiktok-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .txtc1-about, .txtc2-about, .txtc3-about{
+        font-size: 14px;
     }
 
-    .concept-content {
-        margin-bottom: 15%;
+    .txth1-about, .txth2-about, .txth3-about, .txth4-about{
+        font-size: 14px;
     }
 
-    .identite-content {
-        margin-right: 0;
-        margin-bottom: 15%;
-    }
-
-    .tiktok-content {
-        margin-bottom: 15%;
-    }
-
-    .tiktok-content .video {
-        order: 1;
-        margin-right: 0;
-        margin-top: 10px;
-    }
-
-    .tiktok-content video,
-    .tiktok-content video + video {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .tiktok-content video {
-        width: 500px;
-        height: 500px;
-    }
-
-    .texte {
-        text-align: left;
-    }
-}
-
-
-@media screen and (min-width: 850px) and (max-width: 1100px) {
-    .content {
-        margin-left: 15%;
-        margin-right: 15%;
-        margin-top: 23%;
-        margin-bottom: 2%;
-    }
-
-    .concept-content,
-    .identite-content,
-    .tiktok-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .concept-content {
-        margin-bottom: 10%;
-    }
-
-    .identite-content {
-        margin-right: 0;
-        margin-bottom: 10%;
-    }
-
-    .tiktok-content {
-        margin-bottom: 10%;
-    }
-
-    .tiktok-content .video {
-        order: 1;
-        margin-right: 0;
-        margin-top: 10px;
-    }
-
-    .tiktok-content video,
-    .tiktok-content video + video {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .tiktok-content video {
-        width: 500px;
-        height: 500px;
-    }
-
-    .texte {
-        text-align: left;
-    }
-}
-
-@media screen and (min-width: 1101px) {
-    .content {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-    .concept-content {
-        margin-bottom: 1%;
-    }
-
-    .tiktok-content {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
-
-    .tiktok-content .video {
-        order: -1;
-        margin-right: 20px;
-    }
-
-    .tiktok-content video,
-    .tiktok-content video + video {
-        margin-right: 20px;
-        margin-bottom: 0;
+    .txti1-about, .txti2-about, .txti3-about{
+        font-size: 14px;
     }
 }

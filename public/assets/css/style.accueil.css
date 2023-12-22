@@ -166,23 +166,33 @@
     flex-shrink: 0;
 }
 
+.decouv-accueil{
+    border-radius: 10px;
+    background: #F5DAB9;
+    padding: 1% 10% 1% 10%;
+    border: 1px solid #F5DAB9;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
 .btnd-accueil{
     border: none;
-    margin-top: 5%;
     color: #C3AE93;
     text-align: center;
     font-family: Lora;
     font-size: 18px;
     font-weight: 400;
-    border-radius: 10px;
     background: #F5DAB9;
-    border: 1px solid #F5DAB9;
-    padding: 1% 10% 1% 10%;
     cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 
-.btnd-accueil:hover{
+.decouv-accueil:hover{
+    background: #fff;
+    color: #F5DAB9;
+}
+
+.decouv-accueil:hover .btnd-accueil{
     background: #fff;
     color: #F5DAB9;
 }
