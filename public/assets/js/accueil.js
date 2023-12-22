@@ -12,14 +12,6 @@ function obtenirLargeurFenetre() {
 function mettreAJourLargeurFenetre() {
   // Obtient la largeur de la fenêtre
   largeurFenetreActuelle = obtenirLargeurFenetre();
-  
-  // Mettez ici le code que vous souhaitez exécuter avec la nouvelle largeur
-  
-  // Exemple : Affiche la largeur dans la console
-  console.log("Largeur de la fenêtre : " + largeurFenetreActuelle);
-
-  // Vous pouvez appeler d'autres fonctions et leur passer la largeur de la fenêtre
-  //autreFonctionUtilisantLargeur(largeurFenetreActuelle);
 }
 
 // Ajouter un gestionnaire d'événements pour le redimensionnement de la fenêtre
@@ -169,6 +161,36 @@ function prevSlide() {
     showSlide(currentIndex);
 }
 
+// PANIER
+// Ajouter produit au panier
+function ajouterAuPanier(id) {
+	id = parseInt(id);
+	var panier = JSON.parse(localStorage.getItem("panier"));
+
+	if (panier == null) {
+		panier = [];
+	}
+	
+	// On augmente la quantité si le produit est déjà dans le panier
+	let contenu = false;
+	panier.forEach(function(produit) {
+		console.log( produit.id, id, produit.id == id);
+		if (produit.id == id) {
+			console.log(produit.quantite);
+			produit.quantite = parseInt(produit.quantite) + 1;
+			console.log(produit.quantite);
+			contenu = true;
+		}
+	});
+	if (!contenu) { panier.push({id: id, quantite: 1}); }
+
+	localStorage.setItem("panier", JSON.stringify(panier));
+	
+	console.log("Ajouté au panier : " + id + " (1)");
+    updateCart();
+    openCart();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     calculateSlideWidth();
     calculateSlidesToShow();
@@ -178,6 +200,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', function () {
         largeurFenetreActuelle = obtenirLargeurFenetre();
         requestAnimationFrame(updateSlidesToShow);
+    });
+
+    // Gérer le clic sur les "ajouter au panier" des produits du carousel
+    document.getElementsByClassName('btn_panier-accueil').forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            var produitId = event.target.getAttribute('data-produit-id');
+            ajouterAuPanier(produitId);
+            event.stopPropagation();
+        });
     });
 });
 

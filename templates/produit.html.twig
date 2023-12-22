@@ -3,6 +3,7 @@
 <head>
 	<title>Catalogue</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/produit.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/panier.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Logo header / footer -->
 </head>
 
@@ -119,9 +120,14 @@
 
 </div>
 
-{# {% block footer %}
+{# panier #}
+{% block panier %}
+{% include 'panier.html.twig' %}
+{% endblock %}
+
+{% block footer %}
 {% include 'footer.html.twig' %}
-{% endblock %} #}
+{% endblock %} 
 
 <script type="text/javascript" src="{{ asset('assets/js/produit.js') }}"></script>
 

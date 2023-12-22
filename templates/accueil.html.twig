@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/style.accueil.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/panier.css') }}"> {# panier #}
 <body>
     <div class="content-imga">
         <img class="img-accueil" src="{{ asset('images/barparfum.jpg') }}" alt="Image bar à parfum">
@@ -10,42 +11,36 @@
                 <a href="/produit/2"><img class="slidebs-accueil" src="{{ asset('images/produits/ahlam/ahlam1.png') }}" alt="Produit 1"></a>
                 <p class="nomp-accueil">Ahlam</p>
                 <p class="prixp-accueil">30,00€</p>
-                <button class="btn_panier-accueil" >AJOUTER AU PANIER </button>
 				<a class="btn_panier-accueil" href="{{ path('pay_stripe_checkouttest', {'prodId':0})}}">ACHETER </a>
             </div>
             <div class="slidebs-accueil">
                 <a href="/produit/15"><img class="slidebs-accueil" src="{{ asset('images/magic_aïsha.png') }}" alt="Produit 2"></a>
                 <p class="nomp-accueil">Magic Aïsha</p>
                 <p class="prixp-accueil">30,00€</p>
-                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
 			<a class="btn_panier-accueil" href="{{ path('pay_stripe_checkouttest', {'prodId':1})}}">ACHETER </a>
             </div>
             <div class="slidebs-accueil">
                 <a href="/produit/29"><img class="slidebs-accueil" src="{{ asset('images/pure_evasion.png') }}" alt="Produit 3"></a>
-                <p class="nomp-accueil">Pure Evasion</p>
+                <p class="nomp-accueil">Suprême Flower</p>
                 <p class="prixp-accueil">30,00€</p>
-                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
 			<a class="btn_panier-accueil" href="{{ path('pay_stripe_checkouttest', {'prodId':2})}}">ACHETER </a>
             </div>
             <div class="slidebs-accueil">
                 <a href="/produit/39"><img class="slidebs-accueil" src="{{ asset('images/french_riviera.png') }}" alt="Produit 4"></a>
                 <p class="nomp-accueil">French Riviera</p>
                 <p class="prixp-accueil">35,00€</p>
-                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
 			<a class="btn_panier-accueil" href="{{ path('pay_stripe_checkouttest', {'prodId':3})}}">ACHETER </a>
             </div>
             <div class="slidebs-accueil">
                 <a href="/produit/35"><img class="slidebs-accueil" src="{{ asset('images/bali.png') }}" alt="Produit 5"></a>
                 <p class="nomp-accueil">Bali</p>
                 <p class="prixp-accueil">35,00€</p>
-                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
 			<a class="btn_panier-accueil" href="{{ path('pay_stripe_checkouttest', {'prodId':4})}}">ACHETER </a>
             </div>
             <div class="slidebs-accueil">
                 <a href="/produit/37"><img class="slidebs-accueil" src="{{ asset('images/california.png') }}" alt="Produit 6"></a>
                 <p class="nomp-accueil">California</p>
                 <p class="prixp-accueil">35,00€</p>
-                <button class="btn_panier-accueil">AJOUTER AU PANIER</button>
 			<a class="btn_panier-accueil" href="{{ path('pay_stripe_checkouttest', {'prodId':5})}}">ACHETER </a>
             </div>
         </div>
@@ -102,6 +97,12 @@
             <img class="imgbar-accueil" src="{{ asset('images/barparfum.jpg') }}" alt="Image bar à parfum">
         </div>
     </div>
+
+    {# panier #}
+	{% block panier %}
+	{% include 'panier.html.twig' %}
+	{% endblock %}
+
     <script src="{{ asset('assets/js/accueil.js') }}"></script>
 </body>
 </html>

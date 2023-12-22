@@ -27,7 +27,7 @@
 #cart-overlay {
 	position: fixed;
 	top: 0;
-	/* right: -100%; */
+	right: -100%;
 	width: var(--w-cart, 25%); 
 	height: 100%;
 	background-color: white;
@@ -46,6 +46,7 @@
 	justify-content: center;
 	width: 100%;
 	height: var(--h-header, 8%);
+	border-bottom: 1px solid #ddd;
 }
 
 #cart-title {
@@ -165,7 +166,6 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: var(--h-footer, 40%);
 	/* Style */
 	background: #EBEBEB;
 }
@@ -254,3 +254,13 @@
 	margin: 0.5em;
 }
 
+@media screen and (max-width: 1540px) {
+	#cart-content{
+		height: 36%;
+	}
+
+	:root{
+		/* Taille du panier */
+	--w-cart: 30%; 
+	}
+}

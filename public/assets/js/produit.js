@@ -1,45 +1,42 @@
-
-/* +------------+
-   |   Panier   |
-   +------------+ */
-
-
-
-
 /* +-----------------------+
    |   Acheter un produit  |
    +-----------------------+ */
 // Ajouter un produit au panier
 function ajouterAuPanier(id, quantite) {
-	/*var panier = JSON.parse(localStorage.getItem("panier"));
+	id = parseInt(id);
+	var panier = JSON.parse(localStorage.getItem("panier"));
+
 	if (panier == null) {
 		panier = [];
 	}
-
+	
 	// On augmente la quantité si le produit est déjà dans le panier
-	if (panier.includes(id)) {
-		panier.forEach(function(produit) {
-			if (produit.id == id) {
-				panier.quantite = parseInt(panier.quantite) + parseInt(quantite);
-			}
-		});
-	} else {
-		panier.push({id: id, quantite: quantite});
-	}
+	let contenu = false;
+	panier.forEach(function(produit) {
+		console.log( produit.id, id, produit.id == id);
+		if (produit.id == id) {
+			console.log(produit.quantite);
+			produit.quantite = parseInt(produit.quantite) + parseInt(quantite);
+			console.log(produit.quantite);
+			contenu = true;
+		}
+	});
+	if (!contenu) { panier.push({id: id, quantite: quantite}); }
 
-	localStorage.setItem("panier", JSON.stringify(panier));*/
+	localStorage.setItem("panier", JSON.stringify(panier));
+	
 	console.log("Ajouté au panier : " + id + " (" + quantite + ")");
 }
 
+
 // click event (ajouter au panier et redirection vers paiement)
-document.getElementById("ajouter-au-panier").addEventListener("click", function() {
+document.getElementById("panier").addEventListener("click", function() {
 	// Récupérer l'id du produit
-	let id = document.getElementById("id").value;
+	let id = parseInt(window.location.pathname.split("/")[2]);
 	// Récupérer la quantité du produit
 	let quantite = document.getElementById("quantite").value;
 	// Ajouter le produit au panier
 	ajouterAuPanier(id, quantite);
-	window.location.href = "paiement";
 });
 
 

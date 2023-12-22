@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Produit;
+use Composer\Util\Http\Response;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -91,8 +92,8 @@ class PayController extends AbstractController
 					],
 				],
 				'quantity' => 1,
+
 			];
-		}
 
 		//Prend les produits de la commande et les ajoute dans un tableau
 

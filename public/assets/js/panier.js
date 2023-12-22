@@ -17,33 +17,41 @@ const messageInput = document.getElementById('message-input');
    +---------------------------+ */
 // Ouvrir le panier
 // Ajouter un événement pour ouvrir le panier lors du clic sur le bouton du panier
-cartButton.addEventListener('click', function () {
+function openCart() {
 	cartOverlay.style.right = '0';
 	canvas.style.opacity = '1';
 	canvas.style.width = '100%';
 	// Desactiver le scroll de la page
 	document.body.style.overflow = 'hidden';
 	updateCart();
+}
+
+cartButton.addEventListener('click', function () {
+	openCart();
 });
 
 // Fermer le panier
 // Ajouter un événement pour fermer le panier lors du clic en dehors du panier
-document.addEventListener('click', function (event) {
-	// Si l'élément cliqué n'est pas le bouton d'ouverture du panier et n'est pas dans le panier, on ferme le panier
-	if (!cartOverlay.contains(event.target) && !cartButton.contains(event.target)) {
-		cartOverlay.style.right = '-100%';
-		canvas.style.opacity = '0';
-		canvas.style.width = '0';
-		// Reactiver le scroll de la page
-		document.body.style.overflow = 'auto';
-	}
-});
-
-// Ajouter un événement pour fermer le panier lors du clic sur le bouton de fermeture
-document.getElementById('close-cart').addEventListener('click', function () {
+function closeCart() {
 	cartOverlay.style.right = '-100%';
 	canvas.style.opacity = '0';
 	canvas.style.width = '0';
+	// Reactiver le scroll de la page
+	document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('click', function (event) {
+	// Si l'élément cliqué n'est pas le bouton d'ouverture du panier et n'est pas dans le panier, on ferme le panier
+	if (!cartOverlay.contains(event.target) && !cartButton.contains(event.target)) {
+		closeCart();
+	}
+});
+
+
+
+// Ajouter un événement pour fermer le panier lors du clic sur le bouton de fermeture
+document.getElementById('close-cart').addEventListener('click', function () {
+	closeCart();
 });
 
 
@@ -94,7 +102,7 @@ function updateCart() {
 			cartContent.innerHTML += `
 				<div class="cart-item">
 					<div class="cart-item-image-container">
-						<img src="${item.image}" alt="${item.title}">
+						<img src="../${item.image}" alt="${item.title}">
 					</div>
 					<div class="cart-item-content">
 						<h4>${item.title}</h4>
