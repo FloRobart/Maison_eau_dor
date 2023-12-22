@@ -2,11 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.contact.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    {% include 'header.html.twig' %}
+
     <div class="container">
         <section id="contact" class="contact sec-pad dynamicBg">
             <div class="main-container">
@@ -17,21 +21,23 @@
                 <form action='#' class='contact__form' method='post'><input type='hidden' name='form-name' value='form 1' />
                     <div class="contact__form-field">
                         <label class="contact__form-label" for="name">Name</label>
-                        <input required placeholder="Nom" type="text" class="contact__form-input" name="name" id="name" />
+                        <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
                     </div>
                     <div class="contact__form-field">
-                        <label class="contact__form-label" for="email">E-mail</label>
-                        <input required placeholder="E-mail" type="email" class="contact__form-input" name="email" id="email" />
+                        <label class="contact__form-label" for="email">Email</label>
+                        <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
                     </div>
                     <div class="contact__form-field">
                         <label class="contact__form-label" for="message">Message</label>
-                        <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Écrivez ici votre message" name="message" id="message"></textarea>
+                        <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
                     </div>
                     <button type="submit" class="btn btn--theme contact__btn">Envoyer</button>
                 </form>
                 </div>
             </div>
         </section>
-    <div>
+    </div>
+
+    {% include 'footer.html.twig' %}
 </body>
 </html>
