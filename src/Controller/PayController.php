@@ -194,7 +194,7 @@ class PayController extends AbstractController
 		//Ajoute les frais de port dans le tableau
 		$productStripe[] = $tempProductStripe[$prodId];
 
-		Stripe::setApiKey('sk_test_51ONMaZG2UBG3DZO2CttNYXNE0fspQMIfQafk5BM1dqLOHnTiQW90Qb2ruH37d8ZO9HTWONsjLFnGg5ld7cGURqVW00jGcwgbI6');
+		Stripe::setApiKey($this->getParameter('stripe.api_key'));
 
 		$checkout_session = \Stripe\Checkout\Session::create([
 			'customer_email' => $this->getUser(),
