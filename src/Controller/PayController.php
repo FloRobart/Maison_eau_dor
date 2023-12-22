@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Stripe\Stripe;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 class PayController extends AbstractController
 {
@@ -99,16 +100,19 @@ class PayController extends AbstractController
 	}
 
 	#[Route('/failure', name: 'failure_stripe')]
-	public function StripeFailure(): RedirectResponse
+	public function StripeFailure(): SymfonyResponse
 	{
 		return $this->render('payFailure.html.twig');
 	}
 
 	#[Route('/test-session-stripe', name: 'pay_stripe_checkouttest')]
-	public function stripeCheckoutTest(): RedirectResponse
+	public function stripeCheckoutTest(Request $request): RedirectResponse
 	{
-
+		//header('Content-Type: application/json');
+		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
+		$prodId = $request->query->get('prodId');
 		$productStripe = [];
+		$tempProductStripe = [];
 
 		/*//TODO: get product from database
 		$order = null;*/
@@ -120,12 +124,67 @@ class PayController extends AbstractController
 		//TODO: change values when database is created
 		//Prend les produits de la commande et les ajoute dans un tableau
 		
-			$productStripe[] = [
+			$tempProductStripe[] = [
 				'price_data' => [
 					'currency' => 'eur',
 					'unit_amount' => 30 * 100,
 					'product_data' => [
-						'name' => "ParfumTest"
+						'name' => "Ahlam",
+					],
+				],
+				'quantity' => 1,
+			];
+
+			$tempProductStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => 30 * 100,
+					'product_data' => [
+						'name' => "Magic Aïsha"
+					],
+				],
+				'quantity' => 1,
+			];
+
+			$tempProductStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => 30 * 100,
+					'product_data' => [
+						'name' => "Pure Evasion"
+					],
+				],
+				'quantity' => 1,
+			];
+
+			$tempProductStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => 30 * 100,
+					'product_data' => [
+						'name' => "Mula Rouge"
+					],
+				],
+				'quantity' => 1,
+			];
+
+			$tempProductStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => 35 * 100,
+					'product_data' => [
+						'name' => "Bali"
+					],
+				],
+				'quantity' => 1,
+			];
+
+			$tempProductStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => 35 * 100,
+					'product_data' => [
+						'name' => "California"
 					],
 				],
 				'quantity' => 1,
@@ -133,16 +192,13 @@ class PayController extends AbstractController
 		
 
 		//Ajoute les frais de port dans le tableau
-		
+		$productStripe[] = $tempProductStripe[$prodId];
 
-		//header('Content-Type: application/json');
-		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
-
-		Stripe::setApiKey('sk_test_51ONMaZG2UBG3DZO2CttNYXNE0fspQMIfQafk5BM1dqLOHnTiQW90Qb2ruH37d8ZO9HTWONsjLFnGg5ld7cGURqVW00jGcwgbI6');
+		Stripe::setApiKey($this->getParameter('stripe.api_key'));
 
 		$checkout_session = \Stripe\Checkout\Session::create([
 			'customer_email' => $this->getUser(),
-			'payment_method_types' => ['card'],
+			'payment_method_types' => ['card','link'],
 			'line_items' => [[
 				# Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
 				$productStripe
