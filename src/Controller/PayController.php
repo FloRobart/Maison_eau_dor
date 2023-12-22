@@ -72,6 +72,47 @@ class PayController extends AbstractController
 		return new RedirectResponse($checkout_session->url);
 	}
 
+	#[Route('/create-session-stripe-cart', name: 'pay_stripe_checkout_cart')]
+	public function stripeCheckoutCart(Request $request): RedirectResponse
+	{
+
+		$productStripe = [];
+		$product = $this->em->getRepository(Produit::class)->find($request->query->get('prodId'));
+
+		//Prend les produits de la commande et les ajoute dans un tableau
+			$productStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => $product->getPrixProduit() * 100,
+					'product_data' => [
+						'name' => $product->getTitreProduit(),
+					],
+				],
+				'quantity' => 1,
+			];
+
+		//Ajoute les frais de port dans le tableau
+
+		//header('Content-Type: application/json');
+		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
+
+		Stripe::setApiKey($this->getParameter('stripe.api_key'));
+
+		$checkout_session = \Stripe\Checkout\Session::create([
+			'customer_email' => $this->getUser(),
+			'payment_method_types' => ['card'],
+			'line_items' => [[
+				# Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
+				$productStripe
+			]],
+			'mode' => 'payment',
+			'success_url' => $YOUR_DOMAIN . '/success',
+			'cancel_url' => $YOUR_DOMAIN . '/failure',
+		]);
+
+		return new RedirectResponse($checkout_session->url);
+	}
+
 	#[Route('/success', name: 'success_stripe')]
 	public function StripeSuccess(): SymfonyResponse
 	{
