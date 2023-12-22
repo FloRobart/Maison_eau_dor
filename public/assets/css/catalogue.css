@@ -41,6 +41,7 @@ body, html {
 .content {
 	margin-top: 180px; /* marge pour éviter que le contenu soit caché derrière le header */
 	padding: 0 10%;
+	transition: transform 0.5s ease; /* pour l'animation quand on passe en mode mobile */
 }
 
 .catalogue {
@@ -162,15 +163,14 @@ body, html {
 	cursor: pointer;
 }
 
+/* #arrowDownDropdown */
 .filter button i {
-	/*width: 15px;
-	height: 15px;
-	padding: 1rem 1rem;*/
 	width: 15px;
 	height: 100%;
 	padding: 0 1rem;
 	align-items: center;
 	display: flex;
+	transition: rotate 0.3s ease; /* pour l'animation de la flèche quand on modifie le filtre (via js : arrowDownDropdown) */
 }
 
 .filter-content {
@@ -221,6 +221,7 @@ body, html {
 	align-items: center;
 	flex: 1 1 20%;
 	margin: 1%; 
+	transition: all 0.5s ease;
 }
 
 .produit .image-container {
@@ -443,14 +444,11 @@ body, html {
 	   #    PRODUIT   #
 	   ################
 	*/
-	.produit {
-		margin: 1% 0;
-	}
 }
 
 @media screen and (max-width: 768px) {
 	.content {
-		margin-top: 120px;
+		transform: translateY(-60px); 
 	}
 }
 

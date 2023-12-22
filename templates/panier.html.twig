@@ -1,0 +1,57 @@
+{# Canvas de l'overlay #}
+<div id="canvas-overlay"></div>
+
+{# Overlay du panier #}
+<div id="cart-overlay" class="overlay">
+	{# En-tête du panier #}
+	<div id="cart-header">
+		<span id="cart-title">Panier</span>
+		<span id="close-cart">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000" width="24px" height="24px"><path d="M0 0h24v24H0V0z" fill="none"/>
+			<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+		</span>
+	</div>
+
+	 {# Contenu du panier  #}
+	<div id="cart-content">
+		{# ... Liste des articles du panier ...  #}
+	</div>
+
+	{# Pied du panier  #}
+	<div id="cart-footer">
+		{#  Section pour laisser un message au commerçant #}
+		<div id="cart-message">
+			<label for="cart-message-area">Message pour le commerçant</label>
+			<textarea id="cart-message-area" placeholder="Laissez un message pour le commerçant"></textarea>
+		</div>
+
+		{# Sous-total  #}
+		<div id="cart-subtotal">
+			<span>Sous-total</span>
+			<span id="cart-subtotal-amount">0.00 €</span>
+		</div>
+
+		{# Frais de livraison  #}
+		<div id="cart-delivery">
+			<span>Frais de livraison</span>
+			<span >calculés au moment du paiement</span>
+		</div>
+
+		{# Total  #}
+		<div id="cart-total">
+			<div id="cart-total-title">
+				<span>Total</span>
+				<div id="cart-total-TVA">
+					<span>dont TVA</span>
+					<span id="cart-total-TVA-amount">0.00 €</span>
+				</div>
+			</div>
+			<span id="cart-total-amount">0.00 €</span>
+		</div>
+
+		{# Bouton de paiement  #}
+		<button id="pay-button">Payer <span id="total-amount">0.00</span> €</button>
+	</div>
+</div>
+
+<script src="{{ asset('assets/js/panier.js') }}"></script>

@@ -1,0 +1,199 @@
+/* Variables */
+:root {
+	/* Taille du panier */
+	--w-cart: 25%; 
+
+	/* Taille du header du panier */
+	--h-header: 8%;
+
+	/* Taille du footer du panier */
+	--h-footer: 40%;
+}
+
+
+
+#canvas-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 0%; /* Masquer initialement le panier */
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	transition: opacity 0.6s ease-in-out;
+	z-index: 1500; /* entre le header et le panier, 1000 et 2000 */
+	opacity: 0; /* Masquer initialement le panier */
+}
+
+#cart-overlay {
+	position: fixed;
+	top: 0;
+	/* right: -100%; */
+	width: var(--w-cart, 25%); 
+	height: 100%;
+	background-color: white;
+	transition: all 0.4s ease-in-out;
+	z-index: 2000; /* le panier doit être au-dessus de tout, même du header */
+	/* Style */
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* +---------------------+
+   |   Header du panier  |
+   +---------------------+ */
+#cart-header {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	height: var(--h-header, 8%);
+}
+
+#cart-title {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 1em;
+}
+
+#close-cart {
+	position: absolute;
+	top: 1%;
+	right: 3%;
+	display: flex;
+	padding: .5rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* -----------------------+
+   |  Contenu du panier   |
+   +-----------------------*/
+#cart-content {
+	width: 100%;
+	height: calc(100% - var(--h-header, 8%) - var(--h-footer, 40%) - 1em);
+}
+
+.cart-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+	padding: .5em;
+	border-bottom: 1px solid #ddd;
+}
+
+.cart-item-image-container {
+	max-width: 10%;
+	max-height: 10%px;
+}
+
+.cart-item-image-container img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+
+
+/* +----------------------+
+   |   Footer du panier   |
+   +----------------------+ */
+#cart-footer {
+	display: flex;
+	padding: 0.5rem;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: var(--h-footer, 40%);
+	/* Style */
+	background: #EBEBEB;
+}
+
+/* Message commerçant */
+#cart-message {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	padding: .5em;
+}
+
+#cart-message label {
+	padding: .5em;
+	width: 100%;
+	align-self: center;
+	text-align: center;
+	/* Style */
+	font-weight: bold;
+	font-size: 1.2em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#cart-message-area {
+	padding: 1em;
+	width: 90%;
+	align-self: center;
+	/* Style */
+	min-height: 5em;
+	border: 1px solid #ddd;
+	resize: none;
+}
+
+#cart-message-area:focus {
+	outline: none;
+}
+
+
+#cart-delivery, #cart-subtotal, #cart-total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+	padding: .5em;
+}
+
+
+/* Texte "Total" + TVA */
+#cart-total-title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* Texte "Total" */
+#cart-total-title span {
+	margin: 0;
+	font-weight: bold;
+}
+
+/* TVA */
+#cart-total-TVA {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap : 0.5em;
+	/* Style */
+	font-size: 0.8em;
+	color: #aaa;
+}
+
+/* Bouton Payer */
+#pay-button {
+	color: #fff;
+	font-size: 1.6em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 700;
+	border: 1px solid #000;
+	background: #000;
+	padding: 0.5em;
+	text-decoration: none;
+	transition: all 0.5s, color 0.5s;
+	cursor: pointer;
+	width: 100%;
+	margin: 0.5em;
+}
+
