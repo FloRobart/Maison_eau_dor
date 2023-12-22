@@ -94,6 +94,7 @@ class PayController extends AbstractController
 				'quantity' => 1,
 
 			];
+		}
 
 		//Prend les produits de la commande et les ajoute dans un tableau
 
