@@ -84,7 +84,9 @@
 					<button id="plus">+</button>
 				</div>
 			</div>
-			<button id="acheter">Acheter</button>
+			<form action="{{ path('pay_stripe_checkout', {'prodId':produit.id})}}" method="POST">
+				<button id="acheter" type="submit">Acheter</button>
+			</form>
 			<button id="panier">Ajouter au panier</button>
 			<h3>Description :</h3>
 			<p class="desc">{{ produit.description|replace({'.': '.<br>'})|raw }}</p>

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Produit;
 use Composer\Util\Http\Response;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,63 +32,41 @@ class PayController extends AbstractController
 	}
 
 	#[Route('/create-session-stripe', name: 'pay_stripe_checkout')]
-	public function stripeCheckout(): RedirectResponse
+	public function stripeCheckout(Request $request): RedirectResponse
 	{
 
 		$productStripe = [];
+		$product = $this->em->getRepository(Produit::class)->find($request->query->get('prodId'));
 
-		//TODO: get product from database
-		$order = null;
-
-		//TODO: change redirect route when cart is created
-		if (!$order) {
-			return $this->redirectToRoute('cart.index');
-		}
-		//TODO: change values when database is created
 		//Prend les produits de la commande et les ajoute dans un tableau
-		foreach ($order->getRecapDetails()->getValues() as $product) {
 			$productStripe[] = [
 				'price_data' => [
 					'currency' => 'eur',
-					'unit_amount' => $product->getProduct()->getPrice() * 100,
+					'unit_amount' => $product->getPrixProduit() * 100,
 					'product_data' => [
-						'name' => $product->getProduct()->getName(),
-						'images' => [$product->getProduct()->getIllustration()],
+						'name' => $product->getTitreProduit(),
 					],
 				],
-				'quantity' => $product->getQuantity(),
+				'quantity' => 1,
 			];
-		}
 
 		//Ajoute les frais de port dans le tableau
-		$productStripe[] = [
-			'price_data' => [
-				'currency' => 'eur',
-				'unit_amount' => $order->getCarrierPrice() * 100,
-				'product_data' => [
-					'name' => $order->getCarrierName(),
-					'images' => [$order->getCarrierImg()],
-				],
-			],
-			'quantity' => 1,
-		];
 
 		//header('Content-Type: application/json');
 		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
 
-		Stripe::setApiKey('sk_test_51ONMaZG2UBG3DZO2CttNYXNE0fspQMIfQafk5BM1dqLOHnTiQW90Qb2ruH37d8ZO9HTWONsjLFnGg5ld7cGURqVW00jGcwgbI6');
+		Stripe::setApiKey($this->getParameter('stripe.api_key'));
 
 		$checkout_session = \Stripe\Checkout\Session::create([
 			'customer_email' => $this->getUser(),
 			'payment_method_types' => ['card'],
 			'line_items' => [[
 				# Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
-				'price' => '{{PRICE_ID}}',
-				'quantity' => 1,
+				$productStripe
 			]],
 			'mode' => 'payment',
-			'success_url' => $YOUR_DOMAIN . '/success.html',
-			'cancel_url' => $YOUR_DOMAIN . '/cancel.html',
+			'success_url' => $YOUR_DOMAIN . '/success',
+			'cancel_url' => $YOUR_DOMAIN . '/failure',
 		]);
 
 		return new RedirectResponse($checkout_session->url);
@@ -151,7 +130,7 @@ class PayController extends AbstractController
 					'currency' => 'eur',
 					'unit_amount' => 30 * 100,
 					'product_data' => [
-						'name' => "Pure Evasion"
+						'name' => "Suprème Flower"
 					],
 				],
 				'quantity' => 1,
