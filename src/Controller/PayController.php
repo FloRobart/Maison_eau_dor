@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Produit;
-use Composer\Util\Http\Response;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -11,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Stripe\Stripe;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Symfony\Component\HttpFoundation\Request;
+use App\Controller\PanierController;
 
 class PayController extends AbstractController
 {
@@ -75,11 +75,13 @@ class PayController extends AbstractController
 	#[Route('/create-session-stripe-cart', name: 'pay_stripe_checkout_cart')]
 	public function stripeCheckoutCart(Request $request): RedirectResponse
 	{
-
+		$data = json_decode($request->getContent(), true);
+		$idsDuPanier = $data['idsPanier'];
 		$productStripe = [];
-		$product = $this->em->getRepository(Produit::class)->find($request->query->get('prodId'));
 
-		//Prend les produits de la commande et les ajoute dans un tableau
+		$products = $this->em->getRepository(Produit::class)->findBy(['id' => $idsDuPanier]);
+		
+		foreach ($products as $product) {
 			$productStripe[] = [
 				'price_data' => [
 					'currency' => 'eur',
@@ -90,6 +92,9 @@ class PayController extends AbstractController
 				],
 				'quantity' => 1,
 			];
+		}
+
+		//Prend les produits de la commande et les ajoute dans un tableau
 
 		//Ajoute les frais de port dans le tableau
 
@@ -97,6 +102,17 @@ class PayController extends AbstractController
 		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
 
 		Stripe::setApiKey($this->getParameter('stripe.api_key'));
+
+		$productStripe[] = [
+			'price_data' => [
+				'currency' => 'eur',
+				'unit_amount' => 0,
+				'product_data' => [
+					'name' => "Frais de port",
+				],
+			],
+			'quantity' => 1,
+		];
 
 		$checkout_session = \Stripe\Checkout\Session::create([
 			'customer_email' => $this->getUser(),
@@ -110,7 +126,10 @@ class PayController extends AbstractController
 			'cancel_url' => $YOUR_DOMAIN . '/failure',
 		]);
 
-		return new RedirectResponse($checkout_session->url);
+		$responce = new RedirectResponse($checkout_session->url);
+		$responce->headers->set('Access-Control-Allow-Origin', '*');
+
+		return $responce;
 	}
 
 	#[Route('/success', name: 'success_stripe')]

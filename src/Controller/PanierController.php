@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Produit;
+use App\Controller\PayController;
 
 
 class PanierController extends AbstractController
@@ -35,6 +36,9 @@ class PanierController extends AbstractController
 				'image' => $produit->getIdPhoto()[0]->getPathPhoto()
 			];
 		}
+
+		//$paiement = new PayController($this->entityManager);
+		//$paiement->stripeCheckoutCart($produitsArray);
 
 		return new JsonResponse($produitsArray);
 	}
