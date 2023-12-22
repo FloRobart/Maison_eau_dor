@@ -46,7 +46,13 @@ function rechercherProduit() {
 	if (recherche == "") {
 		window.location.href = window.location.href.split("?")[0];
 	} else {
-		window.location.href = window.location.href.split("?")[0] + "?search=" + recherche + "&sortField=name&sortDirection=asc"; 
+		let url = window.location.href.split("?")[0];
+		// Récupérer les paramètres de l'URL
+		let tmpParams = new URLSearchParams(window.location.search);
+		tmpParams.set('search', recherche);
+		tmpParams.delete('page'); // Supprimer la page pour revenir à la première page (car nouvelle recherche)
+		
+		window.location.href = url + "?" + tmpParams.toString();
 	}
 }
 
@@ -147,8 +153,12 @@ document.getElementById("tri-btn").addEventListener("click", function(event) {
 
 	if (filtres.style.display == "none") {
 		filtres.style.display = "block";
+		// Change la direction de la flèche
+		document.getElementById("arrowDownDropdown").style.rotate = "180deg";
 	} else {
 		filtres.style.display = "none";
+		// Change la direction de la flèche
+		document.getElementById("arrowDownDropdown").style.rotate = "0deg";
 	}
 
 	// Arrêter la propagation de l'événement pour éviter la fermeture immédiate
@@ -195,16 +205,29 @@ document.querySelectorAll('.produit button').forEach(function(button) {
 
 // Ajouter produit au panier
 function ajouterAuPanier(id) {
-	/*var panier = JSON.parse(localStorage.getItem("panier"));
+	id = parseInt(id);
+	var panier = JSON.parse(localStorage.getItem("panier"));
 
 	if (panier == null) {
 		panier = [];
 	}
+	
+	// On augmente la quantité si le produit est déjà dans le panier
+	let contenu = false;
+	panier.forEach(function(produit) {
+		console.log( produit.id, id, produit.id == id);
+		if (produit.id == id) {
+			console.log(produit.quantite);
+			produit.quantite = parseInt(produit.quantite) + 1;
+			console.log(produit.quantite);
+			contenu = true;
+		}
+	});
+	if (!contenu) { panier.push({id: id, quantite: 1}); }
 
-	panier.push(id);
-
-	localStorage.setItem("panier", JSON.stringify(panier));*/
-	console.log("Ajouté au panier : " + id);
+	localStorage.setItem("panier", JSON.stringify(panier));
+	
+	console.log("Ajouté au panier : " + id + " (1)");
 }
 
 // Fonction pour ajouter les catégories au menu
