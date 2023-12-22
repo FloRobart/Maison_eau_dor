@@ -2,16 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.contact.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    {% include 'header.html.twig' %}
+
     <div class="container">
         <section id="contact" class="contact sec-pad dynamicBg">
             <div class="main-container">
                 <h2 class="heading heading-sec heading-sec__mb-med">
-                <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+                <span class="heading-sec__main heading-sec__main--lt">Nous Contacter</span>
                 </h2>
                 <div class="contact__form-container">
                 <form action='#' class='contact__form' method='post'><input type='hidden' name='form-name' value='form 1' />
@@ -25,13 +29,15 @@
                     </div>
                     <div class="contact__form-field">
                         <label class="contact__form-label" for="message">Message</label>
-                        <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Écrivez ici votre message" name="message" id="message"></textarea>
+                        <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Écrivez votre message" name="message" id="message"></textarea>
                     </div>
                     <button type="submit" class="btn btn--theme contact__btn">Envoyer</button>
                 </form>
                 </div>
             </div>
         </section>
-    <div>
+    </div>
+
+    {% include 'footer.html.twig' %}
 </body>
 </html>

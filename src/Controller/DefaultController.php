@@ -68,19 +68,19 @@ class DefaultController extends AbstractController
 		return $this->render('about.html.twig');
 	}
 
-	#[Route('/politique-de-confidentialite', name: 'default.privacy', methods: ['GET'])]
+	#[Route('/privacy', name: 'default.privacy', methods: ['GET'])]
 	public function privacy(): Response
 	{
 		return $this->render('privacy.html.twig');
 	}
 
-	#[Route('/conditions-generales-de-vente', name: 'default.cgv', methods: ['GET'])]
+	#[Route('/cgv', name: 'default.cgv', methods: ['GET'])]
 	public function cgv(): Response
 	{
 		return $this->render('cgv.html.twig');
 	}
 
-	#[Route('/politique-de-cookies', name: 'default.cookies', methods: ['GET'])]
+	#[Route('/cookies', name: 'default.cookies', methods: ['GET'])]
 	public function cookies(): Response
 	{
 		return $this->render('cookies.html.twig');

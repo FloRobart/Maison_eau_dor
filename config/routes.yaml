@@ -70,7 +70,6 @@ payment_list:
     path: /payment
     controller: App\Controller\PayController::index
 
-
 #Succes
 success_stripe:
     path: /success
@@ -85,4 +84,28 @@ failure_stripe:
 about_page:
     path: /about
     controller: App\Controller\DefaultController::about
+    methods: ['GET']
+
+    # Condition générale
+cgv_page:
+    path: /cgv
+    controller: App\Controller\DefaultController::cgv
+    methods: ['GET']
+
+# Politique de confidentialité
+privacy_page:
+    path: /privacy
+    controller: App\Controller\DefaultController::privacy
+    methods: ['GET']
+
+# Politique de cookies
+cookies_page:
+    path: /cookies
+    controller: App\Controller\DefaultController::cookies
+    methods: ['GET']
+
+# Mentions légales
+legal_page:
+    path: /legal
+    controller: App\Controller\DefaultController::legal
     methods: ['GET']
