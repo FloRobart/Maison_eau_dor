@@ -85,4 +85,10 @@ class DefaultController extends AbstractController
 	{
 		return $this->render('cookies.html.twig');
 	}
+
+	#[Route('/panier', name: 'default.panier', methods: ['GET'])]
+	public function panier(): Response
+	{
+		return $this->forward(PanierController::class . '::recupererproduitsDuPanier');
+	}
 }
