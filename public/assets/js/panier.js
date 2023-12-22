@@ -12,7 +12,6 @@ const payButton = document.getElementById('pay-button');
 // Récupérer le message du client
 const messageInput = document.getElementById('message-input');
 
-
 /* +---------------------------+
    |   Ouverture / Fermeture   |
    +---------------------------+ */
@@ -220,7 +219,7 @@ document.addEventListener('click', function (event) {
 // Écouter le clic sur le bouton de paiement
 payButton.addEventListener('click', function () {
 	//const totalAmount = totalAmountElement.innerText;
-	const totalAmount = 0;
+	/*const totalAmount = 0;
 	for (let i = 0; i < cartItems.length; i++) {
 		totalAmount += cartItems[i].price * cartItems[i].quantity;
 	}
@@ -233,7 +232,16 @@ payButton.addEventListener('click', function () {
 	// Code pour renvoyer vers la page de paiement
 	// window.location.href = 'paiement';
 
-	console.log(totalAmount, message);
+	console.log(totalAmount, message);*/
+	let ids = [];
+
+	fetch('/create-session-stripe-cart', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({idsPanier: ids}),
+	})
 });
 
 // Initialiser le panier lors du chargement de la page

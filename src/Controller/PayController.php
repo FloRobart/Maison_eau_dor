@@ -11,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Stripe\Stripe;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Symfony\Component\HttpFoundation\Request;
+use App\Controller\PanierController;
 
 class PayController extends AbstractController
 {
@@ -70,6 +71,66 @@ class PayController extends AbstractController
 		]);
 
 		return new RedirectResponse($checkout_session->url);
+	}
+
+	#[Route('/create-session-stripe-cart', name: 'pay_stripe_checkout_cart')]
+	public function stripeCheckoutCart(Request $request): RedirectResponse
+	{
+		$data = json_decode($request->getContent(), true);
+		$idsDuPanier = $data['idsPanier'];
+		$productStripe = [];
+
+		$products = $this->em->getRepository(Produit::class)->findBy(['id' => $idsDuPanier]);
+		
+		foreach ($products as $product) {
+			$productStripe[] = [
+				'price_data' => [
+					'currency' => 'eur',
+					'unit_amount' => $product->getPrixProduit() * 100,
+					'product_data' => [
+						'name' => $product->getTitreProduit(),
+					],
+				],
+				'quantity' => 1,
+
+			];
+
+		//Prend les produits de la commande et les ajoute dans un tableau
+
+		//Ajoute les frais de port dans le tableau
+
+		//header('Content-Type: application/json');
+		$YOUR_DOMAIN = 'http://127.0.0.1:8000';
+
+		Stripe::setApiKey($this->getParameter('stripe.api_key'));
+
+		$productStripe[] = [
+			'price_data' => [
+				'currency' => 'eur',
+				'unit_amount' => 0,
+				'product_data' => [
+					'name' => "Frais de port",
+				],
+			],
+			'quantity' => 1,
+		];
+
+		$checkout_session = \Stripe\Checkout\Session::create([
+			'customer_email' => $this->getUser(),
+			'payment_method_types' => ['card'],
+			'line_items' => [[
+				# Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
+				$productStripe
+			]],
+			'mode' => 'payment',
+			'success_url' => $YOUR_DOMAIN . '/success',
+			'cancel_url' => $YOUR_DOMAIN . '/failure',
+		]);
+
+		$responce = new RedirectResponse($checkout_session->url);
+		$responce->headers->set('Access-Control-Allow-Origin', '*');
+
+		return $responce;
 	}
 
 	#[Route('/success', name: 'success_stripe')]
