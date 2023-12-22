@@ -12,14 +12,6 @@ function obtenirLargeurFenetre() {
 function mettreAJourLargeurFenetre() {
   // Obtient la largeur de la fenêtre
   largeurFenetreActuelle = obtenirLargeurFenetre();
-  
-  // Mettez ici le code que vous souhaitez exécuter avec la nouvelle largeur
-  
-  // Exemple : Affiche la largeur dans la console
-  console.log("Largeur de la fenêtre : " + largeurFenetreActuelle);
-
-  // Vous pouvez appeler d'autres fonctions et leur passer la largeur de la fenêtre
-  //autreFonctionUtilisantLargeur(largeurFenetreActuelle);
 }
 
 // Ajouter un gestionnaire d'événements pour le redimensionnement de la fenêtre

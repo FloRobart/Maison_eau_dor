@@ -91,7 +91,7 @@ header {
 }
 
 /* Media Query pour les écrans en dessous de 768px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .burger-header{
         display: block;
         position: absolute;
@@ -168,7 +168,7 @@ header {
 }
 
 /* Media Query pour les écrans de 768px à 1200px */
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
     .li-header {
         font-size: 16px; /* Ajustez la taille de police pour cette plage de largeurs d'écran */
     }
