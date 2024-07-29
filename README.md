@@ -2,6 +2,10 @@
 
 ## Description
 
+Ce projet scolaire est une application web réalisé en troisième année de BUT informatique avec une équipe de 6 personnes.
+
+Elle à été réalisé à l'aide du framework PHP Symfony.
+
 ## Installation
 
 ### Prérequis
